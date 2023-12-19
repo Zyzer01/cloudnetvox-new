@@ -6,6 +6,10 @@ export default function Home() {
     <main className="">
       <div className="p-16 min-h-screen grid grid-cols-6 gap-x-16 justify-center items-center bg-primary text-white">
         <div className="col-span-6 md:col-span-3">
+          <p className="mb-0">
+            <i className="fas fa-bell rounded-circle mr-2"></i>{" "}
+            Get a <span className="text-primary">.com.ng </span> for as low as N1200
+          </p>
           <h1 className="text-5xl font-semibold leading-snug">
             Unlimited Domain & Hosting in One Platform
           </h1>
