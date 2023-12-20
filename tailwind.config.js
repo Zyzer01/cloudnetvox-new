@@ -11,7 +11,7 @@ module.exports = {
         primary: '#06155A',
         domain: '#103dbe',
         alternate: '#1C65DE',
-        secondary: '#49AFE2'
+        secondary: '#49AFE2' 
       },
     },
   },
