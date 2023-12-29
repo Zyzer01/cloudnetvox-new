@@ -1,35 +1,30 @@
-import { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useEffect, useRef } from 'react';
+import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
-const Counter = ({ endValue }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once
+export default function Counter({ value, direction = 'up' }) {
+  const ref = useRef(null);
+  const motionValue = useMotionValue(direction === 'down' ? value : 0);
+  const springValue = useSpring(motionValue, {
+    damping: 100,
+    stiffness: 100,
   });
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-      controls.start({
-        count: endValue,
-        transition: { duration: 2, ease: 'linear' },
-      });
+    if (isInView) {
+      motionValue.set(direction === 'down' ? 0 : value);
     }
-  }, [inView, controls, endValue]);
+  }, [motionValue, isInView, direction, value]);
 
-  return (
-    <motion.div ref={ref}>
-      {isVisible && (
-        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0, 1] }}>
-          {controls.get('count')}
-        </motion.div>
-      )}
-      {/* You can also display the count outside of the motion.div */}
-      {isVisible && <p>{controls.get('count')}</p>}
-    </motion.div>
+  useEffect(
+    () =>
+      springValue.on('change', (latest) => {
+        if (ref.current) {
+          ref.current.textContent = new Intl.NumberFormat('en-US').format(latest.toFixed(0));
+        }
+      }),
+    [springValue]
   );
-};
 
-export default Counter;
+  return <span ref={ref} />;
+}
