@@ -1,13 +1,30 @@
 import React from 'react';
 import Counter from './Counter';
-// import './styles/new.css';
+import Image from 'next/image';
 
 const BeforeFooter = () => {
   return (
-    <div
-      className="text-primary"
-      style={{ height: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Counter value={1000} />
+    <div>
+      <div className="relative flex justify-center">
+        <Image
+          src="/images/support-pattern.png"
+          width={1920}
+          height={243}
+          alt="cloud support engineering"
+        />
+        <h4 className="text-md md:text-xl lg:text-3xl absolute top-8 sm:top-12 md:top-16 lg:top-24 text-white">
+          Need help? Call our Pro-active support team 24/7: +234 702-500-0200
+        </h4>
+      </div>
+      <div className="h-10 mt-16 flex justify-center items-center">
+        <h4 className="text-3xl">
+          Proudly Hosting Over{' '}
+          <span className="text-domain">
+            <Counter value={10000} />
+          </span>{' '}
+          Websites Since 2015
+        </h4>
+      </div>
     </div>
   );
 };

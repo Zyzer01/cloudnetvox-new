@@ -74,8 +74,9 @@ const Home = () => {
       <Spacer />
       <Reviews />
       <Spacer />
-      <BeforeFooter />
       <AwardBadge />
+      <BeforeFooter />
+      <Spacer />
     </main>
   );
 };

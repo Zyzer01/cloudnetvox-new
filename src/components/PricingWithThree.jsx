@@ -88,12 +88,19 @@ const PricingWithThree = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}>
-                  ${isYearly ? item.price * 12 : item.price}
+                  <span className="italic relative text-2xl -top-4">₦</span>
+                  {new Intl.NumberFormat('en-US', {
+                    style: 'decimal',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 2,
+                    currency: 'NGN',
+                  }).format(isYearly ? item.price * 12 : item.price)}
                 </motion.h3>
               </AnimatePresence>
               <p className="text-muted mb-5">{isYearly ? '/per year' : '/per month'}</p>
               <ButtonV2 text="Buy now" isFullWidth />
             </div>
+
             <div>
               {item.features.map((feature, index) => (
                 <p key={index} className="flex items-center my-4">
