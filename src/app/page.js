@@ -9,6 +9,7 @@ import CtaWithList from '@/components/CtaWithList';
 import RegularCta from '@/components/RegularCta';
 import Reviews from '@/components/Reviews';
 import AwardBadge from '@/components/AwardBadge';
+import BeforeFooter from '@/components/BeforeFooter';
 
 const Home = () => {
   const ctaListItems = [
@@ -74,6 +75,7 @@ const Home = () => {
       <Reviews />
       <Spacer />
       <AwardBadge />
+      <BeforeFooter />
     </main>
   );
 };

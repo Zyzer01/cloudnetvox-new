@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Counter = ({ endValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   const controls = useAnimation();
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Only trigger once
   });
 
   useEffect(() => {
@@ -15,25 +14,22 @@ const Counter = ({ endValue }) => {
       setIsVisible(true);
       controls.start({
         count: endValue,
-        transition: { duration: 2, ease: 'easeOut' },
+        transition: { duration: 2, ease: 'linear' },
       });
     }
   }, [inView, controls, endValue]);
 
   return (
-    <motion.div ref={ref} initial={{ count: 0 }} animate={controls}>
-      {isVisible && Math.floor(controls.get('count')).toLocaleString()}
+    <motion.div ref={ref}>
+      {isVisible && (
+        <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0, 1] }}>
+          {controls.get('count')}
+        </motion.div>
+      )}
+      {/* You can also display the count outside of the motion.div */}
+      {isVisible && <p>{controls.get('count')}</p>}
     </motion.div>
   );
 };
 
-const App = () => {
-  return (
-    <div
-      style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Counter endValue={1000} />
-    </div>
-  );
-};
-
-export default App;
+export default Counter;
