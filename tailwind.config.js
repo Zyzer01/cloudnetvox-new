@@ -7,13 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        '3xl': '0 8px 8px -1px rgba(0, 0, 0, 0.15);',
+      },
       colors: {
         primary: '#06155A',
         domain: '#103dbe',
         alternate: '#1C65DE',
-        secondary: '#49AFE2' 
+        secondary: '#49AFE2',
+        sky: '#e8f1f8',
+        muted: '#707070',
+        heading: '#303030',
       },
     },
   },
   plugins: [],
-}
+};
