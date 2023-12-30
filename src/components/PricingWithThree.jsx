@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import Header from './Header';

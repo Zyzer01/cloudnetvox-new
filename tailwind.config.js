@@ -17,6 +17,7 @@ module.exports = {
         secondary: '#49AFE2',
         sky: '#e8f1f8',
         muted: '#707070',
+        off: '#d7d7d7',
         heading: '#303030',
       },
     },

@@ -1,4 +1,3 @@
-'use client';
 import Hero from '@/components/Hero';
 import DomainSearchBox from '@/components/DomainSearchBox';
 import Patners from '@/components/Patners';
@@ -44,6 +43,7 @@ const Home = () => {
         ctaListItems={ctaListItems}
         buttonText="Get Started Now!"
         ctaImageSrc={ctaImageSrc[0]}
+        altText="Man standing on server"
       />
       <Spacer />
       <RegularCta
