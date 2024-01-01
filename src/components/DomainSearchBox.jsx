@@ -9,7 +9,7 @@ const DomainSearchBox = () => {
       </div>
       <div className="col-span-3 md:col-span-2">
         <div className="flex-flex-col space-y-6">
-          <div className="relative">
+          <div className="relative transition ease-in-out duration-3">
             <label htmlFor="Search" className="sr-only">
               Search
             </label>
@@ -17,7 +17,7 @@ const DomainSearchBox = () => {
               type="text"
               id="Search"
               placeholder="Search for..."
-              className="w-full rounded-full border border-gray-500 py-4 px-6 shadow-md sm:text-sm"
+              className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md sm:text-sm"
             />
             <span className="absolute inset-y-0 end-0 grid w-16 pr-10 place-content-center">
               <button
