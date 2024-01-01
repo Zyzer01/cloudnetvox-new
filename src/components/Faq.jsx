@@ -16,10 +16,10 @@ const Item = ({ title, content }) => {
         title="Open item"
         className="flex items-center justify-between w-full p-4 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}>
-        <h3 className="text-lg font-medium">{title}</h3>
+        <h3 className={`text-lg text-left font-medium ${isOpen && 'text-domain'}`}>{title}</h3>
         <p
           className={`w-3 text-gray-600 text-xl transform transition-transform duration-200  ${
-            isOpen ? 'rotate-180 text-blue-800' : ''
+            isOpen ? 'rotate-180 text-domain' : ''
           }`}>
           <MdKeyboardDoubleArrowDown />
         </p>
@@ -53,7 +53,7 @@ const Item = ({ title, content }) => {
 const Faq = ({ questionContent }) => {
   return (
     <div className="p-16 md:p-28 mx-auto">
-      <Header heading="Frequently Asked Questions" sub="See if your questions is answered" />
+      <Header heading="Frequently Asked Questions" sub="See if your questions are answered" />
       <div className="max-w-xl sm:mx-auto lg:max-w-3xl">
         <div className="space-y-4">
           {questionContent.map((item, index) => (

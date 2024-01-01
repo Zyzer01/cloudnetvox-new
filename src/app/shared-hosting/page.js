@@ -4,7 +4,6 @@ import AltHero from '@/components/AltHero';
 import ComparisonTable from '@/components/ComparisonTable';
 import ComparisonTable2 from '@/components/ComparisonTable2';
 import PackedCta from '@/components/PackedCta';
-import PricingWithThree from '@/components/PricingWithThree';
 import Spacer from '@/components/Spacer';
 import Image from 'next/image';
 import { BiSupport } from 'react-icons/bi';
@@ -15,6 +14,9 @@ import Faq from '@/components/Faq';
 import { DomainContext } from '@/context/DomainContext';
 import PricingWithIcon from '@/components/PricingWithIcon';
 import { CiGlobe } from 'react-icons/ci';
+import { CiServer } from 'react-icons/ci';
+import { VscServer } from 'react-icons/vsc';
+import { GrServerCluster } from 'react-icons/gr';
 
 export default function SharedHosting() {
   const contextValues = useContext(DomainContext);
@@ -25,21 +27,21 @@ export default function SharedHosting() {
 
   const pricingCards = [
     {
-      icon: <CiGlobe />,
+      icon: <CiServer />,
       title: lite.name,
       desc: 'Basic resources for starter, with only 1 site capacity',
       price: lite.price,
       link: '#fullFeatures',
     },
     {
-      icon: <CiGlobe />,
+      icon: <VscServer />,
       title: premium.name,
       desc: 'More space and flexibility for multiple sites.',
       price: premium.price,
       link: '#fullFeatures',
     },
     {
-      icon: <CiGlobe />,
+      icon: <GrServerCluster />,
       title: extra.name,
       desc: 'More space and flexibility for multiple sites.',
       price: extra.price,
@@ -122,12 +124,26 @@ export default function SharedHosting() {
       <Spacer />
       <ComparisonTable2 />
       <Spacer />
-      <PackedCta
-        title={ctaContent.title}
-        sub={ctaContent.sub}
-        desc={ctaContent.desc}
-        guaranteeBox={guaranteeBox}
-      />
+      <div>
+        <div className="bg-sky py-16">
+          <PackedCta
+            title={ctaContent.title}
+            sub={ctaContent.sub}
+            desc={ctaContent.desc}
+            guaranteeBox={guaranteeBox}
+          />
+        </div>
+        <div className="welcome-pattern -mt-8 md:-mt-16 w-full">
+          <Image
+            className="w-full"
+            width={2000}
+            height={2000}
+            src={'/images/welcome-pattern.png'}
+            alt="zig zag clouds illustration"
+          />
+        </div>
+      </div>
+
       <Faq questionContent={questionContent} />
     </main>
   );

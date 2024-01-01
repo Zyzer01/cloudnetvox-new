@@ -5,7 +5,7 @@ import DomainSearchBox from '@/components/DomainSearchBox';
 import Patners from '@/components/Patners';
 import Spacer from '@/components/Spacer';
 import Features from '@/components/Features';
-import PricingWithThree from '@/components/PricingWithThree';
+import Pricing from '@/components/Pricing';
 import CtaWithList from '@/components/CtaWithList';
 import RegularCta from '@/components/RegularCta';
 import Reviews from '@/components/Reviews';
@@ -80,7 +80,7 @@ const Home = () => {
       <Spacer />
       <Features />
       <Spacer />
-      <PricingWithThree
+      <Pricing
         showBadge
         card={card}
         heading="Choose Your Web Hosting Plan"
@@ -102,6 +102,7 @@ const Home = () => {
         isReversed={true}
         ctaImageSrc={ctaImageSrc[1]}
         hideImage
+        link="/new"
       />
       <RegularCta
         heading="More Speed Less Downtime"
@@ -109,6 +110,7 @@ const Home = () => {
         buttonText="Learn more"
         ctaImageSrc={ctaImageSrc[2]}
         hideImage
+        link="/new"
       />
       <div className="bg-primary text-white">
         <RegularCta
@@ -118,6 +120,7 @@ const Home = () => {
           isReversed={true}
           ctaImageSrc={ctaImageSrc[3]}
           darkBg={true}
+          link="/new"
         />
       </div>
       <Spacer />

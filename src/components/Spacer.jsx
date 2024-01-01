@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Spacer = () => {
-  return <div className="py-4 md:py-6"></div>;
+  return <div className="py-6 md:py-8"></div>;
 };
 
 export default Spacer;

@@ -6,7 +6,7 @@ import ButtonV2 from './ui/ButtonV2';
 import Link from 'next/link';
 import { IoCheckmarkDone } from 'react-icons/io5';
 
-const PricingWithThree = ({ showBadge, card, heading, sub }) => {
+const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
   const [isYearly, setIsYearly] = useState(false);
   const controls = useAnimation();
 
@@ -35,7 +35,10 @@ const PricingWithThree = ({ showBadge, card, heading, sub }) => {
         </div>
         <span className="ml-2 text-gray-500">Yearly</span>
       </div>
-      <div className="grid lg:grid-cols-3 gap-y-8 place-content-center place-items-center py-16 gap-x-8">
+      <div
+        className={`grid lg:grid-cols-3 ${
+          isFourCols && 'lg:grid-cols-3'
+        } gap-y-8 place-content-center place-items-center py-16 gap-x-8`}>
         {card.map((item, index) => (
           <div
             key={index}
@@ -96,4 +99,4 @@ const PricingWithThree = ({ showBadge, card, heading, sub }) => {
   );
 };
 
-export default PricingWithThree;
+export default Pricing;

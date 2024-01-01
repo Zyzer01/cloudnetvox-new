@@ -16,7 +16,7 @@ const BeforeFooter = () => {
         </h4>
       </div>
       <div className="h-10 mt-16 flex justify-center items-center">
-        <h4 className="text-3xl">
+        <h4 className="text-xl md:text-3xl">
           Proudly Hosting Over{' '}
           <span className="text-domain">
             <Counter value={10000} />
