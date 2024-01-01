@@ -5,7 +5,6 @@ import Header from './Header';
 import ButtonV2 from './ui/ButtonV2';
 import Link from 'next/link';
 import { IoCheckmarkDone } from 'react-icons/io5';
-import { SlFire } from 'react-icons/sl';
 
 const PricingWithThree = ({ showBadge, card, heading, sub }) => {
   const [isYearly, setIsYearly] = useState(false);

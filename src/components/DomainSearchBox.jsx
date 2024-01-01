@@ -1,8 +1,15 @@
-import React from 'react';
+'useClient';
+import { useContext } from 'react';
+import { DomainContext } from '@/context/DomainContext';
 
 const DomainSearchBox = () => {
+  const contextValues = useContext(DomainContext);
+
+  const { domainPrices } = contextValues;
+
+  const [com, net, info] = domainPrices;
   return (
-    <div className="p-16 md:p-28 grid grid-cols-3 place-items-center">
+    <div className="p-16 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8">
       <div className="col-span-3 md:col-span-1">
         <h2 className="text-4xl font-medium leading-snug">Find Your Perfect Domain Name </h2>
         <p className="text-muted mt-3 font-medium">There are no limits, make the search!</p>
@@ -16,8 +23,8 @@ const DomainSearchBox = () => {
             <input
               type="text"
               id="Search"
-              placeholder="Search for..."
-              className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md sm:text-sm"
+              placeholder="Enter Your Domain Name Here"
+              className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md"
             />
             <span className="absolute inset-y-0 end-0 grid w-16 pr-10 place-content-center">
               <button
@@ -29,17 +36,31 @@ const DomainSearchBox = () => {
             </span>
           </div>
 
-          <div className="flex">
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
-            <p>.com</p>
+          <div className="flex align-items-center justify-between space-x-4">
+            <p className="text-muted">
+              <span className="text-blue-600 font-bold">.COM</span> ₦12,200
+            </p>
+            <p className="text-muted">
+              <span className="text-domain font-bold">.CO</span> ₦29,500
+            </p>
+            <p className="text-muted">
+              <span className="text-red-600 font-bold">
+                .COM<span className="text-green-800">.NG</span>
+              </span>{' '}
+              ₦5,500
+            </p>
+            <p className="text-muted">
+              <span className="text-secondary font-bold">.AFRICA</span> ₦10,000
+            </p>
+            <p className="text-muted">
+              <span className="text-alternate font-bold">.NET</span> ₦13,700
+            </p>
+            <p className="text-muted">
+              <span className="text-green-800 font-bold">
+                .CO<span className="text-red-700">.ZA</span>
+              </span>{' '}
+              ₦6,000
+            </p>
           </div>
         </div>
       </div>

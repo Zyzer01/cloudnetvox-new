@@ -13,6 +13,8 @@ import { LuDatabaseBackup } from 'react-icons/lu';
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import Faq from '@/components/Faq';
 import { DomainContext } from '@/context/DomainContext';
+import PricingWithIcon from '@/components/PricingWithIcon';
+import { CiGlobe } from 'react-icons/ci';
 
 export default function SharedHosting() {
   const contextValues = useContext(DomainContext);
@@ -21,29 +23,26 @@ export default function SharedHosting() {
 
   const [lite, premium, extra] = webHostingPrices;
 
-  const card = [
+  const pricingCards = [
     {
-      title: 'Lite',
-      // sub: 'On sale 56%',
+      icon: <CiGlobe />,
+      title: lite.name,
+      desc: 'Basic resources for starter, with only 1 site capacity',
       price: lite.price,
-      duration: '/per month',
-      features: ['Basic resources for starter, with only 1 site capacity'],
       link: '#fullFeatures',
     },
     {
-      title: 'Premium',
-      // sub: 'On sale 56%',
+      icon: <CiGlobe />,
+      title: premium.name,
+      desc: 'More space and flexibility for multiple sites.',
       price: premium.price,
-      duration: '/per month',
-      features: ['More space and flexibility for multiple sites.'],
       link: '#fullFeatures',
     },
     {
-      title: 'Extra',
-      // sub: 'On sale 56%',
+      icon: <CiGlobe />,
+      title: extra.name,
+      desc: 'More space and flexibility for multiple sites.',
       price: extra.price,
-      duration: '/per month',
-      features: ['More power for complex sites and heavy traffic.'],
       link: '#fullFeatures',
     },
   ];
@@ -111,10 +110,12 @@ export default function SharedHosting() {
         breadcrumb="Shared Hosting"
       />
       <Spacer />
-      <PricingWithThree
-        card={card}
+      <PricingWithIcon
+        isWithToggle
+        pricingCards={pricingCards}
         heading="Choose Your Shared Hosting Plan"
         sub="You want a custom hosting plan. No hidden charges."
+        buttonText="Order Now"
       />
       <Spacer />
       {/* <ComparisonTable /> */}

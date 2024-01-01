@@ -6,20 +6,32 @@ export const DomainContext = createContext();
 const DomainContextProvider = ({ children }) => {
   const domainPrices = [
     {
-      extension: '.com',
+      ext: '.com',
       price: 12200,
     },
     {
-      extension: '.com',
-      price: 12200,
+      ext: '.com.ng',
+      price: 1200,
     },
     {
-      extension: '.com',
-      price: 12200,
+      ext: '.co',
+      price: 29500,
     },
     {
-      extension: '.com',
-      price: 12200,
+      ext: '.co.za',
+      price: 6000,
+    },
+    {
+      ext: '.net',
+      price: 13700,
+    },
+    {
+      ext: '.info',
+      price: 8950,
+    },
+    {
+      ext: '.africa',
+      price: 10000,
     },
   ];
 
