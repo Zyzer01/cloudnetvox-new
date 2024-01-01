@@ -3,6 +3,7 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
 import { IoMailOutline } from 'react-icons/io5';
 import Image from 'next/image';
+import styles from '../styles/overlay.css';
 
 const Footer = () => {
   const services = [
@@ -76,8 +77,8 @@ const Footer = () => {
   ];
 
   return (
-    <section className="bg-primary">
-      <div className="px-8 lg:px-28 pt-28">
+    <section className={styles}>
+      <div className="px-8 lg:px-28 pt-28 pb-8 bg-primary opacity-95">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12">
           <div className="flex flex-col space-y-5">
             <h4 className="text-2xl text-white mb-3">Services</h4>
@@ -136,7 +137,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col space-y-8 justify-center items-center md:justify-between bg-heading p-12 md:px-28 ">
+      <div className="flex flex-col md:flex-row space-y-8 justify-center items-center md:justify-between bg-primary p-12 md:px-28 ">
         <div>
           <p className="text-off">Copyright © 2023 Cloudnetvox. All Rights Reserved.</p>
         </div>

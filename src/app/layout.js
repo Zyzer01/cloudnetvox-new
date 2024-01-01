@@ -1,6 +1,7 @@
 import { Archivo } from 'next/font/google';
 import './globals.css';
 import Footer from '../components/Footer';
+import DomainContextProvider from '@/context/DomainContext';
 
 const archivo = Archivo({ subsets: ['latin'] });
 
@@ -12,8 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={archivo.className}>{children}</body>
-      <Footer />
+      <body className={archivo.className}>
+        <DomainContextProvider>
+          {children}
+          <Footer />
+        </DomainContextProvider>
+      </body>
     </html>
   );
 }

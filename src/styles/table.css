@@ -1,0 +1,158 @@
+#Comprison_pricingplan table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#Comprison_pricingplan table tbody tr:last-child {
+  border-right: none;
+}
+
+article#Comprison_pricingplan:after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  box-shadow: 20px 0 20px rgb(2 103 255);
+  height: 100%;
+  width: 1px;
+  top: 0;
+}
+
+#Comprison_pricingplan td+td,
+#Comprison_pricingplan th+th {
+  text-align: center;
+  display: none;
+}
+
+#Comprison_pricingplan td.default {
+  display: table-cell;
+  border-right: solid 1px #e8eaf1;
+  border-left: solid 1px #e8eaf1;
+}
+
+#Comprison_pricingplan table tbody tr td {
+  padding: 18px 0px;
+}
+
+#Comprison_pricingplan table tbody tr:first-child td:first-child {
+  border: none;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td {
+  box-shadow: 0 30px 30px rgba(30, 34, 47, 0.03);
+}
+
+#Comprison_pricingplan table tbody tr td:first-child {
+  text-align: left;
+  padding-left: 40px;
+  font-size: 16px;
+  color: var(--global--color-black);
+  font-weight: 700;
+}
+
+#Comprison_pricingplan table .adjustment {
+  padding: 17px 0px;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td:nth-child(1) {
+  border-bottom-left-radius: 15px;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+#Comprison_pricingplan table thead tr th {
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 20px;
+  color: var(--global--color-black);
+  font-weight: 700;
+  border-right: 1px solid #e8eaf1;
+  background: var(--global--color-white);
+}
+
+#Comprison_pricingplan table tbody tr td {
+  vertical-align: middle;
+  font-size: 16px;
+  color: var(--global--color-lightgrey);
+  font-weight: 400;
+  background: var(--global--color-white);
+}
+
+#Comprison_pricingplan table tbody tr:first-child {
+  border-left: none;
+  border-top: 0;
+}
+
+#Comprison_pricingplan table tbody tr:last-child {
+  border-left: none;
+  border-top: 0;
+}
+
+#Comprison_pricingplan table tbody tr:first-child td {
+  border-bottom: 1px solid #e8eaf1;
+}
+
+#Comprison_pricingplan table tbody tr:nth-child(2) {
+  padding-top: 36px;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td {
+  padding-bottom: 33px;
+}
+
+#Comprison_pricingplan table thead th:nth-child(1) {
+  width: 284px;
+}
+
+#Comprison_pricingplan table thead th:nth-child(2),
+#Comprison_pricingplan table thead th:nth-child(3),
+#Comprison_pricingplan table .table thead th:nth-child(4) {
+  width: 275px;
+  padding: 21px 0px;
+}
+
+#Comprison_pricingplan table thead th:nth-child(2) {
+  border-top-left-radius: 15px;
+}
+
+#Comprison_pricingplan table thead th:nth-child(4),
+#Comprison_pricingplan table tbody td:nth-child(4) {
+  border-right: none;
+}
+
+#Comprison_pricingplan table thead th:nth-child(4) {
+  border-top-right-radius: 15px;
+}
+
+#Comprison_pricingplan table tbody tr:first-child td:nth-child(1) {
+  border-top-left-radius: 15px;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td:nth-child(1) {
+  border-bottom-left-radius: 15px;
+}
+
+#Comprison_pricingplan table tbody tr:last-child td:nth-child(4) {
+  border-bottom-right-radius: 15px;
+}
+
+#Comprison_pricingplan table tbody td:first-child td:nth-child(1) {
+  border-bottom: none;
+}
+
+.reseller-table-text {
+  position: absolute;
+  top: -27px;
+  right: 346px;
+  font-size: 14px;
+  padding: 3px 14px 2px 14px;
+  border-radius: 5px 5px 0px 0px;
+  color: var(--global--color-black);
+  background: var(--global--color-skyblue);
+  font-weight: 700;
+}
+
+#Comprison_pricingplan table tbody tr:nth-child(2) td {
+  padding-top: 35px;
+}

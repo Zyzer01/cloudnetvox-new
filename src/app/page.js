@@ -11,6 +11,29 @@ import AwardBadge from '@/components/AwardBadge';
 import BeforeFooter from '@/components/BeforeFooter';
 
 const Home = () => {
+  const card = [
+    {
+      title: 'SSD Cloud Server',
+      sub: 'On sale 56%',
+      price: 9000,
+      duration: '/per month',
+      features: ['Feature1', 'feature1222', 'feature333'],
+    },
+    {
+      title: 'SSD Cloud Server',
+      sub: 'On sale 56%',
+      price: 9000,
+      duration: '/per month',
+      features: ['Feature1', 'feature1222', 'feature333'],
+    },
+    {
+      title: 'SSD Cloud Server',
+      sub: 'On sale 56%',
+      price: 9000,
+      duration: '/per month',
+      features: ['Feature1', 'feature1222', 'feature333'],
+    },
+  ];
   const ctaListItems = [
     'FREE Domain Name for 1st Year',
     'FREE Email Address',
@@ -36,7 +59,7 @@ const Home = () => {
       <Spacer />
       <Features />
       <Spacer />
-      <PricingWithThree />
+      <PricingWithThree showBadge card={card} />
       <Spacer />
       <CtaWithList
         ctaHeading="Up to 70% Discount with FREE Domain Name Registration Included!"

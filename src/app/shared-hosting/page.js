@@ -1,9 +1,129 @@
-import Image from 'next/image'
+'use client';
+import { useContext } from 'react';
+import AltHero from '@/components/AltHero';
+import ComparisonTable from '@/components/ComparisonTable';
+import ComparisonTable2 from '@/components/ComparisonTable2';
+import PackedCta from '@/components/PackedCta';
+import PricingWithThree from '@/components/PricingWithThree';
+import Spacer from '@/components/Spacer';
+import Image from 'next/image';
+import { BiSupport } from 'react-icons/bi';
+import { TbWorldUpload } from 'react-icons/tb';
+import { LuDatabaseBackup } from 'react-icons/lu';
+import { FaMoneyBillTransfer } from 'react-icons/fa6';
+import Faq from '@/components/Faq';
+import { DomainContext } from '@/context/DomainContext';
 
 export default function SharedHosting() {
+  const contextValues = useContext(DomainContext);
+
+  const { domainPrices, hostingPrices } = contextValues;
+
+  console.log(hostingPrices);
+
+  console.log(hostingPrices);
+
+  const card = [
+    {
+      title: 'Lite',
+      // sub: 'On sale 56%',
+      price: 999,
+      duration: '/per month',
+      features: ['Basic resources for starter, with only 1 site capacity'],
+    },
+    {
+      title: 'Premium',
+      // sub: 'On sale 56%',
+      price: 1300,
+      duration: '/per month',
+      features: ['More space and flexibility for multiple sites.'],
+    },
+    {
+      title: 'Extra',
+      // sub: 'On sale 56%',
+      price: 2500,
+      duration: '/per month',
+      features: ['More power for complex sites and heavy traffic.'],
+    },
+  ];
+  const ctaContent = {
+    title: 'Our Guarantees',
+    sub: 'High performance dedicated servers with cloud flexibility and scalability.',
+    desc: 'We guarantee you 99.9% server uptime, steady backups, support if you have any issues 24/7, if you feel you aren&apos;t satisfied, we pledge a 30 Day money back guarantee.',
+  };
+  const guaranteeBox = [
+    {
+      icon: <BiSupport />,
+      boxTitle: 'Award Winning 24/7 Live Support',
+    },
+    {
+      icon: <TbWorldUpload />,
+      boxTitle: '99.99% Network Uptime Guarantee!',
+    },
+    {
+      icon: <LuDatabaseBackup />,
+      boxTitle: 'Daily backups with 1-click restore',
+    },
+    {
+      icon: <FaMoneyBillTransfer />,
+      boxTitle: '30 Day Money Back Guarantee',
+    },
+  ];
+  const questionContent = [
+    {
+      title: 'What is Shared Hosting?',
+      content:
+        'Shared Hosting is one of the most popular hosting packages because it provides an affordable way to get your website online. Shared Hosting works by allowing multiple users to share space on a single server maintained by the hosting provider (CloudNetvox). A Shared Hosting package can include multiple offers or combinations of features as offered by their hosting provider. CloudNetvox Shared Hosting is perfect for blogging, hobbies and small business websites.',
+    },
+    {
+      title: 'What is the difference between Shared vs WordPress Hosting?',
+      content:
+        'Anyone who has a website needs hosting to get their website online. Shared Hosting is a low-cost option for new users that is affordable and can be used with WordPress. Any website hosted through Cloudnetvox automatically has WordPress installed and ready to use. Shared WordPress Hosting is fully integrated with all the WordPress features to include automatic WordPress updates and installation.',
+    },
+    {
+      title: 'What are Shared Hosting Benefits?',
+      content:
+        'When you sign up for a Shared Hosting package, your biggest benefit is purchasing hosting at an affordable price. In addition to various features, our shared hosting platform is managed which means users don’t have to worry about server management and platform patches. When you purchase a CloudNetvox Shared Hosting package it also includes an SSL certificate, domain name and more!',
+    },
+    {
+      title: 'What is the difference between Shared vs VPS Hosting?',
+      content:
+        'When you have a Shared Hosting package you are one of multiple users hosting their website on a web server. This means a specific allotment of resources (RAM, CPU, etc) are not guaranteed for your website. Virtual Private Server (VPS) Hosting provides more space and bandwidth to manage a higher influx of traffic to your website. VPS Hosting allows you to expand a website over time so you can easily scale up your website as it grows. Users have a much higher degree of control with VPS Hosting so you can customize your control configuration as you’d like.',
+    },
+    {
+      title: 'How do I get started with Shared Hosting?',
+      content:
+        'CloudNetvox tries to make it easy for customers to get their website online with the purchase of our hosting packages. When you visit the CloudNetvox website you just have to select your Shared Web Hosting plan. These plans vary in prices and features. Once you select your hosting package we will automatically install the latest version of WordPress for you. Once you’re logged in, it’s time to get your website up and running!',
+    },
+    {
+      title: 'How do I migrate to CloudNetvox?',
+      content:
+        'If you already have a website and are considering changing your web host, then you will need some assistance with migration. CloudNetvox provides a migration service that can assist you in getting all your files transferred securely and correctly. All you have to do is send a mail to support@cloudnetvox.com',
+    },
+  ];
+
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-        <h1>Shared Hosting</h1>
+    <main className="">
+      <AltHero />
+      <Spacer />
+      <PricingWithThree
+        card={card}
+        link="#fullFeatures"
+        heading="Choose Your Shared Hosting Plan"
+        sub="You want a custom hosting plan. No hidden charges."
+      />
+      <Spacer />
+      {/* <ComparisonTable /> */}
+      <Spacer />
+      <ComparisonTable2 />
+      <Spacer />
+      <PackedCta
+        title={ctaContent.title}
+        sub={ctaContent.sub}
+        desc={ctaContent.desc}
+        guaranteeBox={guaranteeBox}
+      />
+      <Faq questionContent={questionContent} />
     </main>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Button from './ui/Button';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const buttonVariants = {
   hidden: {
@@ -28,7 +29,14 @@ const Hero = () => {
             A ton of website hosting options, 99.9% uptime guarantee, free SSL certificate, easy
             WordPress installs.
           </h2>
-          <Button text="View plans" variants={buttonVariants} initial="hidden" animate="visible" />
+          <Link href="/shared-hosting">
+            <Button
+              text="View plans"
+              variants={buttonVariants}
+              initial="hidden"
+              animate="visible"
+            />
+          </Link>
         </div>
         <div className="col-span-3">
           <Image

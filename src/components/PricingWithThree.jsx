@@ -7,31 +7,7 @@ import Link from 'next/link';
 import { IoCheckmarkDone } from 'react-icons/io5';
 import { SlFire } from 'react-icons/sl';
 
-const PricingWithThree = () => {
-  const card = [
-    {
-      title: 'SSD Cloud Server',
-      sub: 'On sale 56%',
-      price: 9000,
-      duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
-    },
-    {
-      title: 'SSD Cloud Server',
-      sub: 'On sale 56%',
-      price: 9000,
-      duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
-    },
-    {
-      title: 'SSD Cloud Server',
-      sub: 'On sale 56%',
-      price: 9000,
-      duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
-    },
-  ];
-
+const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
   const [isYearly, setIsYearly] = useState(false);
   const controls = useAnimation();
 
@@ -39,27 +15,25 @@ const PricingWithThree = () => {
     setIsYearly((prev) => !prev);
 
     controls.start({
-      x: isYearly ? 0 : '100%',
+      x: isYearly ? 0 : '100%', // Updated from '100vw' to '100%' for proper percentage-based animation
       transition: { duration: 0.3 },
     });
   };
 
   return (
     <div className="p-16 md:p-28">
-      <Header
-        heading="Choose Your Web Hosting Plan"
-        sub="You want a custom hosting plan. No hidden charges."
-      />
+      <Header heading={heading} sub={sub} />
       <div className="flex items-center justify-center my-8">
         <span className="mr-2 text-gray-500">Monthly</span>
-        <motion.div
-          className="relative w-12 h-6 bg-gray-300 rounded-full cursor-pointer"
-          onClick={handleToggle}
-          animate={controls}>
-          <motion.div
-            className={`absolute top-0 left-0 w-6 h-6 bg-white rounded-full shadow transition-transform`}
+        <div
+          className="relative inline-block w-12 h-6 bg-gray-300 rounded-full cursor-pointer"
+          onClick={handleToggle}>
+          <div
+            className={`absolute w-6 h-6 rounded-full shadow transition-transform ${
+              isYearly ? 'transform translate-x-full bg-domain' : 'bg-white'
+            }`}
           />
-        </motion.div>
+        </div>
         <span className="ml-2 text-gray-500">Yearly</span>
       </div>
       <div className="grid lg:grid-cols-3 gap-y-8 place-content-center place-items-center py-16 gap-x-8">
@@ -69,7 +43,7 @@ const PricingWithThree = () => {
             className={`z-20  relative shadow-3xl border rounded p-12 w-full hover:bg-sky hover:transition ease-in-out duration-500 ${
               index === 1 && 'bg-sky hover:bg-sky'
             }`}>
-            {index == 1 && (
+            {showBadge && index === 1 && (
               <div className="-z-10 flex justify-center items-center absolute w-40 origin-center rotate-45 top-8 -right-10 text-white bg-green-600 py-1">
                 <SlFire />
                 <p className="mx-2">Popular</p>
@@ -114,7 +88,7 @@ const PricingWithThree = () => {
               ))}
             </div>
             <p className="text-center text-muted hover:text-domain pt-4">
-              <Link href="/new">Click here to see all features</Link>
+              <Link href={link}>Click here to see all features</Link>
             </p>
           </div>
         ))}
