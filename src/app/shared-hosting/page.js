@@ -17,33 +17,34 @@ import { DomainContext } from '@/context/DomainContext';
 export default function SharedHosting() {
   const contextValues = useContext(DomainContext);
 
-  const { domainPrices, hostingPrices } = contextValues;
+  const { webHostingPrices } = contextValues;
 
-  console.log(hostingPrices);
-
-  console.log(hostingPrices);
+  const [lite, premium, extra] = webHostingPrices;
 
   const card = [
     {
       title: 'Lite',
       // sub: 'On sale 56%',
-      price: 999,
+      price: lite.price,
       duration: '/per month',
       features: ['Basic resources for starter, with only 1 site capacity'],
+      link: '#fullFeatures',
     },
     {
       title: 'Premium',
       // sub: 'On sale 56%',
-      price: 1300,
+      price: premium.price,
       duration: '/per month',
       features: ['More space and flexibility for multiple sites.'],
+      link: '#fullFeatures',
     },
     {
       title: 'Extra',
       // sub: 'On sale 56%',
-      price: 2500,
+      price: extra.price,
       duration: '/per month',
       features: ['More power for complex sites and heavy traffic.'],
+      link: '#fullFeatures',
     },
   ];
   const ctaContent = {
@@ -104,11 +105,14 @@ export default function SharedHosting() {
 
   return (
     <main className="">
-      <AltHero />
+      <AltHero
+        pageTitle="Shared Hosting"
+        pageSub="Powerful Cloud servers built from scratch with SSD storage"
+        breadcrumb="Shared Hosting"
+      />
       <Spacer />
       <PricingWithThree
         card={card}
-        link="#fullFeatures"
         heading="Choose Your Shared Hosting Plan"
         sub="You want a custom hosting plan. No hidden charges."
       />

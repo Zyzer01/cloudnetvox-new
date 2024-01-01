@@ -58,9 +58,9 @@ const plans = [
 const ComparisonTable2 = () => {
   const contextValues = useContext(DomainContext);
 
-  const { domainPrices, hostingPrices } = contextValues;
+  const { webHostingPrices } = contextValues;
 
-  const [lite, premium, extra] = hostingPrices;
+  const [lite, premium, extra] = webHostingPrices;
 
   return (
     <div className="flex justify-center p-16 md:p-28">

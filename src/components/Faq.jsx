@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from './Header';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import { AnimatePresence, motion } from 'framer-motion';
+import { v1 as uuidv1 } from 'uuid';
 
 const Item = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,34 +24,38 @@ const Item = ({ title, content }) => {
           <MdKeyboardDoubleArrowDown />
         </p>
       </button>
-      {isOpen && (
-        <div className="p-4 pt-0">
-          <AnimatePresence mode="wait">
-            <motion.p
-              className="text-gray-700"
-              initial="collapsed"
-              animate={isOpen ? 'open' : 'collapsed'}
-              variants={{
-                open: { opacity: 1, height: 'auto' },
-                collapsed: { opacity: 0, height: 0 },
-              }}
-              transition={{ duration: 0.3 }}
-              exit={{ collapsed: { opacity: 0, height: 0 } }}>
-              {content}
-            </motion.p>
-          </AnimatePresence>
-        </div>
-      )}
+      <AnimatePresence mode="visible">
+        {isOpen && (
+          <motion.div
+            key={uuidv1()}
+            layout
+            initial={{ opacity: 0, transform: 'scaleY(0)' }}
+            animate={{ opacity: 1, transform: 'scaleY(1)', height: 'auto' }}
+            exit={{ opacity: 0, transform: 'scaleY(0)', height: 0 }}
+            transition={{
+              type: 'spring',
+              ease: 'easeInOut',
+              duration: 0.4,
+              animate: {
+                start: { opacity: 0, height: 0 },
+                end: { opacity: 1, height: 'auto' },
+              },
+            }}
+            className="p-4 pt-0 overflow-hidden">
+            <p className="text-gray-700">{content}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
 const Faq = ({ questionContent }) => {
   return (
-    <div class="p-16 md:p-28 mx-auto">
+    <div className="p-16 md:p-28 mx-auto">
       <Header heading="Frequently Asked Questions" sub="See if your questions is answered" />
-      <div class="max-w-xl sm:mx-auto lg:max-w-3xl">
-        <div class="space-y-4">
+      <div className="max-w-xl sm:mx-auto lg:max-w-3xl">
+        <div className="space-y-4">
           {questionContent.map((item, index) => (
             <Item key={index} title={item.title} content={item.content}></Item>
           ))}

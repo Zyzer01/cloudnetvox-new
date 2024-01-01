@@ -1,3 +1,5 @@
+'use client';
+import { useContext } from 'react';
 import Hero from '@/components/Hero';
 import DomainSearchBox from '@/components/DomainSearchBox';
 import Patners from '@/components/Patners';
@@ -9,29 +11,48 @@ import RegularCta from '@/components/RegularCta';
 import Reviews from '@/components/Reviews';
 import AwardBadge from '@/components/AwardBadge';
 import BeforeFooter from '@/components/BeforeFooter';
+import { DomainContext } from '@/context/DomainContext';
 
 const Home = () => {
+  const contextValues = useContext(DomainContext);
+
+  const { cloudServers } = contextValues;
+
+  const [ssd, shared, dedicated] = cloudServers;
   const card = [
     {
-      title: 'SSD Cloud Server',
+      title: ssd.name,
       sub: 'On sale 56%',
-      price: 9000,
+      price: ssd.price,
       duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
+      features: [
+        'Enjoy flexibility',
+        ' Increased power for your websites',
+        'Unlimited Bandwidth',
+        ' 2X Processing Power & Memory',
+      ],
+      link: '/cloud-servers',
     },
     {
-      title: 'SSD Cloud Server',
+      title: shared.name,
       sub: 'On sale 56%',
-      price: 9000,
+      price: shared.price,
       duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
+      features: [' 1 Website', '10,000 visits', '5 GB disk space', 'Free SSL & Sitelock'],
+      link: '/shared-hosting',
     },
     {
-      title: 'SSD Cloud Server',
+      title: dedicated.name,
       sub: 'On sale 56%',
-      price: 9000,
+      price: dedicated.price,
       duration: '/per month',
-      features: ['Feature1', 'feature1222', 'feature333'],
+      features: [
+        'Always-on, 24/7 Fully-Managed',
+        'Bare metal servers',
+        'Root access for complete control',
+        'Flexible Server Configurations',
+      ],
+      link: 'https://cloudnetvox.com/clients/contact.php',
     },
   ];
   const ctaListItems = [
@@ -59,7 +80,12 @@ const Home = () => {
       <Spacer />
       <Features />
       <Spacer />
-      <PricingWithThree showBadge card={card} />
+      <PricingWithThree
+        showBadge
+        card={card}
+        heading="Choose Your Web Hosting Plan"
+        sub="You want custom hosting plan. No hidden charge."
+      />
       <Spacer />
       <CtaWithList
         ctaHeading="Up to 70% Discount with FREE Domain Name Registration Included!"

@@ -23,7 +23,7 @@ const DomainContextProvider = ({ children }) => {
     },
   ];
 
-  const hostingPrices = [
+  const webHostingPrices = [
     {
       name: 'Lite',
       price: 999,
@@ -38,9 +38,24 @@ const DomainContextProvider = ({ children }) => {
     },
   ];
 
+  const cloudServers = [
+    {
+      name: 'SSD Cloud Server',
+      price: 9000,
+    },
+    {
+      name: 'Shared Hosting',
+      price: 999,
+    },
+    {
+      name: 'Dedicated Servers',
+      price: 60000,
+    },
+  ];
   const contextValues = {
     domainPrices,
-    hostingPrices,
+    webHostingPrices,
+    cloudServers,
   };
 
   return <DomainContext.Provider value={contextValues}>{children}</DomainContext.Provider>;

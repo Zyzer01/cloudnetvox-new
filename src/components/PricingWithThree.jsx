@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { IoCheckmarkDone } from 'react-icons/io5';
 import { SlFire } from 'react-icons/sl';
 
-const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
+const PricingWithThree = ({ showBadge, card, heading, sub }) => {
   const [isYearly, setIsYearly] = useState(false);
   const controls = useAnimation();
 
@@ -15,7 +15,7 @@ const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
     setIsYearly((prev) => !prev);
 
     controls.start({
-      x: isYearly ? 0 : '100%', // Updated from '100vw' to '100%' for proper percentage-based animation
+      x: isYearly ? 0 : '100%',
       transition: { duration: 0.3 },
     });
   };
@@ -44,11 +44,9 @@ const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
               index === 1 && 'bg-sky hover:bg-sky'
             }`}>
             {showBadge && index === 1 && (
-              <div className="-z-10 flex justify-center items-center absolute w-40 origin-center rotate-45 top-8 -right-10 text-white bg-green-600 py-1">
-                <SlFire />
-                <p className="mx-2">Popular</p>
-                <SlFire />
-              </div>
+              <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border border-primary shadow-md bg-white text-center text-gray-700 text-sm font-semibold">
+                Most popular
+              </span>
             )}
             <div className="text-center">
               <h3 className="font-medium text-2xl">{item.title}</h3>
@@ -73,7 +71,9 @@ const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
                 </motion.h3>
               </AnimatePresence>
               <p className="text-muted mb-5">{isYearly ? '/per year' : '/per month'}</p>
-              <ButtonV2 text="Buy now" isFullWidth />
+              <Link href={item.link}>
+                <ButtonV2 text="Buy now" isFullWidth />
+              </Link>
             </div>
 
             <div>
@@ -88,7 +88,7 @@ const PricingWithThree = ({ showBadge, card, link, heading, sub }) => {
               ))}
             </div>
             <p className="text-center text-muted hover:text-domain pt-4">
-              <Link href={link}>Click here to see all features</Link>
+              <Link href={item.link}>Click here to see all features</Link>
             </p>
           </div>
         ))}
