@@ -2,8 +2,18 @@ import React from 'react';
 import Header from './Header';
 import { SlCloudUpload } from 'react-icons/sl';
 import { HiOutlineAdjustmentsVertical } from 'react-icons/hi2';
+import { motion } from 'framer-motion';
 
 const Features = () => {
+  const sleekShowVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    onScreen: {
+      opacity: 1,
+      transition: { duration: 1.5 },
+    },
+  };
   const featureContent = [
     {
       title: '99% Uptime',
@@ -50,7 +60,12 @@ const Features = () => {
       />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center py-16 gap-y-16 gap-x-4">
         {featureContent.map((item, index) => (
-          <div className="flex" key={index}>
+          <motion.div
+            className="flex"
+            key={index}
+            variants={sleekShowVariants}
+            initial="hidden"
+            whileInView="onScreen">
             <div className="mr-7">
               <p className="text-4xl text-domain">{item.icon}</p>
             </div>
@@ -58,7 +73,7 @@ const Features = () => {
               <h3 className="text-2xl mb-2">{item.title}</h3>
               <p className="text-muted">{item.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

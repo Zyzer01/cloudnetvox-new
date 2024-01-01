@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import { Archivo } from 'next/font/google';
 import './globals.css';
 import Footer from '../components/Footer';
@@ -15,7 +16,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={archivo.className}>
         <DomainContextProvider>
-          {children}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={typeof window !== 'undefined' ? window.location.pathname : ''}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.3 }}>
+              {children}
+            </motion.div>
+          </AnimatePresence>
           <Footer />
         </DomainContextProvider>
       </body>

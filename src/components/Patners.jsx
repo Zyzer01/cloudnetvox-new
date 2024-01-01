@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Patners = () => {
   const patnerLogos = [
@@ -23,14 +24,17 @@ const Patners = () => {
       <div className="py-16">
         <Marquee>
           {patnerLogos.map((logo, index) => (
-            <Image
-              className="w-24 mr-16"
+            <motion.div
               key={index}
-              src={logo}
-              width={280}
-              height={200}
-              alt={`logo ${index + 1}`}
-            />
+              whileHover={{ scale: 1.1, transition: { ease: 'easeIn', duration: 0.3 } }}>
+              <Image
+                className="w-24 mr-16"
+                src={logo}
+                width={280}
+                height={200}
+                alt={`logo ${index + 1}`}
+              />
+            </motion.div>
           ))}
         </Marquee>
       </div>

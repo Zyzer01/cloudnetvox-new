@@ -8,6 +8,25 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
   const [isYearly, setIsYearly] = useState(false);
   const controls = useAnimation();
 
+  const cardHoverVariants = {
+    initial: {
+      y: 0,
+      opacity: 0,
+    },
+    hover: {
+      y: -5,
+      boxShadow: '0 30px 30px rgba(24, 27, 34, 0.10)', // Add a drop shadow
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut',
+      },
+    },
+    onScreen: {
+      opacity: 1,
+      transition: { duration: 1.5 },
+    },
+  };
+
   const handleToggle = () => {
     setIsYearly((prev) => !prev);
 
@@ -16,6 +35,7 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
       transition: { duration: 0.3 },
     });
   };
+
   return (
     <div>
       <Header heading={heading} sub={sub} />
@@ -36,7 +56,11 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
       )}
       <div className="grid lg:grid-cols-3 gap-y-8 place-content-center place-items-center gap-x-8 px-16 md:px-28">
         {pricingCards.map((item, index) => (
-          <div
+          <motion.div
+            initial="initial"
+            whileHover="hover"
+            variants={cardHoverVariants}
+            whileInView="onScreen"
             key={index}
             className="relative shadow-3xl border rounded-xl p-12 w-full ease-in-out duration-500">
             <div className="flex flex-col space-y-5">
@@ -72,7 +96,7 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
                 <ButtonV2 text={buttonText} />
               </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

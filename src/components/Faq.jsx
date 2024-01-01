@@ -52,16 +52,18 @@ const Item = ({ title, content }) => {
 
 const Faq = ({ questionContent }) => {
   return (
-    <div className="p-16 md:p-28 mx-auto">
+    <>
       <Header heading="Frequently Asked Questions" sub="See if your questions are answered" />
-      <div className="max-w-xl sm:mx-auto lg:max-w-3xl">
-        <div className="space-y-4">
-          {questionContent.map((item, index) => (
-            <Item key={index} title={item.title} content={item.content}></Item>
-          ))}
+      <div className="p-16 md:py-16 md:px-28 mx-auto">
+        <div className="max-w-xl sm:mx-auto lg:max-w-3xl">
+          <div className="space-y-4">
+            {questionContent.map((item, index) => (
+              <Item key={index} title={item.title} content={item.content}></Item>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

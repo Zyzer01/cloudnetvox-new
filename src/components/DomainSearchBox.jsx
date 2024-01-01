@@ -1,15 +1,35 @@
 'useClient';
 import { useContext } from 'react';
 import { DomainContext } from '@/context/DomainContext';
+import { animate, motion } from 'framer-motion';
 
-const DomainSearchBox = () => {
+const DomainSearchBox = ({ enableAnimation }) => {
   const contextValues = useContext(DomainContext);
 
   const { domainPrices } = contextValues;
 
   const [com, net, info] = domainPrices;
+
+  const cardVariants = {
+    offscreen: {
+      y: enableAnimation ? 300 : 0,
+    },
+    onscreen: {
+      y: 50,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        duration: 0.3,
+      },
+    },
+  };
   return (
-    <div className="p-16 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8">
+    <motion.div
+      className="p-16 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
+      variants={cardVariants}
+      initial="offscreen"
+      whileInView={enableAnimation && 'onscreen'}
+      viewport={{ once: true, amount: 0.8 }}>
       <div className="col-span-3 md:col-span-1">
         <h2 className="text-4xl font-medium leading-snug">Find Your Perfect Domain Name </h2>
         <p className="text-muted mt-3 font-medium">There are no limits, make the search!</p>
@@ -64,7 +84,7 @@ const DomainSearchBox = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

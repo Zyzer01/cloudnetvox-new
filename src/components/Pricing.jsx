@@ -19,6 +19,16 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
     });
   };
 
+  const sleekShowVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    onScreen: {
+      opacity: 1,
+      transition: { duration: 1.5 },
+    },
+  };
+
   return (
     <div className="p-16 md:p-28">
       <Header heading={heading} sub={sub} />
@@ -40,7 +50,10 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
           isFourCols && 'lg:grid-cols-4'
         } gap-y-8 place-content-center place-items-center py-16 gap-x-8`}>
         {card.map((item, index) => (
-          <div
+          <motion.div
+            variants={sleekShowVariants}
+            initial="hidden"
+            whileInView="onScreen"
             key={index}
             className={`z-20  relative shadow-3xl border rounded ${
               isFourCols ? 'p-8' : 'p-12'
@@ -111,7 +124,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
                 <Link href={item.link}>Click here to see all features</Link>
               </p>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

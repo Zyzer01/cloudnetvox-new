@@ -77,7 +77,7 @@ const Home = () => {
   return (
     <main className="">
       <Hero />
-      <DomainSearchBox />
+      <DomainSearchBox enableAnimation />
       <Spacer />
       <Patners />
       <Spacer />
