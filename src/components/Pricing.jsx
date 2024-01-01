@@ -37,7 +37,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
       </div>
       <div
         className={`grid lg:grid-cols-3 ${
-          isFourCols && 'lg:grid-cols-3'
+          isFourCols && 'lg:grid-cols-4'
         } gap-y-8 place-content-center place-items-center py-16 gap-x-8`}>
         {card.map((item, index) => (
           <div
@@ -69,7 +69,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 2,
                     currency: 'NGN',
-                  }).format(isYearly ? item.price * 12 : item.price)}
+                  }).format(isYearly && isFourCols ? item.price * 12 : item.price)}
                 </motion.h3>
               </AnimatePresence>
               <p className="text-muted mb-5">{isYearly ? '/per year' : '/per month'}</p>

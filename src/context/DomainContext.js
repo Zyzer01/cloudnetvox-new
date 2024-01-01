@@ -64,10 +64,33 @@ const DomainContextProvider = ({ children }) => {
       price: 60000,
     },
   ];
+  const ssdCloudServers = [
+    {
+      name: 'lite',
+      globalPrice: 9000,
+      localPrice: 29250,
+    },
+    {
+      name: 'premium',
+      globalPrice: 23000,
+      localPrice: 45000,
+    },
+    {
+      name: 'premium',
+      globalPrice: 23000,
+      localPrice: 65000,
+    },
+    {
+      name: 'gold',
+      globalPrice: 80000,
+      localPrice: 100500,
+    },
+  ];
   const contextValues = {
     domainPrices,
     webHostingPrices,
     cloudServers,
+    ssdCloudServers,
   };
 
   return <DomainContext.Provider value={contextValues}>{children}</DomainContext.Provider>;

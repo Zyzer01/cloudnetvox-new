@@ -21,7 +21,7 @@ import { GrServerCluster } from 'react-icons/gr';
 export default function SharedHosting() {
   const contextValues = useContext(DomainContext);
 
-  const { webHostingPrices } = contextValues;
+  const { webHostingPrices, ssdCloudServers } = contextValues;
 
   const [lite, premium, extra] = webHostingPrices;
 
