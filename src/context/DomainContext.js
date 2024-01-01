@@ -66,22 +66,22 @@ const DomainContextProvider = ({ children }) => {
   ];
   const ssdCloudServers = [
     {
-      name: 'lite',
+      name: 'Lite',
       globalPrice: 9000,
       localPrice: 29250,
     },
     {
-      name: 'premium',
+      name: 'Premium',
       globalPrice: 23000,
       localPrice: 45000,
     },
     {
-      name: 'premium',
+      name: 'Extra',
       globalPrice: 23000,
       localPrice: 65000,
     },
     {
-      name: 'gold',
+      name: 'Gold',
       globalPrice: 80000,
       localPrice: 100500,
     },

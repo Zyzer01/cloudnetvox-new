@@ -32,6 +32,7 @@ const Home = () => {
         ' 2X Processing Power & Memory',
       ],
       link: '/cloud-servers',
+      buttonText: 'Buy now',
     },
     {
       title: shared.name,
@@ -40,6 +41,7 @@ const Home = () => {
       duration: '/per month',
       features: [' 1 Website', '10,000 visits', '5 GB disk space', 'Free SSL & Sitelock'],
       link: '/shared-hosting',
+      buttonText: 'Buy now',
     },
     {
       title: dedicated.name,
@@ -53,6 +55,7 @@ const Home = () => {
         'Flexible Server Configurations',
       ],
       link: 'https://cloudnetvox.com/clients/contact.php',
+      buttonText: 'Buy now',
     },
   ];
   const ctaListItems = [
@@ -85,6 +88,8 @@ const Home = () => {
         card={card}
         heading="Choose Your Web Hosting Plan"
         sub="You want custom hosting plan. No hidden charge."
+        option1="Monthly"
+        option2="Yearly"
       />
       <Spacer />
       <CtaWithList
@@ -103,6 +108,7 @@ const Home = () => {
         ctaImageSrc={ctaImageSrc[1]}
         hideImage
         link="/new"
+        showButton
       />
       <RegularCta
         heading="More Speed Less Downtime"
@@ -111,6 +117,7 @@ const Home = () => {
         ctaImageSrc={ctaImageSrc[2]}
         hideImage
         link="/new"
+        showButton
       />
       <div className="bg-primary text-white">
         <RegularCta
@@ -121,6 +128,7 @@ const Home = () => {
           ctaImageSrc={ctaImageSrc[3]}
           darkBg={true}
           link="/new"
+          showButton
         />
       </div>
       <Spacer />

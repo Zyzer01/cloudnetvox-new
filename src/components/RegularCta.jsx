@@ -12,9 +12,10 @@ const RegularCta = ({
   darkBg,
   hideImage,
   link,
+  showButton,
 }) => {
   return (
-    <div className="grid md:grid-cols-2 p-16 md:p-28 gap-x-8 gap-y-8 place-items-center place-content-center">
+    <div className="grid md:grid-cols-2 px-16 py-8 md:py-16 md:px-28 gap-x-8 gap-y-8 place-items-center place-content-center">
       {isReversed ? (
         <>
           <div>
@@ -22,27 +23,31 @@ const RegularCta = ({
             <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
               {description}
             </p>
-            <Link href={link}>
-              <ButtonV2 text={buttonText} />
-            </Link>
+            {showButton && (
+              <Link href={link}>
+                <ButtonV2 text={buttonText} />
+              </Link>
+            )}
           </div>
           <div className={`${hideImage && 'hidden md:block'}`}>
-            <Image src={ctaImageSrc} width={500} height={400} alt={heading} />
+            <Image src={ctaImageSrc} width={400} height={350} alt={heading} />
           </div>
         </>
       ) : (
         <>
           <div className={`${hideImage && 'hidden md:block'}`}>
-            <Image src={ctaImageSrc} width={500} height={400} alt={heading} />
+            <Image src={ctaImageSrc} width={400} height={350} alt={heading} />
           </div>
           <div>
             <h3 className="text-3xl my-3">{heading}</h3>
             <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
               {description}
             </p>
-            <Link href={link}>
-              <ButtonV2 text={buttonText} />
-            </Link>
+            {showButton && (
+              <Link href={link}>
+                <ButtonV2 text={buttonText} />
+              </Link>
+            )}
           </div>
         </>
       )}

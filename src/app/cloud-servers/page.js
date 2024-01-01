@@ -6,62 +6,118 @@ import Pricing from '@/components/Pricing';
 import Spacer from '@/components/Spacer';
 import React from 'react';
 import { DomainContext } from '@/context/DomainContext';
+import RegularCta from '@/components/RegularCta';
+import Image from 'next/image';
+import BeforeFooter from '@/components/BeforeFooter';
+import Brag from '@/components/Brag';
+import { BiSupport } from 'react-icons/bi';
+import { FaMoneyBillTransfer } from 'react-icons/fa6';
+import { LuDatabaseBackup } from 'react-icons/lu';
+import { TbWorldUpload } from 'react-icons/tb';
 
 const CloudServers = () => {
   const contextValues = useContext(DomainContext);
   const { ssdCloudServers } = contextValues;
-  const { global, local } = ssdCloudServers;
-  console.log(global);
+  const [lite, premium, extra, gold] = ssdCloudServers;
+
+  console.log(lite);
 
   const card = [
     {
-      title: 'ssd.name',
+      title: lite.name,
       sub: 'On sale 56%',
-      price: 556,
+      localPrice: lite.localPrice,
+      globalPrice: lite.globalPrice,
       duration: '/per month',
       features: [
-        'Enjoy flexibility',
-        ' Increased power for your websites',
-        'Unlimited Bandwidth',
-        ' 2X Processing Power & Memory',
+        'Free Setup',
+        '1GB Memory Space',
+        '1 core CPU',
+        '30GB SSD Disk Space',
+        '1TB Bandwidth',
+        'Test IP On-Demand',
       ],
       link: '/cloud-servers',
+      buttonText: 'Choose Plan',
     },
     {
-      title: 'shared.name',
+      title: premium.name,
       sub: 'On sale 56%',
-      price: 25,
+      localPrice: premium.localPrice,
+      globalPrice: premium.globalPrice,
       duration: '/per month',
-      features: [' 1 Website', '10,000 visits', '5 GB disk space', 'Free SSL & Sitelock'],
+      features: [
+        'Free Setup',
+        '4GB Memory Space',
+        '2 cores CPU',
+        '70GB SSD Disk Space',
+        '2TB Bandwidth',
+        'Test IP On-Demand',
+      ],
       link: '/shared-hosting',
+      buttonText: 'Choose Plan',
     },
     {
-      title: 'dedicated.name',
+      title: extra.name,
       sub: 'On sale 56%',
-      price: 123,
+      localPrice: extra.localPrice,
+      globalPrice: extra.globalPrice,
       duration: '/per month',
       features: [
-        'Always-on, 24/7 Fully-Managed',
-        'Bare metal servers',
-        'Root access for complete control',
-        'Flexible Server Configurations',
+        'Free Setup',
+        '8GB Memory Space',
+        '4 cores CPU',
+        '150GB SSD Disk Space',
+        '3TB Bandwidth',
+        'Test IP On-Demand',
       ],
       link: 'https://cloudnetvox.com/clients/contact.php',
+      buttonText: 'Choose Plan',
     },
     {
-      title: 'dedicated.name',
+      title: gold.name,
       sub: 'On sale 56%',
-      price: 123,
+      localPrice: gold.localPrice,
+      globalPrice: gold.globalPrice,
       duration: '/per month',
       features: [
-        'Always-on, 24/7 Fully-Managed',
-        'Bare metal servers',
-        'Root access for complete control',
-        'Flexible Server Configurations',
+        'Free Setup',
+        '16GB Memory Space',
+        '6 cores CPU',
+        '300GB SSD Disk Space',
+        '5TB Bandwidth',
+        'Test IP On-Demand',
       ],
       link: 'https://cloudnetvox.com/clients/contact.php',
+      buttonText: 'Choose Plan',
     },
   ];
+
+  const ctaImageSrc = [
+    '/images/dedicated server feature network illustration.svg',
+    '/images/cloud technology feature.svg',
+    '/images/flexible root option.svg',
+  ];
+
+  const guaranteeBox = [
+    {
+      icon: <BiSupport />,
+      boxTitle: 'Award Winning 24/7 Live Support',
+    },
+    {
+      icon: <TbWorldUpload />,
+      boxTitle: '99.99% Network Uptime Guarantee!',
+    },
+    {
+      icon: <LuDatabaseBackup />,
+      boxTitle: 'Daily backups with 1-click restore',
+    },
+    {
+      icon: <FaMoneyBillTransfer />,
+      boxTitle: '30 Day Money Back Guarantee',
+    },
+  ];
+
   return (
     <main className="">
       <AltHero
@@ -70,7 +126,61 @@ const CloudServers = () => {
         breadcrumb="Cloud Servers"
       />
       <Spacer />
-      <Pricing card={card} isFourCols />
+      <Pricing
+        card={card}
+        isFourCols
+        showBadge
+        option1="Global"
+        option2="Nigeria"
+        heading="Choose Your Cloud Hosting Plan"
+        sub="Scale your online presence with flexible cloud hosting designed for performance and growth."
+      />
+      <Spacer />
+      <div>
+        <div className="bg-sky p-16 lg:p-28 ">
+          <div className="bg-white xl:p-16 rounded-3xl">
+            <RegularCta
+              heading="Multi-Server Management"
+              description="Need more than one server? You can add more VPS, or even Shared and Dedicated hosting services to your account and effortlessly manage everything in one convenient location."
+              ctaImageSrc={ctaImageSrc[0]}
+              link="/new"
+              hideImage
+            />
+            <RegularCta
+              heading="Cloud Technology"
+              description="
+              Cloud Technology
+              We work with industry leaders like Intel and AMD to continually evaluate our VPS platform to maintain optimal performance. Our packages are among the fastest VPS hosting available."
+              ctaImageSrc={ctaImageSrc[1]}
+              link="/new"
+              isReversed
+              hideImage
+            />
+            <RegularCta
+              heading="Flexible Root Options"
+              description="Full root access gives you more control over your environment, allowing for custom script or application installs on your Virtual Private Server, also enjoy Easy scalability."
+              ctaImageSrc={ctaImageSrc[2]}
+              link="/new"
+              hideImage
+            />
+          </div>
+        </div>
+        <div className="welcome-pattern -mt-8 md:-mt-16 w-full">
+          <Image
+            className="w-full"
+            width={2000}
+            height={2000}
+            src={'/images/welcome-pattern.png'}
+            alt="zig zag clouds illustration"
+          />
+        </div>
+      </div>
+      <Brag
+        guaranteeBox={guaranteeBox}
+        heading="Why Choose Us?"
+        sub="Our customizable and scalable platform delivers everything your website needs."
+      />
+      <BeforeFooter />
     </main>
   );
 };

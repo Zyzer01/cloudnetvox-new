@@ -116,7 +116,7 @@ export default function SharedHosting() {
         isWithToggle
         pricingCards={pricingCards}
         heading="Choose Your Shared Hosting Plan"
-        sub="You want a custom hosting plan. No hidden charges."
+        sub="Start your online journey with our shared hosting — reliable, affordable, and perfect for getting your website up and running."
         buttonText="Order Now"
       />
       <Spacer />

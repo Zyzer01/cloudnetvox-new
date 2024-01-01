@@ -6,7 +6,7 @@ import ButtonV2 from './ui/ButtonV2';
 import Link from 'next/link';
 import { IoCheckmarkDone } from 'react-icons/io5';
 
-const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
+const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }) => {
   const [isYearly, setIsYearly] = useState(false);
   const controls = useAnimation();
 
@@ -22,8 +22,8 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
   return (
     <div className="p-16 md:p-28">
       <Header heading={heading} sub={sub} />
-      <div className="flex items-center justify-center my-8">
-        <span className="mr-2 text-gray-500">Monthly</span>
+      <div className="flex items-center justify-center mt-8 mb-12">
+        <span className="mr-2 text-gray-900 font-bold">{option1}</span>
         <div
           className="relative inline-block w-12 h-6 bg-gray-300 rounded-full cursor-pointer"
           onClick={handleToggle}>
@@ -33,7 +33,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
             }`}
           />
         </div>
-        <span className="ml-2 text-gray-500">Yearly</span>
+        <span className="ml-2 text-gray-900 font-bold">{option2}</span>
       </div>
       <div
         className={`grid lg:grid-cols-3 ${
@@ -42,7 +42,9 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
         {card.map((item, index) => (
           <div
             key={index}
-            className={`z-20  relative shadow-3xl border rounded p-12 w-full hover:bg-sky hover:transition ease-in-out duration-500 ${
+            className={`z-20  relative shadow-3xl border rounded ${
+              isFourCols ? 'p-8' : 'p-12'
+            } w-full hover:bg-sky hover:transition ease-in-out duration-500 ${
               index === 1 && 'bg-sky hover:bg-sky'
             }`}>
             {showBadge && index === 1 && (
@@ -58,23 +60,38 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
               <AnimatePresence mode="wait">
                 <motion.h3
                   key={isYearly ? 'yearly' : 'monthly'}
-                  className="text-5xl text-domain tracking-wide font-medium"
+                  className={`text-domain tracking-wide font-medium ${
+                    isFourCols ? 'text-3xl' : 'text-5xl'
+                  }`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}>
-                  <span className="italic relative text-2xl -top-4">₦</span>
-                  {new Intl.NumberFormat('en-US', {
-                    style: 'decimal',
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 2,
-                    currency: 'NGN',
-                  }).format(isYearly && isFourCols ? item.price * 12 : item.price)}
+                  <span className={`italic relative text-2xl  ${isFourCols ? '-top-2' : '-top-4'}`}>
+                    ₦
+                  </span>
+                  {isFourCols
+                    ? new Intl.NumberFormat('en-US', {
+                        style: 'decimal',
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 2,
+                        currency: 'NGN',
+                      }).format(isYearly ? item.localPrice : item.globalPrice)
+                    : new Intl.NumberFormat('en-US', {
+                        style: 'decimal',
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 2,
+                        currency: 'NGN',
+                      }).format(isYearly ? item.price * 12 : item.price)}
                 </motion.h3>
               </AnimatePresence>
-              <p className="text-muted mb-5">{isYearly ? '/per year' : '/per month'}</p>
+              {isFourCols ? (
+                <p className="text-muted mb-5">/month</p>
+              ) : (
+                <p className="text-muted mb-5">{isYearly ? '/per year' : '/per month'}</p>
+              )}
               <Link href={item.link}>
-                <ButtonV2 text="Buy now" isFullWidth />
+                <ButtonV2 text={item.buttonText} isFullWidth />
               </Link>
             </div>
 
@@ -89,9 +106,11 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols }) => {
                 </p>
               ))}
             </div>
-            <p className="text-center text-muted hover:text-domain pt-4">
-              <Link href={item.link}>Click here to see all features</Link>
-            </p>
+            {!isFourCols && (
+              <p className="text-center text-muted hover:text-domain pt-4">
+                <Link href={item.link}>Click here to see all features</Link>
+              </p>
+            )}
           </div>
         ))}
       </div>

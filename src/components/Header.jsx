@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({ heading, sub }) => {
   return (
-    <div className="text-center grid grid-cols-6 mb-10">
+    <div className="text-center grid grid-cols-6">
       <div></div>
       <div className="col-span-6 md:col-span-4">
         <h2 className="text-3xl md:text-4xl text-heading py-4">{heading}</h2>
