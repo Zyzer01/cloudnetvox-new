@@ -11,7 +11,7 @@ const Features = () => {
     },
     onScreen: {
       opacity: 1,
-      transition: { duration: 1.5 },
+      transition: { duration: 1 },
     },
   };
   const featureContent = [

@@ -15,11 +15,11 @@ const RegularCta = ({
   showButton,
 }) => {
   return (
-    <div className="grid md:grid-cols-2 px-16 py-8 md:py-16 md:px-28 gap-x-8 gap-y-8 place-items-center place-content-center">
+    <div className="grid md:grid-cols-2 p-16 md:px-28 gap-x-8 gap-y-8 text-center sm:text-left place-items-center place-content-center">
       {isReversed ? (
         <>
           <div>
-            <h3 className="text-3xl my-3">{heading}</h3>
+            <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
               {description}
             </p>
@@ -39,7 +39,7 @@ const RegularCta = ({
             <Image src={ctaImageSrc} width={400} height={350} alt={heading} />
           </div>
           <div>
-            <h3 className="text-3xl my-3">{heading}</h3>
+            <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
               {description}
             </p>

@@ -10,7 +10,7 @@ const CtaWithList = ({ ctaHeading, ctaImageSrc, altText, buttonText, ctaListItem
         <Image src={ctaImageSrc} alt={altText} width={525} height={460} />
       </div>
       <div>
-        <h3 className="text-3xl">{ctaHeading}</h3>
+        <h3 className="text-2xl md:text-3xl">{ctaHeading}</h3>
         <div className="py-4">
           {ctaListItems.map((item, index) => (
             <p key={index} className="flex items-center my-4">

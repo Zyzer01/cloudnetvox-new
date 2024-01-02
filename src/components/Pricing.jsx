@@ -25,12 +25,12 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
     },
     onScreen: {
       opacity: 1,
-      transition: { duration: 1.5 },
+      transition: { duration: 1 },
     },
   };
 
   return (
-    <div className="p-16 md:p-28">
+    <div className="p-16 md:px-28">
       <Header heading={heading} sub={sub} />
       <div className="flex items-center justify-center mt-8 mb-12">
         <span className="mr-2 text-gray-900 font-bold">{option1}</span>
@@ -46,9 +46,9 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
         <span className="ml-2 text-gray-900 font-bold">{option2}</span>
       </div>
       <div
-        className={`grid lg:grid-cols-3 ${
-          isFourCols && 'lg:grid-cols-4'
-        } gap-y-8 place-content-center place-items-center py-16 gap-x-8`}>
+        className={`grid grid-cols-1 lg:grid-cols-3 ${
+          isFourCols && 'md:grid-cols-2 lg:grid-cols-4'
+        } gap-y-16 place-content-center place-items-center gap-x-8`}>
         {card.map((item, index) => (
           <motion.div
             variants={sleekShowVariants}

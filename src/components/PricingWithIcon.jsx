@@ -37,7 +37,7 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
   };
 
   return (
-    <div>
+    <div className="p-16 md:px-28">
       <Header heading={heading} sub={sub} />
       {isWithToggle && (
         <div className="flex items-center justify-center mt-8 mb-12">
@@ -54,7 +54,7 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
           <span className="ml-2 text-gray-900 font-bold">Yearly</span>
         </div>
       )}
-      <div className="grid lg:grid-cols-3 gap-y-8 place-content-center place-items-center gap-x-8 px-16 md:px-28">
+      <div className="grid lg:grid-cols-3 gap-y-8 place-content-center place-items-center gap-x-8 ">
         {pricingCards.map((item, index) => (
           <motion.div
             initial="initial"

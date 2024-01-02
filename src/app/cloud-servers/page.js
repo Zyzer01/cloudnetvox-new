@@ -1,5 +1,4 @@
 'use client';
-
 import { useContext } from 'react';
 import AltHero from '@/components/AltHero';
 import Pricing from '@/components/Pricing';
@@ -14,6 +13,7 @@ import { BiSupport } from 'react-icons/bi';
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { LuDatabaseBackup } from 'react-icons/lu';
 import { TbWorldUpload } from 'react-icons/tb';
+import ComponentWrapper from '@/components/ComponentWrapper';
 
 const CloudServers = () => {
   const contextValues = useContext(DomainContext);
@@ -25,7 +25,7 @@ const CloudServers = () => {
   const card = [
     {
       title: lite.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 5%',
       localPrice: lite.localPrice,
       globalPrice: lite.globalPrice,
       duration: '/per month',
@@ -42,7 +42,7 @@ const CloudServers = () => {
     },
     {
       title: premium.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 10%',
       localPrice: premium.localPrice,
       globalPrice: premium.globalPrice,
       duration: '/per month',
@@ -59,7 +59,7 @@ const CloudServers = () => {
     },
     {
       title: extra.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 15%',
       localPrice: extra.localPrice,
       globalPrice: extra.globalPrice,
       duration: '/per month',
@@ -76,7 +76,7 @@ const CloudServers = () => {
     },
     {
       title: gold.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 20%',
       localPrice: gold.localPrice,
       globalPrice: gold.globalPrice,
       duration: '/per month',
@@ -119,7 +119,7 @@ const CloudServers = () => {
   ];
 
   return (
-    <main className="">
+    <ComponentWrapper>
       <AltHero
         pageTitle="SSD Cloud Server"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -181,7 +181,7 @@ const CloudServers = () => {
         sub="Our customizable and scalable platform delivers everything your website needs."
       />
       <BeforeFooter />
-    </main>
+    </ComponentWrapper>
   );
 };
 

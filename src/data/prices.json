@@ -1,0 +1,81 @@
+{
+  "domainNames": {
+    "africa": {
+      "ext": ".africa",
+      "price": 12200
+    },
+    "co": {
+      "ext": ".co",
+      "price": 29500
+    },
+    "coZA": {
+      "ext": ".co.za",
+      "price": 6000
+    },
+    "com": {
+      "ext": ".com",
+      "price": 12200
+    },
+    "comNG": {
+      "ext": ".com.ng",
+      "price": 1200
+    },
+    "net": {
+      "ext": ".net",
+      "price": 1200
+    }
+  },
+
+  "hostingServicesBasePrice": {
+    "lite": {
+      "cloudServers": "SSD Cloud Server",
+      "price": 9000
+    },
+    "shared": {
+      "name": "Shared Hosting",
+      "price": 999
+    },
+    "dedicated": {
+      "name": "Dedicated Servers",
+      "price": 60000
+    }
+  },
+
+  "sharedHosting": {
+    "lite": {
+      "name": "Lite",
+      "price": 999
+    },
+    "premium": {
+      "name": "Premium",
+      "price": 1300
+    },
+    "extra": {
+      "name": "Extra",
+      "price": 2500
+    }
+  },
+
+  "vpsHosting": {
+    "lite": {
+      "name": "Lite",
+      "globalPrice": 9000,
+      "localPrice": 29250
+    },
+    "premium": {
+      "name": "Premium",
+      "globalPrice": 23000,
+      "localPrice": 45000
+    },
+    "extra": {
+      "name": "Extra",
+      "globalPrice": 23000,
+      "localPrice": 65000
+    },
+    "gold": {
+      "name": "Gold",
+      "globalPrice": 80000,
+      "localPrice": 100500
+    }
+  }
+}

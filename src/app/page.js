@@ -12,6 +12,7 @@ import Reviews from '@/components/Reviews';
 import AwardBadge from '@/components/AwardBadge';
 import BeforeFooter from '@/components/BeforeFooter';
 import { DomainContext } from '@/context/DomainContext';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const contextValues = useContext(DomainContext);
@@ -22,7 +23,7 @@ const Home = () => {
   const card = [
     {
       title: ssd.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 5%',
       price: ssd.price,
       duration: '/per month',
       features: [
@@ -36,7 +37,7 @@ const Home = () => {
     },
     {
       title: shared.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 12%',
       price: shared.price,
       duration: '/per month',
       features: [' 1 Website', '10,000 visits', '5 GB disk space', 'Free SSL & Sitelock'],
@@ -45,7 +46,7 @@ const Home = () => {
     },
     {
       title: dedicated.name,
-      sub: 'On sale 56%',
+      sub: 'On sale 15%',
       price: dedicated.price,
       duration: '/per month',
       features: [
@@ -75,7 +76,11 @@ const Home = () => {
   ];
 
   return (
-    <main className="">
+    <motion.main
+      className=""
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
       <Hero />
       <DomainSearchBox enableAnimation />
       <Spacer />
@@ -93,13 +98,12 @@ const Home = () => {
       />
       <Spacer />
       <CtaWithList
-        ctaHeading="Up to 70% Discount with FREE Domain Name Registration Included!"
+        ctaHeading="Up to 30% Discount with FREE Domain Name Registration Included!"
         ctaListItems={ctaListItems}
         buttonText="Get Started Now!"
         ctaImageSrc={ctaImageSrc[0]}
         altText="Man standing on server"
       />
-      <Spacer />
       <RegularCta
         heading="99% Cloud Hosting High-speed Cutting-edge Platform"
         description="All businesses can utilize cloud hosting due to a variety of reasons. Firstly, the fresh start-up ones can benefit from it due to the minimal upfront costs. When you are launching a new business from scratch, your primary target includes getting the website up and running. Having a fast and cost-effective solution like CloudNetvox's cloud hosting can provide such new companies with a strong start."
@@ -136,8 +140,7 @@ const Home = () => {
       <Spacer />
       <AwardBadge />
       <BeforeFooter />
-      <Spacer />
-    </main>
+    </motion.main>
   );
 };
 

@@ -52,9 +52,9 @@ const Item = ({ title, content }) => {
 
 const Faq = ({ questionContent }) => {
   return (
-    <>
+    <div className="p-16 md:px-28">
       <Header heading="Frequently Asked Questions" sub="See if your questions are answered" />
-      <div className="p-16 md:py-16 md:px-28 mx-auto">
+      <div className="mx-auto mt-16">
         <div className="max-w-xl sm:mx-auto lg:max-w-3xl">
           <div className="space-y-4">
             {questionContent.map((item, index) => (
@@ -63,7 +63,7 @@ const Faq = ({ questionContent }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

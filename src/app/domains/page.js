@@ -1,22 +1,18 @@
 'use client';
-import { useContext } from 'react';
 import AltHero from '@/components/AltHero';
 import DomainSearchBox from '@/components/DomainSearchBox';
 import PricingWithIcon from '@/components/PricingWithIcon';
 import Spacer from '@/components/Spacer';
 import Image from 'next/image';
-import { DomainContext } from '@/context/DomainContext';
 import { CiGlobe } from 'react-icons/ci';
 import Faq from '@/components/Faq';
 import RegularCta from '@/components/RegularCta';
+import ComponentWrapper from '@/components/ComponentWrapper';
+import data from '../../data/prices.json';
+
+const x = data.domainNames;
 
 export default function Domains() {
-  const contextValues = useContext(DomainContext);
-
-  const { domainPrices } = contextValues;
-
-  const [com, net, info] = domainPrices;
-
   const questionContent = [
     {
       title: "What's a domain name?",
@@ -43,23 +39,23 @@ export default function Domains() {
   const pricingCards = [
     {
       icon: <CiGlobe />,
-      title: net.ext,
+      title: x.comNG.ext,
       desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
-      price: net.price,
+      price: x.comNG.price,
       link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
     },
     {
       icon: <CiGlobe />,
-      title: com.ext,
+      title: x.com.ext,
       desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
-      price: com.price,
+      price: x.com.price,
       link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
     },
     {
       icon: <CiGlobe />,
-      title: info.ext,
+      title: x.africa.ext,
       desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
-      price: info.price,
+      price: x.africa.price,
       link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
     },
   ];
@@ -67,7 +63,7 @@ export default function Domains() {
   const ctaImageSrc = ['/images/web search concept illustration.jpg'];
 
   return (
-    <main className="">
+    <ComponentWrapper>
       <AltHero
         pageTitle="Choose Your Perfect Domain Name"
         pageSub="We'll make sure you find the right domain and that it's got a secure home online."
@@ -101,6 +97,6 @@ export default function Domains() {
         </div>
       </div>
       <Faq questionContent={questionContent} />
-    </main>
+    </ComponentWrapper>
   );
 }

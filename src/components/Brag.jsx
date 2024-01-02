@@ -16,9 +16,9 @@ const Brag = ({ heading, sub, guaranteeBox }) => {
     },
   };
   return (
-    <div>
+    <div className="p-16 lg:p-28">
       <Header heading={heading} sub={sub} />
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-white p-16 lg:p-28">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-white mt-16">
         {guaranteeBox.map((item, index) => (
           <motion.div
             initial="initial"

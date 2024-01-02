@@ -13,10 +13,10 @@ import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import Faq from '@/components/Faq';
 import { DomainContext } from '@/context/DomainContext';
 import PricingWithIcon from '@/components/PricingWithIcon';
-import { CiGlobe } from 'react-icons/ci';
 import { CiServer } from 'react-icons/ci';
 import { VscServer } from 'react-icons/vsc';
 import { GrServerCluster } from 'react-icons/gr';
+import ComponentWrapper from '@/components/ComponentWrapper';
 
 export default function SharedHosting() {
   const contextValues = useContext(DomainContext);
@@ -105,7 +105,7 @@ export default function SharedHosting() {
   ];
 
   return (
-    <main className="">
+    <ComponentWrapper>
       <AltHero
         pageTitle="Shared Hosting"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -145,6 +145,6 @@ export default function SharedHosting() {
       </div>
 
       <Faq questionContent={questionContent} />
-    </main>
+    </ComponentWrapper>
   );
 }
