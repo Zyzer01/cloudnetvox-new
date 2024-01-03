@@ -1,41 +1,83 @@
-import Image from 'next/image';
-import Button from './ui/Button';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-
-const buttonVariants = {
-  hidden: {
-    x: '-100vw',
-  },
-  visible: {
-    x: 0,
-    transition: { type: 'spring', delay: 0.5 },
-  },
-};
+import Image from "next/image";
+import Button from "./ui/Button";
+import Link from "next/link";
+import heroImage from "public/images/hero-img-new.png";
+import welcomePattern from "public/images/welcome-pattern.png";
+import { PiBellRinging } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const zoomInLeftVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0.1,
+      x: -1000,
+      transition: {
+        duration: 0.5,
+        ease: [0.55, 0.055, 0.675, 0.19],
+      },
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      x: 10,
+      transition: {
+        type: "spring",
+        damping: 12,
+        // stiffness: 90,
+        duration: 0.5,
+        delay: 0.5,
+        ease: [0.175, 0.885, 0.32, 1],
+      },
+    },
+  };
+  const rippleWhiteVariants = {
+    initial: {
+      boxShadow:
+        "0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1)",
+    },
+    animate: {
+      boxShadow:
+        "0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0)",
+    },
+  };
+
   return (
     <div>
       <div className="p-16 md:p-28 min-h-screen grid grid-cols-6 gap-x-16 justify-center items-center bg-primary text-white">
         <div className="col-span-6 lg:col-span-3">
-          <p className="mb-0">
-            <i className="fas fa-bell rounded-circle mr-2"></i> Get a{' '}
-            <span className="text-primary">.com.ng </span> for as low as N1200
-          </p>
+          <div className="grid grid-cols-3">
+            <div className="col-span-3 md:col-span-2">
+              <motion.p
+                className="mb-4 rounded-full bg-gray-300 bg-opacity-20 mb-0 flex items-center p-2"
+                initial="initial"
+                animate="animate"
+                variants={zoomInLeftVariants}
+              >
+                <motion.span
+                  className="text-white text-xl mr-4 rounded-full"
+                  initial="initial"
+                  animate="animate"
+                  variants={rippleWhiteVariants}
+                  transition={{ duration: 1, repeat: Infinity }}
+                >
+                  <PiBellRinging />
+                </motion.span>
+                <span className="font-bold"> .com.ng </span> 
+                 domain name at N1200
+              </motion.p>
+            </div>
+            <div></div>
+          </div>
           <h1 className="text-4xl md:text-5xl font-semibold leading-snug">
             Unlimited Domain & Hosting in One Platform
           </h1>
           <h2 className="text-xl leading-normal mb-6">
-            A ton of website hosting options, 99.9% uptime guarantee, free SSL certificate, easy
-            WordPress installs.
+            A ton of website hosting options, 99.9% uptime guarantee, free SSL
+            certificate, easy WordPress installs.
           </h2>
           <Link href="/shared-hosting">
-            <Button
-              text="View plans"
-              variants={buttonVariants}
-              initial="hidden"
-              animate="visible"
-            />
+            <Button text="View plans" />
           </Link>
         </div>
         <div className="col-span-6 lg:col-span-3">
@@ -43,7 +85,8 @@ const Hero = () => {
             className="w-full"
             width={851}
             height={671}
-            src={'/images/hero-img-new.svg'}
+            src={heroImage}
+            placeholder="blur"
             alt="Computer with cloud and server illustration"
           />
         </div>
@@ -53,8 +96,9 @@ const Hero = () => {
           className="w-full"
           width={1919}
           height={167}
-          src={'/images/welcome-pattern.png'}
-          alt="zig zag clouds illustration"
+          src={welcomePattern}
+          alt="zig-zag clouds illustration"
+          placeholder="blur"
         />
       </div>
     </div>

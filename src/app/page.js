@@ -1,18 +1,23 @@
-'use client';
-import { useContext } from 'react';
-import Hero from '@/components/Hero';
-import DomainSearchBox from '@/components/DomainSearchBox';
-import Patners from '@/components/Patners';
-import Spacer from '@/components/Spacer';
-import Features from '@/components/Features';
-import Pricing from '@/components/Pricing';
-import CtaWithList from '@/components/CtaWithList';
-import RegularCta from '@/components/RegularCta';
-import Reviews from '@/components/Reviews';
-import AwardBadge from '@/components/AwardBadge';
-import BeforeFooter from '@/components/BeforeFooter';
-import { DomainContext } from '@/context/DomainContext';
-import { motion } from 'framer-motion';
+"use client";
+import { useContext } from "react";
+import Hero from "@/components/Hero";
+import DomainSearchBox from "@/components/DomainSearchBox";
+import Patners from "@/components/Patners";
+import Spacer from "@/components/Spacer";
+import Features from "@/components/Features";
+import Pricing from "@/components/Pricing";
+import CtaWithList from "@/components/CtaWithList";
+import RegularCta from "@/components/RegularCta";
+import Reviews from "@/components/Reviews";
+import AwardBadge from "@/components/AwardBadge";
+import BeforeFooter from "@/components/BeforeFooter";
+import { DomainContext } from "@/context/DomainContext";
+import { motion } from "framer-motion";
+import ctaImageSrc0 from "public/images/man standing on server.png";
+import ctaImageSrc1 from "public/images/animation people sitting on server.png";
+import ctaImageSrc2 from "public/images/sitting on drive and server people with laptop.png";
+import ctaImageSrc3 from "public/images/world wide web and cloud.png";
+import ScrollingBanner from "@/components/ScrollingBanner";
 
 const Home = () => {
   const contextValues = useContext(DomainContext);
@@ -23,56 +28,54 @@ const Home = () => {
   const card = [
     {
       title: ssd.name,
-      sub: 'On sale 5%',
+      sub: "On sale 5%",
       price: ssd.price,
-      duration: '/per month',
+      duration: "/per month",
       features: [
-        'Enjoy flexibility',
-        ' Increased power for your websites',
-        'Unlimited Bandwidth',
-        ' 2X Processing Power & Memory',
+        "Enjoy flexibility",
+        " Increased power for your websites",
+        "Unlimited Bandwidth",
+        " 2X Processing Power & Memory",
       ],
-      link: '/cloud-servers',
-      buttonText: 'Buy now',
+      link: "/cloud-servers",
+      buttonText: "Buy now",
     },
     {
       title: shared.name,
-      sub: 'On sale 12%',
+      sub: "On sale 12%",
       price: shared.price,
-      duration: '/per month',
-      features: [' 1 Website', '10,000 visits', '5 GB disk space', 'Free SSL & Sitelock'],
-      link: '/shared-hosting',
-      buttonText: 'Buy now',
+      duration: "/per month",
+      features: [
+        " 1 Website",
+        "10,000 visits",
+        "5 GB disk space",
+        "Free SSL & Sitelock",
+      ],
+      link: "/shared-hosting",
+      buttonText: "Buy now",
     },
     {
       title: dedicated.name,
-      sub: 'On sale 15%',
+      sub: "On sale 15%",
       price: dedicated.price,
-      duration: '/per month',
+      duration: "/per month",
       features: [
-        'Always-on, 24/7 Fully-Managed',
-        'Bare metal servers',
-        'Root access for complete control',
-        'Flexible Server Configurations',
+        "Always-on, 24/7 Fully-Managed",
+        "Bare metal servers",
+        "Root access for complete control",
+        "Flexible Server Configurations",
       ],
-      link: 'https://cloudnetvox.com/clients/contact.php',
-      buttonText: 'Buy now',
+      link: "https://cloudnetvox.com/clients/contact.php",
+      buttonText: "Buy now",
     },
   ];
   const ctaListItems = [
-    'FREE Domain Name for 1st Year',
-    'FREE Email Address',
-    'Plenty of Disk Space',
-    'FREE Website Builder',
-    'FREE Marketing Tools',
-    '1-Click WordPress Install',
-  ];
-
-  const ctaImageSrc = [
-    '/images/man standing on server.png',
-    '/images/animation people sitting on server.svg',
-    '/images/sitting on drive and server people with laptop.svg',
-    '/images/world wide web and cloud.svg',
+    "FREE Domain Name for 1st Year",
+    "FREE Email Address",
+    "Plenty of Disk Space",
+    "FREE Website Builder",
+    "FREE Marketing Tools",
+    "1-Click WordPress Install",
   ];
 
   return (
@@ -80,7 +83,9 @@ const Home = () => {
       className=""
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+      exit={{ opacity: 0 }}
+    >
+      <ScrollingBanner />
       <Hero />
       <DomainSearchBox enableAnimation />
       <Spacer />
@@ -101,7 +106,7 @@ const Home = () => {
         ctaHeading="Up to 30% Discount with FREE Domain Name Registration Included!"
         ctaListItems={ctaListItems}
         buttonText="Get Started Now!"
-        ctaImageSrc={ctaImageSrc[0]}
+        ctaImageSrc={ctaImageSrc0}
         altText="Man standing on server"
       />
       <RegularCta
@@ -109,7 +114,7 @@ const Home = () => {
         description="All businesses can utilize cloud hosting due to a variety of reasons. Firstly, the fresh start-up ones can benefit from it due to the minimal upfront costs. When you are launching a new business from scratch, your primary target includes getting the website up and running. Having a fast and cost-effective solution like CloudNetvox's cloud hosting can provide such new companies with a strong start."
         buttonText="Learn more"
         isReversed={true}
-        ctaImageSrc={ctaImageSrc[1]}
+        ctaImageSrc={ctaImageSrc1}
         hideImage
         link="/new"
         showButton
@@ -118,7 +123,7 @@ const Home = () => {
         heading="More Speed Less Downtime"
         description="Nowadays, most websites are vulnerable to unpredictable crashes and thus more prone to unprecedented downtimes too At CloudNetvox, We ensure Integrated Caching, Resource Management, Automated Failover, Data Mirroring, and Stabilty!"
         buttonText="Learn more"
-        ctaImageSrc={ctaImageSrc[2]}
+        ctaImageSrc={ctaImageSrc2}
         hideImage
         link="/new"
         showButton
@@ -129,7 +134,7 @@ const Home = () => {
           description="The freedom of accessibility can bring some threats along with the perks. The cybercriminals are now fully prepared to attack any vulnerable website and gain personal profits from it. Trust CloudNetvox to protect you from being vulnerable."
           buttonText="Learn more"
           isReversed={true}
-          ctaImageSrc={ctaImageSrc[3]}
+          ctaImageSrc={ctaImageSrc3}
           darkBg={true}
           link="/new"
           showButton

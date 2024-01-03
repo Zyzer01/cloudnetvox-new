@@ -4,10 +4,11 @@ import { IoCheckmarkDone } from 'react-icons/io5';
 import ButtonV2 from './ui/ButtonV2';
 
 const CtaWithList = ({ ctaHeading, ctaImageSrc, altText, buttonText, ctaListItems }) => {
+
   return (
     <div className="grid md:grid-cols-2 bg-sky p-16 gap-y-8 md:p-28">
       <div>
-        <Image src={ctaImageSrc} alt={altText} width={525} height={460} />
+        <Image src={ctaImageSrc} alt={altText} width={525} height={460} placeholder="blur" />
       </div>
       <div>
         <h3 className="text-2xl md:text-3xl">{ctaHeading}</h3>

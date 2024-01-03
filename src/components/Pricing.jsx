@@ -30,7 +30,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
   };
 
   return (
-    <div className="p-16 md:px-28">
+    <div className="p-16 md:px-28 xl:px-20">
       <Header heading={heading} sub={sub} />
       <div className="flex items-center justify-center mt-8 mb-12">
         <span className="mr-2 text-gray-900 font-bold">{option1}</span>

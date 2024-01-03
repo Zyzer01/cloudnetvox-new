@@ -21,32 +21,32 @@ const DomainSearchBox = ({ enableAnimation }) => {
 
   const domainNames = [
     {
-      colorVariant: 'blue-600',
+      colorVariant: 'text-blue-600',
       ext: x.com.ext,
       price: x.com.price,
     },
     {
-      colorVariant: 'domain',
+      colorVariant: 'text-domain',
       ext: x.co.ext,
       price: x.co.price,
     },
     {
-      colorVariant: 'green-800',
+      colorVariant: 'text-green-800',
       ext: x.comNG.ext,
       price: x.comNG.price,
     },
     {
-      colorVariant: 'secondary',
+      colorVariant: 'text-secondary',
       ext: x.africa.ext,
       price: x.africa.price,
     },
     {
-      colorVariant: 'alternate',
+      colorVariant: 'text-alternate',
       ext: x.net.ext,
       price: x.net.price,
     },
     {
-      colorVariant: 'red-700',
+      colorVariant: 'text-red-700',
       ext: x.coZA.ext,
       price: x.coZA.price,
     },
@@ -54,7 +54,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
   return (
     <motion.div
       className="p-16 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
-      variants={cardVariants}
+      variants={cardVariants} 
       initial="offscreen"
       whileInView={enableAnimation && 'onscreen'}
       viewport={{ once: true, amount: 0.8 }}>
@@ -89,7 +89,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
           <div className="flex align-items-center justify-between space-x-4">
             {domainNames.map((item, index) => (
               <p className="text-muted uppercase" key={index}>
-                <span className={`text-${item.colorVariant} font-bold`}>{item.ext}</span> ₦
+                <span className={`${item.colorVariant} font-bold`}>{item.ext}</span> ₦
                 {new Intl.NumberFormat('en-US', {
                   style: 'decimal',
                   minimumFractionDigits: 0,

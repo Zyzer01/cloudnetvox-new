@@ -14,6 +14,9 @@ import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { LuDatabaseBackup } from 'react-icons/lu';
 import { TbWorldUpload } from 'react-icons/tb';
 import ComponentWrapper from '@/components/ComponentWrapper';
+import ctaImageSrc0 from 'public/images/dedicated server feature network illustration.png'
+import ctaImageSrc1 from 'public/images/cloud technology feature.png'
+import ctaImageSrc2 from 'public/images/flexible root option.png'
 
 const CloudServers = () => {
   const contextValues = useContext(DomainContext);
@@ -93,11 +96,6 @@ const CloudServers = () => {
     },
   ];
 
-  const ctaImageSrc = [
-    '/images/dedicated server feature network illustration.svg',
-    '/images/cloud technology feature.svg',
-    '/images/flexible root option.svg',
-  ];
 
   const guaranteeBox = [
     {
@@ -142,7 +140,7 @@ const CloudServers = () => {
             <RegularCta
               heading="Multi-Server Management"
               description="Need more than one server? You can add more VPS, or even Shared and Dedicated hosting services to your account and effortlessly manage everything in one convenient location."
-              ctaImageSrc={ctaImageSrc[0]}
+              ctaImageSrc={ctaImageSrc0}
               link="/new"
               hideImage
             />
@@ -151,7 +149,7 @@ const CloudServers = () => {
               description="
               Cloud Technology
               We work with industry leaders like Intel and AMD to continually evaluate our VPS platform to maintain optimal performance. Our packages are among the fastest VPS hosting available."
-              ctaImageSrc={ctaImageSrc[1]}
+              ctaImageSrc={ctaImageSrc1}
               link="/new"
               isReversed
               hideImage
@@ -159,7 +157,7 @@ const CloudServers = () => {
             <RegularCta
               heading="Flexible Root Options"
               description="Full root access gives you more control over your environment, allowing for custom script or application installs on your Virtual Private Server, also enjoy Easy scalability."
-              ctaImageSrc={ctaImageSrc[2]}
+              ctaImageSrc={ctaImageSrc2}
               link="/new"
               hideImage
             />

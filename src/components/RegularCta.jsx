@@ -1,7 +1,8 @@
-import Image from 'next/image';
-import React from 'react';
-import ButtonV2 from './ui/ButtonV2';
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import ButtonV2 from "./ui/ButtonV2";
+import Link from "next/link";
+
 
 const RegularCta = ({
   heading,
@@ -20,7 +21,11 @@ const RegularCta = ({
         <>
           <div>
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
-            <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
+            <p
+              className={`${
+                darkBg ? "text-white" : "text-muted"
+              } mb-6 leading-7`}
+            >
               {description}
             </p>
             {showButton && (
@@ -29,18 +34,35 @@ const RegularCta = ({
               </Link>
             )}
           </div>
-          <div className={`${hideImage && 'hidden md:block'}`}>
-            <Image src={ctaImageSrc} width={400} height={350} alt={heading} />
+          <div className={`${hideImage && "hidden md:block"}`}>
+            <Image
+              src={ctaImageSrc}
+              width={400}
+              height={350}
+              alt={heading}
+              placeholder="blur"
+            />
           </div>
         </>
       ) : (
         <>
-          <div className={`${hideImage && 'hidden md:block'}`}>
-            <Image src={ctaImageSrc} width={400} height={350} alt={heading} />
+          <div className={`${hideImage && "hidden md:block"}`}>
+            <Image
+              src={ctaImageSrc}
+              width={400}
+              height={350}
+              alt={heading}
+              placeholder="blur"
+              
+            />
           </div>
           <div>
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
-            <p className={`${darkBg ? 'text-white' : 'text-muted'} mb-6 leading-7`}>
+            <p
+              className={`${
+                darkBg ? "text-white" : "text-muted"
+              } mb-6 leading-7`}
+            >
               {description}
             </p>
             {showButton && (

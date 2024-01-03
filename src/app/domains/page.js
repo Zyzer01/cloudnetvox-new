@@ -9,6 +9,7 @@ import Faq from '@/components/Faq';
 import RegularCta from '@/components/RegularCta';
 import ComponentWrapper from '@/components/ComponentWrapper';
 import data from '../../data/prices.json';
+import ctaImageSrc0 from 'public/images/web search concept illustration.jpg';
 
 const x = data.domainNames;
 
@@ -60,7 +61,6 @@ export default function Domains() {
     },
   ];
 
-  const ctaImageSrc = ['/images/web search concept illustration.jpg'];
 
   return (
     <ComponentWrapper>
@@ -82,7 +82,7 @@ export default function Domains() {
             we handle every aspect, ensuring your domains are secure, accessible, and seamlessly integrated with your web hosting.
             Focus on your business while we take care of your domain needs."
             buttonText="Get Started"
-            ctaImageSrc={ctaImageSrc[0]}
+            ctaImageSrc={ctaImageSrc0}
             link="/new"
           />
         </div>
