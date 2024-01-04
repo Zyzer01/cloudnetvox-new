@@ -158,7 +158,11 @@ article#Comprison_pricingplan:after {
 }
 
 
-
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
 .domain-table-section {
   padding: 100px 0px;
   background: var(--global--color-darkblue);

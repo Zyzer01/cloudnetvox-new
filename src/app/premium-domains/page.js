@@ -1,7 +1,9 @@
-import React from 'react'
+import PremiumDomainList from "@/components/PremiumDomainList";
 
-export const page = () => {
+const PremiumDomains = () => {
   return (
-    <div>page</div>
-  )
-}
+      <PremiumDomainList />
+  );
+};
+
+export default PremiumDomains;

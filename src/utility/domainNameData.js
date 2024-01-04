@@ -137,3 +137,167 @@ export const domainPrices = [
         transferPrice: x.meKE.transferPrice,
       },
   ];
+
+
+   {/* <tr>
+                  <th scope="row">.mobi.ke</th>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">.mobi.ng</th>
+                  <td>&#8358;1,250</td>
+                  <td>&#8358;1,250</td>
+                  <td>&#8358;1,250</td>
+                </tr>
+                <tr>
+                  <th scope="row">.name</th>
+                  <td>&#8358;4,800</td>
+                  <td>&#8358;4,800</td>
+                  <td>&#8358;4,800</td>
+                </tr>
+                <tr>
+                  <th scope="row">.ne.ke</th>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">.ngo / .ong</th>
+                  <td>&#8358;16,800</td>
+                  <td>&#8358;16,800</td>
+                  <td>&#8358;16,800</td>
+                </tr>
+                <tr>
+                  <th scope="row">.net.gh</th>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                </tr>
+                <tr>
+                  <th scope="row">.net.ng</th>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                </tr>
+                <tr>
+                  <th scope="row">.net.za</th>
+                  <td>&#8358;5,950</td>
+                  <td>&#8358;5,950</td>
+                  <td>&#8358;5,950</td>
+                </tr>
+                <tr>
+                  <th scope="row">.or.ke</th>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">.org</th>
+                  <td>&#8358;6,700</td>
+                  <td>&#8358;6,700</td>
+                  <td>&#8358;6,700</td>
+                </tr>
+                <tr>
+                  <th scope="row">.org.gh</th>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                  <td>&#8358;20,950</td>
+                </tr>
+                <tr>
+                  <th scope="row">.org.ng</th>
+                  <td>&#8358;1,200</td>
+                  <td>&#8358;1,200</td>
+                  <td>&#8358;1,200</td>
+                </tr>
+                <tr>
+                  <th scope="row">.org.za</th>
+                  <td>&#8358;5,050</td>
+                  <td>&#8358;5,050</td>
+                  <td>&#8358;5,050</td>
+                </tr>
+                <tr>
+                  <th scope="row">.sc.ke</th>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                  <td>&#8358;3,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">.sch.ng</th>
+                  <td>&#8358;1,200</td>
+                  <td>&#8358;1,200</td>
+                  <td>&#8358;1,200</td>
+                </tr>
+                <tr>
+                  <th scope="row">.web.za</th>
+                  <td>&#8358;5,050</td>
+                  <td>&#8358;5,050</td>
+                  <td>&#8358;5,050</td>
+                </tr>
+                <tr>
+                  <th scope="row">.store</th>
+                  <td>&#8358;21,450</td>
+                  <td>&#8358;21,450</td>
+                  <td>&#8358;21,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">.shop</th>
+                  <td>&#8358;13,150</td>
+                  <td>&#8358;13,150</td>
+                  <td>&#8358;13,150</td>
+                </tr>
+                <tr>
+                  <th scope="row">.social</th>
+                  <td>&#8358;11,900</td>
+                  <td>&#8358;11,900</td>
+                  <td>&#8358;11,900</td>
+                </tr>
+                <tr>
+                  <th scope="row">.online</th>
+                  <td>&#8358;13,950</td>
+                  <td>&#8358;13,950</td>
+                  <td>&#8358;13,950</td>
+                </tr>
+                <tr>
+                  <th scope="row">.fashion</th>
+                  <td>&#8358;11,900</td>
+                  <td>&#8358;11,900</td>
+                  <td>&#8358;11,900</td>
+                </tr>
+                <tr>
+                  <th scope="row">.tv</th>
+                  <td>&#8358;14,050</td>
+                  <td>&#8358;14,050</td>
+                  <td>&#8358;14,050</td>
+                </tr>
+                <tr>
+                  <th scope="row">.top</th>
+                  <td>&#8358;3,700</td>
+                  <td>&#8358;3,700</td>
+                  <td>&#8358;3,700</td>
+                </tr>
+                <tr>
+                  <th scope="row">.me</th>
+                  <td>&#8358;12,200</td>
+                  <td>&#8358;12,200</td>
+                  <td>&#8358;12,200</td>
+                </tr>
+                <tr>
+                  <th scope="row">.in</th>
+                  <td>&#8358;4,100</td>
+                  <td>&#8358;4,100</td>
+                  <td>&#8358;4,100</td>
+                </tr>
+                <tr>
+                  <th scope="row">.us</th>
+                  <td>&#8358;4,200</td>
+                  <td>&#8358;4,200</td>
+                  <td>&#8358;4,200</td>
+                </tr>
+                <tr>
+                  <th scope="row">.xyz</th>
+                  <td>&#8358;4,900</td>
+                  <td>&#8358;4,900</td>
+                  <td>&#8358;4,900</td>
+                </tr> */}
