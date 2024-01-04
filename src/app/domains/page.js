@@ -10,6 +10,7 @@ import RegularCta from '@/components/RegularCta';
 import ComponentWrapper from '@/components/ComponentWrapper';
 import data from '../../data/prices.json';
 import ctaImageSrc0 from 'public/images/web search concept illustration.jpg';
+import DomainList from '@/components/DomainList';
 
 const x = data.domainNames;
 
@@ -96,6 +97,7 @@ export default function Domains() {
           />
         </div>
       </div>
+      <DomainList />
       <Faq questionContent={questionContent} />
     </ComponentWrapper>
   );

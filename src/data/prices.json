@@ -1,31 +1,4 @@
 {
-  "domainNames": {
-    "africa": {
-      "ext": ".africa",
-      "price": 12200
-    },
-    "co": {
-      "ext": ".co",
-      "price": 29500
-    },
-    "coZA": {
-      "ext": ".co.za",
-      "price": 6000
-    },
-    "com": {
-      "ext": ".com",
-      "price": 12200
-    },
-    "comNG": {
-      "ext": ".com.ng",
-      "price": 1200
-    },
-    "net": {
-      "ext": ".net",
-      "price": 1200
-    }
-  },
-
   "hostingServicesBasePrice": {
     "lite": {
       "cloudServers": "SSD Cloud Server",
@@ -76,6 +49,141 @@
       "name": "Gold",
       "globalPrice": 80000,
       "localPrice": 100500
+    }
+  },
+  "domainNames": {
+    "acKE": {
+      "ext": ".ac.ke",
+      "price": 3500,
+      "renewPrice": 3500,
+      "transferPrice": 3500
+    },
+    "africa": {
+      "ext": ".africa",
+      "price": 12500,
+      "renewPrice": 12500,
+      "transferPrice": 12500
+    },
+    "biz": {
+      "ext": ".biz",
+      "price": 8100,
+      "renewPrice": 8100,
+      "transferPrice": 8100
+    },
+    "capetown": {
+      "ext": ".capetown",
+      "price": 9000,
+      "renewPrice": 9000,
+      "transferPrice": 9000
+    },
+    "co": {
+      "ext": ".co",
+      "price": 11000,
+      "renewPrice": 11000,
+      "transferPrice": 11000
+    },
+    "coKE": {
+      "ext": ".co",
+      "price": 3500,
+      "renewPrice": 3500,
+      "transferPrice": 3500
+    },
+    "coZA": {
+      "ext": ".co.za",
+      "price": 6000,
+      "renewPrice": 6000,
+      "transferPrice": 6000
+    },
+    "com": {
+      "ext": ".com",
+      "price": 12200,
+      "renewPrice": 12200,
+      "transferPrice": 12200
+    },
+    "comGH": {
+      "ext": ".com.gh",
+      "price": 20950,
+      "renewPrice": 20950,
+      "transferPrice": 20950
+    },
+    "comNG": {
+      "ext": ".com.ng",
+      "price": 1200,
+      "renewPrice": 1200,
+      "transferPrice": 1200
+    },
+    "info": {
+      "ext": ".info",
+      "price": 8950,
+      "renewPrice": 8950,
+      "transferPrice": 8950
+    },
+    "durban": {
+      "ext": ".durban",
+      "price": 9000,
+      "renewPrice": 9000,
+      "transferPrice": 9000
+    },
+    "eduGH": {
+      "ext": ".edu.gh",
+      "price": 20950,
+      "renewPrice": 20950,
+      "transferPrice": 20950
+    },
+    "eduNG": {
+      "ext": ".edu.ng",
+      "price": 1200,
+      "renewPrice": 1200,
+      "transferPrice": 1200
+    },
+    "goKE": {
+      "ext": ".go.ke",
+      "price": 3450,
+      "renewPrice": 3450,
+      "transferPrice": 3450
+    },
+    "govNG": {
+      "ext": ".gov.ng",
+      "price": 20000,
+      "renewPrice": 20000,
+      "transferPrice": 20000
+    },
+
+    "infoKE": {
+      "ext": ".info.ke",
+      "price": 3450,
+      "renewPrice": 3450,
+      "transferPrice": 3450
+    },
+    "joburge": {
+      "ext": ".joburge",
+      "price": 9000,
+      "renewPrice": 9000,
+      "transferPrice": 9000
+    },
+    "ke": {
+      "ext": ".ke",
+      "price": 23000,
+      "renewPrice": 23000,
+      "transferPrice": 23000
+    },
+    "net": {
+      "ext": ".net",
+      "price": 9500,
+      "renewPrice": 9500,
+      "transferPrice": 9500
+    },
+    "meKE": {
+      "ext": ".me.ke",
+      "price": 3450,
+      "renewPrice": 3450,
+      "transferPrice": 3450
+    },
+    "ng": {
+      "ext": ".ng",
+      "price": 9600,
+      "renewPrice": 9600,
+      "transferPrice": 9600
     }
   }
 }
