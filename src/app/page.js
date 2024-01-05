@@ -85,7 +85,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <ScrollingBanner />
+      {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
       <Spacer />

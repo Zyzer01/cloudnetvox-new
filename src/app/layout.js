@@ -4,8 +4,10 @@ import Footer from '../components/Footer';
 import DomainContextProvider from '@/context/DomainContext';
 import PageWarapper from '@/components/PageWarapper';
 import TopBanner from '@/components/TopBanner';
+import NavBar from '@/components/NavBar';
 
-const archivo = Archivo({ subsets: ['latin'] });
+
+const archivo = Archivo({ subsets: ['latin'], display: 'swap', });
 
 export const metadata = {
   title: 'Cloudnetvox',
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
         <DomainContextProvider>
           <PageWarapper>
             <TopBanner />
+            <NavBar />
             {children}
             <Footer />
           </PageWarapper>
