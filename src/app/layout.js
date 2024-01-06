@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <DomainContextProvider>
           <PageWarapper>
             <TopBanner />
-            <NavBar />
+            {/* <NavBar /> */}
             {children}
             <Footer />
           </PageWarapper>
