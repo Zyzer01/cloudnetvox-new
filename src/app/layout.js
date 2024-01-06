@@ -19,12 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={archivo.className}>
         <DomainContextProvider>
-          <PageWarapper>
+          {/* <PageWarapper> */}
             <TopBanner />
             <NavBar />
             {children}
             <Footer />
-          </PageWarapper>
+          {/* </PageWarapper> */}
         </DomainContextProvider>
       </body>
     </html>
