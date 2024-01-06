@@ -81,9 +81,9 @@ const Home = () => {
   return (
     <motion.main
       className=""
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
     >
       {/* <ScrollingBanner /> */}
       <Hero />

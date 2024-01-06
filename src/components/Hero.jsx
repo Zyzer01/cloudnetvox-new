@@ -44,7 +44,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="p-16 md:p-28 min-h-screen grid grid-cols-6 gap-x-16 justify-center items-center bg-primary text-white">
+      <div className="px-16 md:px-28 py-40 -mt-20 min-h-screen grid grid-cols-6 gap-x-16 justify-center items-center bg-primary text-white">
         <div className="col-span-6 lg:col-span-3">
           <div className="grid grid-cols-3">
             <div className="col-span-3 md:col-span-2">
