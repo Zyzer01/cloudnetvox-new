@@ -86,7 +86,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
             {navigation.map((item, idx) => (
               <li key={idx}>
                 <details
-                  class="group [&_summary::-webkit-details-marker]:hidden"
+                  class="group [&_summary::-webkit-details-marker]:hidden"  
                   onClick={handleItemClick}
                 >
                   <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
