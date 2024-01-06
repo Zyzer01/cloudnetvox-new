@@ -3,7 +3,6 @@ import BreadCrumbs from './ui/BreadCrumbs';
 
 const AltHero = ({ pageTitle, pageSub, breadcrumb }) => {
   return (
-    // <div className="">
       <div className="bg-primary text-white -mt-20 grid md:grid-cols-4 place-content-center place-items-center h-96">
         <div></div>
         <div className="text-white text-center col-span-4">
@@ -15,7 +14,6 @@ const AltHero = ({ pageTitle, pageSub, breadcrumb }) => {
         </div>
         <div></div>
       </div>
-    // </div>
   );
 };
 
