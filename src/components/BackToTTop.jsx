@@ -11,7 +11,7 @@ const BackToTop = ({ scrollHeightToShow = 100 }) => {
       setIsVisible(scrolled > scrollHeightToShow);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll); 
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
