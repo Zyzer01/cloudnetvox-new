@@ -87,7 +87,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       {/* <ScrollingBanner /> */}
-      <Hero />
+      <Hero /> 
       <DomainSearchBox enableAnimation />
       <BackToTop />  
       <Spacer />
