@@ -12,7 +12,7 @@ const PackedCta = ({ title, sub, desc, guaranteeBox }) => {
       transition: {
         duration: 0.3,
         ease: 'easeInOut',
-      },
+      }, 
     },
   };
   return (
