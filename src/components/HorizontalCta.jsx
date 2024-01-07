@@ -16,7 +16,6 @@ const HorizontalCta = ({guaranteeBox}) => {
           },
         },
       };
-
   return (
         <div className="grid grid-cols-4 gap-6 text-white px-24 gap-6">
           {guaranteeBox.map((item, index) => (
