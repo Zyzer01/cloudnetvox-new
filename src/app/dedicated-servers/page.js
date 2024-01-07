@@ -29,7 +29,7 @@ const DedicatedServers = () => {
   return (
     <div>
       <AltHero
-        pageTitle="Dedicated Servers"
+        pageTitle="Dedicated Servers" 
         pageSub="When you prefer not to share! All resources, including RAM, storage, CPU, and network capacity, are dedicated, with no interference from noisy neighbors."
         breadcrumb="Dedicated Servers"
       />
