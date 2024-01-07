@@ -89,7 +89,7 @@ const Home = () => {
       {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
-      <BackToTop />
+      <BackToTop /> 
       <Spacer />
       <Patners />
       <Spacer />
