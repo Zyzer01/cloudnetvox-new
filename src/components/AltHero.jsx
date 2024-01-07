@@ -9,9 +9,9 @@ const AltHero = ({ pageTitle, pageSub, breadcrumb }) => {
           <div className="py-16">
             <h1 className="text-3xl md:text-4xl text-white py-4">{pageTitle}</h1>
             <p className="">{pageSub}</p>
-          </div>
+          </div>  
           <BreadCrumbs page={breadcrumb} />
-        </div>
+        </div> 
         <div></div>
       </div>
   );
