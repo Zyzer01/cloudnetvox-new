@@ -1,4 +1,3 @@
-import React from 'react';
 import ButtonV2 from './ui/ButtonV2';
 import { motion } from 'framer-motion';
 
