@@ -18,6 +18,7 @@ import ctaImageSrc1 from "public/images/animation people sitting on server.png";
 import ctaImageSrc2 from "public/images/sitting on drive and server people with laptop.png";
 import ctaImageSrc3 from "public/images/world wide web and cloud.png";
 import ScrollingBanner from "@/components/ScrollingBanner";
+import BackToTop from "@/components/BackToTTop";
 
 const Home = () => {
   const contextValues = useContext(DomainContext);
@@ -88,6 +89,7 @@ const Home = () => {
       {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
+      <BackToTop />
       <Spacer />
       <Patners />
       <Spacer />
