@@ -43,7 +43,7 @@ const DomainRow = ({
         <del>{formerRegPrice}</del>
         <span className="text-muted font-medium">
           {" "}
-          &#8358;
+          &#8358; 
           <PriceFormatted price={regPrice} />
         </span>
       </td>
