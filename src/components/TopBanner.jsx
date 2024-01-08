@@ -8,7 +8,7 @@ const TopBanner = () => {
   return (
     <div className="bg-gradient-to-r from-primary to-alternate flex justify-between py-2.5 px-8 md:px-28">
       <div className="flex divide-x space-x-4">
-        <Link href="tel:07025000200">
+        <Link href="tel:07025000200"> 
           <p className="flex items-center text-white">
             <span className="mr-2">
               <IoMdCall />
