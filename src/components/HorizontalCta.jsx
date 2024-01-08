@@ -5,7 +5,7 @@ const HorizontalCta = ({guaranteeBox}) => {
     const cardHoverVariants = {
         initial: {
           y: 0,
-        },
+        }, 
         hover: {
           y: -5,
           boxShadow: '0 30px 30px rgba(24, 27, 34, 0.10)', // Add a drop shadow
