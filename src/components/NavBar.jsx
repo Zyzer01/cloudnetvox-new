@@ -10,7 +10,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaCloudArrowUp } from "react-icons/fa6";
 import Button from "./ui/Button";
 
-const MobileMenuModal = ({ isOpen, onClose }) => {
+const MobileMenuModal = ({ isOpen, onClose }) => { 
   const navigation = [
     { title: "Shared Hosting", path: "/shared-hosting" },
     {
