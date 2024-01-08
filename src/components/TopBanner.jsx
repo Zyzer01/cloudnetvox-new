@@ -21,7 +21,7 @@ const TopBanner = () => {
             <span className="mr-2">
               <MdEmail />
             </span>
-            <span className="hidden lg:inl">Email: info@cloudnetvox.com</span>
+            <span className="hidden lg:inli">Email: info@cloudnetvox.com</span>
           </p>
         </Link>
       </div>
