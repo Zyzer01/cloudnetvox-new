@@ -13,7 +13,7 @@ const TopBanner = () => {
             <span className="mr-2">
               <IoMdCall />
             </span>
-            <span className="lg:visible">Call Us: 0702-500-0200</span>
+            <span className="hidden lg:inline-block">Call Us: 0702-500-0200</span>
           </p>
         </Link>
         <Link href="mailto:info@cloudnetvox.com">
