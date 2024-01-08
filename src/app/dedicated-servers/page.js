@@ -25,7 +25,7 @@ const DedicatedServers = () => {
       icon: <FaMoneyBillTransfer />,
       boxTitle: "30 Day Money Back Guarantee",
     },
-  ];
+  ]; 
   return (
     <div>
       <AltHero
