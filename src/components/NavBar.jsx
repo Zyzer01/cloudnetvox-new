@@ -17,7 +17,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
       title: "VPS Hosting",
       path: "javascript:void(0)",
       subMenu: [
-        {
+        { 
           title: "Submenu 1",
           desc: "NVMe Powered cPanel Web Hosting",
           path: "/sub",
