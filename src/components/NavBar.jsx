@@ -189,7 +189,7 @@ const NavBar = () => {
           icon: <FaCloudArrowUp />,
           title: "Premium Domains",
           desc: "NVMe Powered cPanel Web Hosting",
-          path: "/sub",
+          path: "/premium-domains",
         },
       ],
     },
