@@ -39,7 +39,7 @@ const TopBanner = () => {
             <span className="mr-2">
               <MdPayment />
             </span>
-            <span className="hidden lg:visible">Payment Options</span>
+            <span className="hidden lg:inline-block">Payment Options</span>
           </p>
         </Link>
       </div>
