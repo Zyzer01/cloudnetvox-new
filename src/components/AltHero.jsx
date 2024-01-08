@@ -13,7 +13,7 @@ const AltHero = ({ pageTitle, pageSub, breadcrumb }) => {
           <BreadCrumbs page={breadcrumb} />
         </div> 
         <div></div>
-      </div>
+      </div> 
   );
 };
 
