@@ -14,8 +14,6 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
   );
 };
 
-
-
 const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
 
   return (
