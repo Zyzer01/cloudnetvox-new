@@ -63,20 +63,20 @@ const ComparisonTable2 = () => {
   const [lite, premium, extra] = webHostingPrices;
 
   return (
-    <div className="flex justify-center p-16 md:p-28">
+    <div className="flex justify-center p-16 md:p-28" id='#Comprison_pricingplan'>
       <table className="table-fixed w-full border-collapse border">
-        <thead className="border-collapse border-spacing-0 border">
+        <thead className="border">
           <tr>
-            <th scope="col" className="border-t-0 border-r-0 invisible">
+            <th className="border border-r-0 invisible">
               Extensions (TLD)
             </th>
-            <th scope="col" className="border-t-0">
+            <th className="border">
               {lite.name}
             </th>
-            <th scope="col" className="border-t-0">
+            <th className="border">
               {premium.name}
             </th>
-            <th scope="col" className="border-t-0">
+            <th className="border-0">
               {extra.name}
             </th>
           </tr>
@@ -84,13 +84,13 @@ const ComparisonTable2 = () => {
         <tbody className="">
           <tr className="text-center">
             <td className="border-t-0 border-b-0 border-r-0 pt-0 invisible">Extensions (TLD)</td>
-            <td className="rounded-0">
-              <div className="p-16">
-                <p className="reseller-table-plan-box-paragraph mb-2">Starting at:</p>
+            <td>
+              <div className="p-8">
+                <p className="mb-2">Starting at:</p>
                 <div>
                   <h2 className="mb-3">
                     ₦{lite.price}
-                    <span className="reseller-table-plan-box-pricing-month">/mo</span>
+                    <span className="">/mo</span>
                   </h2>
                 </div>
                 <div className="reseller-table-plan-box-button">
@@ -101,31 +101,31 @@ const ComparisonTable2 = () => {
               </div>
             </td>
             <td className="default">
-              <div className="p-16">
-                <p className="reseller-table-plan-box-paragraph mb-2">Starting at:</p>
+              <div className="p-8">
+                <p className="mb-2">Starting at:</p>
                 <div>
                   <h2 className="mb-3">
                     ₦{premium.price}
-                    <span className="reseller-table-plan-box-pricing-month">/mo</span>
+                    <span className="">/mo</span>
                   </h2>
                 </div>
-                <div className="reseller-table-plan-box-button variation-2">
+                <div className="">
                   <Link href="/new">
                     <ButtonV2 text="Order now" />
                   </Link>
                 </div>
               </div>
             </td>
-            <td className="rounded-0">
-              <div className="p-16">
-                <p className="reseller-table-plan-box-paragraph mb-2">Starting at:</p>
+            <td>
+              <div className="p-8">
+                <p className="mb-2">Starting at:</p>
                 <div>
                   <h2 className="mb-3">
                     ₦{extra.price}
-                    <span className="reseller-table-plan-box-pricing-month">/mo</span>
+                    <span className="">/mo</span>
                   </h2>
                 </div>
-                <div className="reseller-table-plan-box-button variation-3">
+                <div className="">
                   <Link href="/new">
                     <ButtonV2 text="Order now" />
                   </Link>

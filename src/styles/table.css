@@ -262,3 +262,10 @@ article#Comprison_pricingplan:after {
   text-align: left;
   padding-left: 0px;
 }
+
+
+.table-fixed th,
+.table-fixed td {
+  padding: 16px;
+  /* border: 1px solid #ddd; */
+}
