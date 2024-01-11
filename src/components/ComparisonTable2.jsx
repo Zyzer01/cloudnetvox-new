@@ -4,13 +4,14 @@ import ButtonV2 from './ui/ButtonV2';
 import Link from 'next/link';
 import { DomainContext } from '@/context/DomainContext';
 import '../styles/table.css';
+import { ImCheckmark } from "react-icons/im";
 
 const FeatureRow = ({ feature, lite, premium, extra }) => {
   return (
-    <tr className="p-24 mb-6 ">
-      <td className='border-r'>{feature}</td>
-      <td className='border-r'>{lite}</td>
-      <td className="default border-r">{premium}</td>
+    <tr className="">
+      <td className='border-r '>{feature}</td>
+      <td className='border-r text-center'>{lite}</td>
+      <td className="default border-r text-center">{premium}</td>
       <td>{extra}</td>
     </tr>
   );
@@ -24,10 +25,10 @@ const plans = [
     extra: 'Unlimited',
   },
   {
-    feature: 'Visits per month',
-    lite: 'Up to 10000',
-    premium: 'Up to 50000',
-    extra: 'Unlimited',
+    feature: 'Free Domain Reg',
+    lite: <ImCheckmark />,
+    premium: <ImCheckmark />,
+    extra: <ImCheckmark />,
   },
   {
     feature: 'Visits per month',
@@ -64,25 +65,25 @@ const ComparisonTable2 = () => {
 
   return (
     <div className="flex justify-center p-16 md:p-28 bg-sky" id='#Comprison_pricingplan'>
-      <table className="table-fixed w-full border-collapse border-t-0 border bg-white">
+      <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl pb-32">
         <thead>
           <tr>
             <th className="border-0 invisible">
               Extensions (TLD)
             </th>
-            <th className="border">
+            <th className="border border-t-0">
               {lite.name}
             </th>
-            <th className="border">
+            <th className="border border-t-0">
               {premium.name}
             </th>
-            <th className="border">
+            <th className="border border-t-0">
               {extra.name}
             </th>
           </tr>
         </thead>
-        <tbody className="border">
-          <tr className="text-center">
+        <tbody>
+          <tr className='text-center'>
             <td className="border-0 invisible">Extensions (TLD)</td>
             <td className='border'>
               <div className="p-8">

@@ -266,6 +266,5 @@ article#Comprison_pricingplan:after {
 
 .table-fixed th,
 .table-fixed td {
-  padding: 16px;
-  /* border: 1px solid #ddd; */
+  padding: 20px;
 }
