@@ -2,7 +2,6 @@
 import { useContext } from 'react';
 import AltHero from '@/components/AltHero';
 import ComparisonTable from '@/components/ComparisonTable';
-import ComparisonTable2 from '@/components/ComparisonTable2';
 import PackedCta from '@/components/PackedCta';
 import Spacer from '@/components/Spacer';
 import Image from 'next/image';
@@ -11,40 +10,40 @@ import { TbWorldUpload } from 'react-icons/tb';
 import { LuDatabaseBackup } from 'react-icons/lu';
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import Faq from '@/components/Faq';
-import { DomainContext } from '@/context/DomainContext';
 import PricingWithIcon from '@/components/PricingWithIcon';
 import { CiServer } from 'react-icons/ci';
 import { VscServer } from 'react-icons/vsc';
 import { GrServerCluster } from 'react-icons/gr';
 import ComponentWrapper from '@/components/ComponentWrapper';
+import data from '../../data/prices.json';
+import { ImCheckmark } from 'react-icons/im';
+
+
+const z = data.sharedHosting;
+
 
 export default function SharedHosting() {
-  const contextValues = useContext(DomainContext);
-
-  const { webHostingPrices, ssdCloudServers } = contextValues;
-
-  const [lite, premium, extra] = webHostingPrices;
 
   const pricingCards = [
     {
       icon: <CiServer />,
-      title: lite.name,
+      title: z.lite.name,
       desc: 'Basic resources for starter, with only 1 site capacity',
-      price: lite.price,
+      price: z.lite.price,
       link: '#fullFeatures',
     },
     {
       icon: <VscServer />,
-      title: premium.name,
+      title: z.premium.name,
       desc: 'More space and flexibility for multiple sites.',
-      price: premium.price,
+      price: z.premium.price,
       link: '#fullFeatures',
     },
     {
       icon: <GrServerCluster />,
-      title: extra.name,
+      title: z.extra.name,
       desc: 'More space and flexibility for multiple sites.',
-      price: extra.price,
+      price: z.extra.price,
       link: '#fullFeatures',
     },
   ];
@@ -104,6 +103,40 @@ export default function SharedHosting() {
     },
   ];
 
+  
+  const comparisonPlans = [
+  {
+    feature: "Visits per month",
+    lite: "Up to 10000",
+    premium: "Up to 50000",
+    extra: "Unlimited",
+  },
+  {
+    feature: "Free Domain Reg",
+    lite: <ImCheckmark />,
+    premium: <ImCheckmark />,
+    extra: <ImCheckmark />,
+  },
+  {
+    feature: "Visits per month",
+    lite: "Up to 10000",
+    premium: "Up to 50000",
+    extra: "Unlimited",
+  },
+  {
+    feature: "Visits per month",
+    lite: "Up to 10000",
+    premium: "Up to 50000",
+    extra: "Unlimited",
+  },
+  {
+    feature: "Visits per month",
+    lite: "Up to 10000",
+    premium: "Up to 50000",
+    extra: "Unlimited",
+  },
+];
+
   return (
     <ComponentWrapper>
       <AltHero
@@ -120,9 +153,8 @@ export default function SharedHosting() {
         buttonText="Order Now"
       />
       <Spacer />
-      {/* <ComparisonTable /> */}
       <Spacer />
-      <ComparisonTable2 />
+      <ComparisonTable comparisonPlans={comparisonPlans} lite={z.lite} premium={z.premium} extra={z.extra}  />
       <Spacer />
       <div>
         <div className="bg-sky py-16">
