@@ -9,10 +9,10 @@ import { ImCheckmark } from "react-icons/im";
 const FeatureRow = ({ feature, lite, premium, extra }) => {
   return (
     <tr className="">
-      <td className="border-r ">{feature}</td>
-      <td className="border-r text-center hidden md:inline-block"> {lite}</td>
-      <td className="default border-r text-center">{premium}</td>
-      <td>{extra}</td>
+      <td className="border-r">{feature}</td>
+      <td className="border-r text-center hidden md:block"> {lite}</td>
+      <td className="border-r text-center">{premium}</td>
+      <td className="hidden md:block">{extra}</td>
     </tr>
   );
 };
@@ -65,8 +65,25 @@ const ComparisonTable2 = () => {
 
   const [selectedPlan, setSelectedPlan] = useState("premium");
 
-  const handlePlanSwitch = (plan) => {
-    setSelectedPlan(plan);
+  const [showLitePlan, setShowLitePlan] = useState(false);
+
+  const [showExtraPlan, setShowExtraPlan] = useState(false);
+
+  const handlePlanSwitchLite = () => {
+    setSelectedPlan("lite");
+    setShowLitePlan(!showLitePlan);
+  };
+
+  const handlePlanSwitchPremium = () => {
+    setSelectedPlan("premium");
+    setShowExtraPlan(false);
+    setShowLitePlan(false);
+  };
+
+  const handlePlanSwitchExtra = () => {
+    setSelectedPlan("extra");
+    setShowLitePlan(false);
+    setShowExtraPlan(!showExtraPlan);
   };
 
   const getPlanData = () => {
@@ -78,7 +95,7 @@ const ComparisonTable2 = () => {
       case "extra":
         return extra;
       default:
-        return lite; // Default to lite if an invalid plan is selected
+        return lite; 
     }
   };
 
@@ -86,40 +103,45 @@ const ComparisonTable2 = () => {
 
   return (
     <>
-      <div className="flex justify-center mb-8">
-        <button
-          onClick={() => handlePlanSwitch("lite")}
-          className={selectedPlan === "lite" ? "active-btn" : ""}
-        >
-          Lite
+      <div className="flex justify-center mb-8 md:hidden">
+      {selectedPlan === "lite" && (
+          <button
+            onClick={handlePlanSwitchLite}
+            className="active-btn"
+          >
+            Lite
+          </button>
+        )}
+        {selectedPlan === "premium" && (
+          <button
+            onClick={handlePlanSwitchPremium}
+            className="active-btn">
+              Premium
         </button>
-        <button
-          onClick={() => handlePlanSwitch("premium")}
-          className={selectedPlan === "premium" ? "active-btn" : ""}
-        >
-          Premium
-        </button>
-        <button
-          onClick={() => handlePlanSwitch("extra")}
-          className={selectedPlan === "extra" ? "active-btn" : ""}
-        >
-          Extra
-        </button>
+        )}
+         {selectedPlan === "extra" && (
+          <button
+            onClick={handlePlanSwitchExtra}
+            className={selectedPlan === "extra" ? "active-btn" : ""}
+          >
+            Extra
+          </button>
+        )}
       </div>
-      <div className="flex justify-center p-16 md:p-28 bg-sky">
+      <div className="flex justify-center p-8 md:p-28 bg-sky">
         <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl pb-32">
           <thead>
             <tr>
               <th className="border-0 invisible">Extensions (TLD)</th>
-              <th className="border border-t-0">{lite.name}</th>
-              <th className="border border-t-0">{premium.name}</th>
-              <th className="border border-t-0">{extra.name}</th>
+              <th className="border border-t-0 hidden md:block">{lite.name}</th>
+              <th className="border border-t-0 ">{premium.name}</th>
+              <th className="border border-t-0 hidden md:block">{extra.name}</th>
             </tr>
           </thead>
           <tbody>
             <tr className="text-center">
               <td className="border-0 invisible">Extensions (TLD)</td>
-              <td className="border">
+              <td className="border hidden md:block">
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
@@ -151,7 +173,7 @@ const ComparisonTable2 = () => {
                   </div>
                 </div>
               </td>
-              <td className="border">
+              <td className="border hidden md:block">
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
