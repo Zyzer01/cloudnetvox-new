@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { TbBrandUbuntu } from "react-icons/tb";
 import { RiCentosLine } from "react-icons/ri";
 import { DiDebian } from "react-icons/di";
+import { AiOutlineWindows } from "react-icons/ai";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Ubuntu");
@@ -26,15 +27,14 @@ const Tabs = () => {
     },
     {
       title: "Windows",
-      icon: <IoCheckmarkDoneCircleOutline />,
+      icon: <AiOutlineWindows />,
     },
   ];
 
   return (
     <div className="flex flex-col space-y-6 justify-center item items-center">
       <div className="">
-        <div className="">
-          <nav className="grid grid-cols-4 gap-x-10">
+          <nav className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-10">
             {options.map((tab) => (
               <motion.div
                 key={tab.title}
@@ -54,7 +54,6 @@ const Tabs = () => {
               </motion.div>
             ))}
           </nav>
-        </div>
       </div>
 
       <motion.div
