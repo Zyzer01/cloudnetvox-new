@@ -16,15 +16,15 @@ const HorizontalCta = ({guaranteeBox}) => {
         },
       };
   return (
-        <div className="grid grid-cols-4 gap-6 text-white px-24 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white px-24 gap-6">
           {guaranteeBox.map((item, index) => (
             <motion.div
               initial="initial"
               whileHover="hover"
               variants={cardHoverVariants}
               key={index}
-              className="bg-gray-800 rounded-2xl text-center px-6 py-14 border flex flex-col items-center justify-center space-y-5">
-              <p className="text-5xl text-domain">{item.icon}</p>
+              className="bg-gray-800 rounded-2xl text-center px-6 py-10 border flex flex-col items-center justify-center space-y-5">
+              <p className="text-5xl text-sky">{item.icon}</p>
               <h6 className="text-lg">{item.boxTitle}</h6>
             </motion.div>
           ))}

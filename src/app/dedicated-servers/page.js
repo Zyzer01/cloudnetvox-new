@@ -2,6 +2,7 @@
 import AltHero from "@/components/AltHero";
 import HorizontalCta from "@/components/HorizontalCta";
 import Spacer from "@/components/Spacer";
+import Tabs from "@/components/Tabs";
 import { BiSupport } from "react-icons/bi";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { LuDatabaseBackup } from "react-icons/lu";
@@ -34,8 +35,11 @@ const DedicatedServers = () => {
         breadcrumb="Dedicated Servers"
       />
       <Spacer />
+      <Tabs />
+      <Spacer />
       <HorizontalCta guaranteeBox={guaranteeBox} />
       <Spacer />
+
     </div>
   );
 };
