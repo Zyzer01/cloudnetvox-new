@@ -7,10 +7,10 @@ import '../styles/table.css';
 
 const FeatureRow = ({ feature, lite, premium, extra }) => {
   return (
-    <tr className="p-24 mb-6">
-      <td>{feature}</td>
-      <td>{lite}</td>
-      <td className="default">{premium}</td>
+    <tr className="p-24 mb-6 ">
+      <td className='border-r'>{feature}</td>
+      <td className='border-r'>{lite}</td>
+      <td className="default border-r">{premium}</td>
       <td>{extra}</td>
     </tr>
   );
@@ -63,11 +63,11 @@ const ComparisonTable2 = () => {
   const [lite, premium, extra] = webHostingPrices;
 
   return (
-    <div className="flex justify-center p-16 md:p-28" id='#Comprison_pricingplan'>
-      <table className="table-fixed w-full border-collapse border">
-        <thead className="border">
+    <div className="flex justify-center p-16 md:p-28 bg-sky" id='#Comprison_pricingplan'>
+      <table className="table-fixed w-full border-collapse border-t-0 border bg-white">
+        <thead>
           <tr>
-            <th className="border border-r-0 invisible">
+            <th className="border-0 invisible">
               Extensions (TLD)
             </th>
             <th className="border">
@@ -76,15 +76,15 @@ const ComparisonTable2 = () => {
             <th className="border">
               {premium.name}
             </th>
-            <th className="border-0">
+            <th className="border">
               {extra.name}
             </th>
           </tr>
         </thead>
-        <tbody className="">
+        <tbody className="border">
           <tr className="text-center">
-            <td className="border-t-0 border-b-0 border-r-0 pt-0 invisible">Extensions (TLD)</td>
-            <td>
+            <td className="border-0 invisible">Extensions (TLD)</td>
+            <td className='border'>
               <div className="p-8">
                 <p className="mb-2">Starting at:</p>
                 <div>
@@ -100,7 +100,7 @@ const ComparisonTable2 = () => {
                 </div>
               </div>
             </td>
-            <td className="default">
+            <td className="default border">
               <div className="p-8">
                 <p className="mb-2">Starting at:</p>
                 <div>
@@ -116,7 +116,7 @@ const ComparisonTable2 = () => {
                 </div>
               </div>
             </td>
-            <td>
+            <td className='border'>
               <div className="p-8">
                 <p className="mb-2">Starting at:</p>
                 <div>
