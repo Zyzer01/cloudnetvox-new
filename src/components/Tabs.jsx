@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Header from "./Header";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const Tabs = ({options}) => {
   const [activeTab, setActiveTab] = useState("Ubuntu");
@@ -24,7 +25,7 @@ const Tabs = ({options}) => {
             className={`border rounded-2xl text-center px-6 py-6 w-50 border flex flex-col items-center justify-center space-y-5 text-sm cursor-pointer ${
               activeTab === tab.title
                 ? "text-domain border-domain font-medium"
-                : "text-gray-500 hover:text-gray-700 grayscale"
+                : "hover:border-domain grayscale"
             }`}
             onClick={() => handleTabClick(tab.title)}
             initial={{ opacity: 0 }}
@@ -51,7 +52,16 @@ const Tabs = ({options}) => {
               <div className="px-16 md:px-32 grid md:grid-cols-2 place-content-center place-items-center">
                 <div>
                   <h2 className="text-2xl md:text-3xl my-3">{item.title}</h2>
-                  <p className="text-black">{item.desc}</p>
+                  <p className="text-gray-500">{item.desc}</p>
+                  <div className="py-4">
+                    <h3 className="text-lg font-bold">Available Templates</h3>
+                    {item.template.map((template, index) => (
+                      <div key={index} className="flex items-center space-x-2 space-y-2">
+                        <p className="text-domain"><FaRegCheckCircle /></p>
+                        <p>{template}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div>
                   <Image
