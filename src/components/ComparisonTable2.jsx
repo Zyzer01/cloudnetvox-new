@@ -78,7 +78,7 @@ const ComparisonTable2 = () => {
       case "extra":
         return extra;
       default:
-        return lite; // Default to lite if an invalid plan is selected
+        return lite;
     }
   };
 
