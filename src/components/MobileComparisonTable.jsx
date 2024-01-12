@@ -14,7 +14,7 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
   );
 };  
 
-const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
+const MobileComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
 
   return (
     <> 
@@ -101,4 +101,4 @@ const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
   );
 };
 
-export default ComparisonTable;
+export default MobileComparisonTable;
