@@ -108,7 +108,6 @@ const DedicatedServers = () => {
         description="Nowadays, most websites are vulnerable to unpredictable crashes and thus more prone to unprecedented downtimes too At CloudNetvox, We ensure Integrated Caching, Resource Management, Automated Failover, Data Mirroring, and Stabilty!"
         buttonText="Get Started"
         ctaImageSrc={ctaImageSrc0}
-        hideImage
         link="/new"
         showButton
       />
@@ -117,7 +116,6 @@ const DedicatedServers = () => {
         description="While the allure of the cloud may promise budget-friendliness, the truth often unveils a different story. Opting for a dedicated server may come with a higher initial price tag compared to cloud hosting, but in the grand scheme, it's an investment that can fuel your business's success. A dedicated server empowers businesses to fine-tune infrastructure utilization, minimize downtime, and tailor hosting costs to meet unique needs. Say goodbye to unnecessary expenses and hello to optimized efficiency!"
         buttonText="Get Started"
         ctaImageSrc={ctaImageSrc1}
-        hideImage
         link="/new"
         isReversed
         showButton
@@ -127,7 +125,6 @@ const DedicatedServers = () => {
         description="Fortify your digital fortress with dedicated servers – your ultimate shield against cyber threats! Take charge of both the inbound and outbound traffic, ensuring robust security in an age of relentless cyber-attacks. Amidst data breaches and evolving regulations like POPI and PCI compliance, empower your business with unparalleled control over server security. When you own the server, you own the key to unyielding protection!"
         buttonText="Get Started"
         ctaImageSrc={ctaImageSrc3}
-        hideImage
         link="/new"
         showButton
       />
