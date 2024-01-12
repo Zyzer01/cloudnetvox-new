@@ -52,7 +52,7 @@ const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
                   </div>
                 </div>
               </td>
-              <td className="default border">
+              <td className="default border"> 
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
