@@ -25,7 +25,7 @@ const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
       </div>
       <div className="flex justify-center p-8 md:p-28 bg-sky">
         <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl pb-32">
-          <thead>
+          <thead> 
             <tr>
               <th className="border-0 invisible">Extensions (TLD)</th>
               <th className="border border-t-0">{lite.name}</th>
