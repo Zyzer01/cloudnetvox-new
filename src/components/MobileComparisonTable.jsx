@@ -12,7 +12,7 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
       <td>{extra}</td>
     </tr>
   );
-}; 
+};  
 
 const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
 
