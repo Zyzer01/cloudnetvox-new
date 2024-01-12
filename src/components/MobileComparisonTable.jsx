@@ -4,7 +4,7 @@ import Link from "next/link";
 import "../styles/table.css";
 
 const FeatureRow = ({ feature, lite, premium, extra }) => {
-  return (
+  return ( 
     <tr className="">
       <td className="border-r">{feature}</td>
       <td className="border-r text-center">{lite}</td>
