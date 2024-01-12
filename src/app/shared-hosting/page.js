@@ -97,7 +97,7 @@ export default function SharedHosting() {
         'CloudNetvox tries to make it easy for customers to get their website online with the purchase of our hosting packages. When you visit the CloudNetvox website you just have to select your Shared Web Hosting plan. These plans vary in prices and features. Once you select your hosting package we will automatically install the latest version of WordPress for you. Once you’re logged in, it’s time to get your website up and running!',
     },
     {
-      title: 'How do I migrate to CloudNetvox?',
+      title: 'How do I migrate to Cloudnetvox?',
       content:
         'If you already have a website and are considering changing your web host, then you will need some assistance with migration. CloudNetvox provides a migration service that can assist you in getting all your files transferred securely and correctly. All you have to do is send a mail to support@cloudnetvox.com',
     },
@@ -138,8 +138,8 @@ export default function SharedHosting() {
 ];
 
   return (
-    <ComponentWrapper>
     <div>
+    <ComponentWrapper>
       <AltHero
         pageTitle="Shared Hosting"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -178,7 +178,7 @@ export default function SharedHosting() {
       </div>
 
       <Faq questionContent={questionContent} />
-      </div>
     </ComponentWrapper>
+      </div>
   );
 }

@@ -18,7 +18,7 @@ const Tabs = ({options}) => {
         heading="Choose Your Operating System"
         sub="OS templates are accessible for effortless one-click reinstallation whenever needed."
       />
-      <nav className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-10 pt-8">
+      <nav className="grid grid-cols-3 md:grid-cols-6 gap-y-6 gap-x-10 pt-8">
         {options.map((tab) => (
           <motion.div
             key={tab.title}

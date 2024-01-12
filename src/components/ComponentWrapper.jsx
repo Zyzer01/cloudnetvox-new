@@ -8,7 +8,7 @@ const ComponentWrapper = ({ children }) => {
       initial={{ x: '100vw' }}
       animate={{ x: 0, transition: { type: 'linear' } }}
       exit={{ x: '-100vw' }}
-      className='-z-70'
+      className='z-0'
       >
       {children}
     </motion.main>

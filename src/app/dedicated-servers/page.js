@@ -11,10 +11,14 @@ import { TbBrandUbuntu } from "react-icons/tb";
 import { RiCentosLine } from "react-icons/ri";
 import { DiDebian } from "react-icons/di";
 import { AiOutlineWindows } from "react-icons/ai";
+import { SiOpensuse } from "react-icons/si";
+import { SiArchlinux } from "react-icons/si";
 import ubuntu from "public/images/ubuntu.png"
 import debian from "public/images/debian-logo-1024x576.png"
 import centos from "public/images/centos.jpeg"
 import windows from "public/images/microsoft windows.png"
+import arch from "public/images/arch linux.png"
+import opensuse from "public/images/opensuse.jpg"
 import RegularCta from "@/components/RegularCta";
 import ctaImageSrc0 from "public/images/budget friendly cheap.jpg";
 import ctaImageSrc1 from "public/images/power energy.png";
@@ -63,6 +67,20 @@ const DedicatedServers = () => {
       desc: "CentOS, a free Linux distribution, remains fully functionally compatible with RHEL but lacks commercial support. CentOS generally offers comprehensive long-term support, along with dedicated efforts towards security and stability-focused development, ensuring ongoing maintenance updates for every major version.",
       icon: <RiCentosLine />,
       imageSrc: centos,
+      template: ['CentOS 7', 'CentOS Stream 8', 'CentOS Stream 8']
+    },
+    {
+      title: "Opensuse",
+      desc: "Opensuse, a free Linux distribution, remains fully functionally compatible with RHEL but lacks commercial support. CentOS generally offers comprehensive long-term support, along with dedicated efforts towards security and stability-focused development, ensuring ongoing maintenance updates for every major version.",
+      icon: <SiOpensuse />,
+      imageSrc: opensuse,
+      template: ['CentOS 7', 'CentOS Stream 8', 'CentOS Stream 8']
+    },
+    {
+      title: "Archlinux",
+      desc: "Arch Linux is a lightweight, user-centric Linux distribution with a rolling release model. It offers high customization, a minimalistic design, and a DIY approach, allowing users to build and configure their systems according to their preferences. The Pacman package manager and Arch User Repository (AUR) simplify software management. Ideal for those who value control and staying close to the latest software updates.",
+      icon: <SiArchlinux />,
+      imageSrc: arch,
       template: ['CentOS 7', 'CentOS Stream 8', 'CentOS Stream 8']
     },
     {
