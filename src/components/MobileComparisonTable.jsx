@@ -17,7 +17,7 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
 const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
 
   return (
-    <>
+    <> 
       <div className="flex justify-center mb-8 md:hidden">
         <button className="active-btn">Lite</button>
         <button className="active-btn">Premium</button>
