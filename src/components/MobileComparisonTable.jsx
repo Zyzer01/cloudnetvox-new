@@ -48,7 +48,7 @@ const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
                   <div className="">
                     <Link href="/new">
                       <ButtonV2 text="Order now" />
-                    </Link>
+                    </Link> 
                   </div>
                 </div>
               </td>
