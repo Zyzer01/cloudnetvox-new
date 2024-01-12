@@ -67,7 +67,7 @@ const ComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
                     </Link>
                   </div>
                 </div>
-              </td>
+               </td>
               <td className="border">
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
