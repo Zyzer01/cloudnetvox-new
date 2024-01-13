@@ -9,11 +9,11 @@ const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   return (
     <tr className="">
       <td className="border-r">{feature}</td>
-      {activeTab === "Lite" && <td className="border-r text-center">{lite}</td>}
+      {activeTab === "Lite" && <td className="flex justify-center items-center">{lite}</td>}
       {activeTab === "Premium" && (
-        <td className="border-r text-center">{premium}</td>
+        <td className="flex justify-center items-center">{premium}</td>
       )}
-      {activeTab === "Extra" && <td>{extra}</td>}
+      {activeTab === "Extra" && <td className="flex justify-center items-center">{extra}</td>}
     </tr>
   );
 };
@@ -103,7 +103,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
                   <div className="py-8">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-3">
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
                         ₦{lite.price}
                         <span className="">/mo</span>
                       </h2>
@@ -121,7 +121,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
                   <div className="py-8">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-3">
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
                         ₦{premium.price}
                         <span className="">/mo</span>
                       </h2>
@@ -139,7 +139,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
                   <div className="py-8">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-3">
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
                         ₦{extra.price}
                         <span className="">/mo</span>
                       </h2>
