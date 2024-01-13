@@ -4,6 +4,7 @@ import Link from "next/link";
 import "../styles/table.css";
 import { useState } from "react";
 import { ImCheckmark } from "react-icons/im";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   return (
@@ -22,7 +23,32 @@ const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   );
 };
 
-const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailHosting }) => {
+const PriceFormatted = ({ price }) => {
+  const formattedPrice = new Intl.NumberFormat("en-US", {
+    style: "decimal",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+    currency: "NGN",
+  }).format(price);
+
+  return <>{formattedPrice}</>;
+};
+
+const MobileComparisonTable = ({
+  lite,
+  premium,
+  extra,
+  liteSizes,
+  premiumSizes,
+  extraSizes,
+  selectedSizeLite,
+  selectedSizePremium,
+  selectedSizeExtra,
+  comparisonPlans,
+  isEmailHosting,
+  priceSwitchVariants,
+  clickFunction
+}) => {
   const [activeTab, setActiveTab] = useState("Premium");
 
   const handleTabClick = (tab) => {
@@ -73,13 +99,26 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                     <p className="mb-2">Starting at:</p>
                     <div>
                       {isEmailHosting ? (
-                        <h2 className="mb-4 text-domain text-2xl font-bold">
-                          <span className="">/mo</span>
-                        </h2>
+                        <AnimatePresence mode="wait">
+                          <motion.h2
+                            key={liteSizes.price[selectedSizeLite]}
+                            className="mb-4 text-domain text-2xl font-bold"
+                            variants={priceSwitchVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                          >
+                            ₦
+                            <PriceFormatted
+                              price={liteSizes.price[selectedSizeLite]}
+                            />
+                            <span>/mo</span>
+                          </motion.h2>
+                        </AnimatePresence>
                       ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{lite.price}
-                          <span className="">/mo</span>
+                          <span>/mo</span>
                         </h2>
                       )}
                     </div>
@@ -88,6 +127,21 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                         <ButtonV2 text="Order" />
                       </Link>
                     </div>
+                    {isEmailHosting && (
+                    <div className="flex justify-between pt-6">
+                      {Object.keys(liteSizes.price).map((size) => (
+                        <p
+                          key={size}
+                          onClick={() => clickFunction.lite(size)}
+                          className={`font-bold cursor-pointer ${
+                            selectedSizeLite === size && "text-domain underline"
+                          }`}
+                        >
+                          {size}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                   </div>
                 </td>
               )}
@@ -97,13 +151,26 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                     <p className="mb-2">Starting at:</p>
                     <div>
                       {isEmailHosting ? (
-                        <h2 className="mb-4 text-domain text-2xl font-bold">
-                          <span className="">/mo</span>
-                        </h2>
+                        <AnimatePresence mode="wait">
+                          <motion.h2
+                            key={premiumSizes.price[selectedSizePremium]}
+                            className="mb-4 text-domain text-2xl font-bold"
+                            variants={priceSwitchVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                          >
+                            ₦
+                            <PriceFormatted
+                              price={premiumSizes.price[selectedSizePremium]}
+                            />
+                            <span>/mo</span>
+                          </motion.h2>
+                        </AnimatePresence>
                       ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{premium.price}
-                          <span className="">/mo</span>
+                          <span>/mo</span>
                         </h2>
                       )}
                     </div>
@@ -112,6 +179,21 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                         <ButtonV2 text="Order" />
                       </Link>
                     </div>
+                    {isEmailHosting && (
+                    <div className="flex justify-between pt-6">
+                      {Object.keys(premiumSizes.price).map((size) => (
+                        <p
+                          key={size}
+                          onClick={() => clickFunction.premium(size)}
+                          className={`font-bold cursor-pointer ${
+                            selectedSizePremium === size && "text-domain underline"
+                          }`}
+                        >
+                          {size}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                   </div>
                 </td>
               )}
@@ -121,13 +203,26 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                     <p className="mb-2">Starting at:</p>
                     <div>
                       {isEmailHosting ? (
-                        <h2 className="mb-4 text-domain text-2xl font-bold">
-                          <span className="">/mo</span>
-                        </h2>
+                        <AnimatePresence mode="wait">
+                          <motion.h2
+                            key={extraSizes.price[selectedSizeExtra]}
+                            className="mb-4 text-domain text-2xl font-bold"
+                            variants={priceSwitchVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                          >
+                            ₦
+                            <PriceFormatted
+                              price={extraSizes.price[selectedSizeExtra]}
+                            />
+                            <span>/mo</span>
+                          </motion.h2>
+                        </AnimatePresence>
                       ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{extra.price}
-                          <span className="">/mo</span>
+                          <span>/mo</span>
                         </h2>
                       )}
                     </div>
@@ -136,6 +231,21 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                         <ButtonV2 text="Order" />
                       </Link>
                     </div>
+                    {isEmailHosting && (
+                    <div className="flex justify-between pt-6">
+                      {Object.keys(extraSizes.price).map((size) => (
+                        <p
+                          key={size}
+                          onClick={() => clickFunction.extra(size)}
+                          className={`font-bold cursor-pointer ${
+                            selectedSizeExtra === size && "text-domain underline"
+                          }`}
+                        >
+                          {size}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                   </div>
                 </td>
               )}

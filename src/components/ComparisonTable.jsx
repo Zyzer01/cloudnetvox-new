@@ -53,33 +53,22 @@ const ComparisonTable = ({
   premium,
   extra,
   isEmailHosting,
+  liteSizes,
+  premiumSizes,
+  extraSizes,
 }) => {
-  const [selectedSize, setSelectedSize] = useState("8gb");
+  const [selectedSizeLite, setSelectedSizeLite] = useState("8gb");
+  const [selectedSizePremium, setSelectedSizePremium] = useState("8gb");
+  const [selectedSizeExtra, setSelectedSizeExtra] = useState("8gb");
 
-  const liteSizes = {
-    price: {
-      "8gb": lite.price[0]["8gb"],
-      "25gb": lite.price[0]["25gb"],
-    },
+  const handleSizeClickLite = (size) => {
+    setSelectedSizeLite(size);
   };
-  const premiumSizes = {
-    price: {
-      "8gb": premium.price[0]["8gb"],
-      "25gb": premium.price[0]["25gb"],
-      "50gb": premium.price[0]["50gb"],
-    },
+  const handleSizeClickPremium = (size) => {
+    setSelectedSizePremium(size);
   };
-  const extraSizes = {
-    price: {
-      "8gb": extra.price[0]["8gb"],
-      "25gb": extra.price[0]["25gb"],
-      "50gb": extra.price[0]["50gb"],
-      "100gb": extra.price[0]["100gb"],
-    },
-  };
-
-  const handleSizeClick = (size) => {
-    setSelectedSize(size);
+  const handleSizeClickExtra = (size) => {
+    setSelectedSizeExtra(size);
   };
 
   return (
@@ -104,14 +93,17 @@ const ComparisonTable = ({
                     {isEmailHosting ? (
                       <AnimatePresence mode="wait">
                         <motion.h2
-                          key={liteSizes.price[selectedSize]}
+                          key={liteSizes.price[selectedSizeLite]}
                           className="mb-4 text-domain text-2xl font-bold"
                           variants={priceSwitchVariants}
                           initial="hidden"
                           animate="visible"
                           exit="exit"
                         >
-                          ₦{liteSizes.price[selectedSize]}
+                          ₦
+                          <PriceFormatted
+                            price={liteSizes.price[selectedSizeLite]}
+                          />
                           <span>/mo</span>
                         </motion.h2>
                       </AnimatePresence>
@@ -132,9 +124,9 @@ const ComparisonTable = ({
                       {Object.keys(liteSizes.price).map((size) => (
                         <p
                           key={size}
-                          onClick={() => handleSizeClick(size)}
+                          onClick={() => handleSizeClickLite(size)}
                           className={`font-bold cursor-pointer ${
-                            selectedSize === size && "text-domain underline"
+                            selectedSizeLite === size && "text-domain underline"
                           }`}
                         >
                           {size}
@@ -151,7 +143,7 @@ const ComparisonTable = ({
                     {isEmailHosting ? (
                       <AnimatePresence mode="wait">
                         <motion.h2
-                          key={premiumSizes.price[selectedSize]}
+                          key={premiumSizes.price[selectedSizePremium]}
                           className="mb-4 text-domain text-2xl font-bold"
                           variants={priceSwitchVariants}
                           initial="hidden"
@@ -160,7 +152,7 @@ const ComparisonTable = ({
                         >
                           ₦
                           <PriceFormatted
-                            price={premiumSizes.price[selectedSize]}
+                            price={premiumSizes.price[selectedSizePremium]}
                           />
                           <span>/mo</span>
                         </motion.h2>
@@ -182,9 +174,10 @@ const ComparisonTable = ({
                       {Object.keys(premiumSizes.price).map((size) => (
                         <p
                           key={size}
-                          onClick={() => handleSizeClick(size)}
+                          onClick={() => handleSizeClickPremium(size)}
                           className={`font-bold cursor-pointer ${
-                            selectedSize === size && "text-domain underline"
+                            selectedSizePremium === size &&
+                            "text-domain underline"
                           }`}
                         >
                           {size}
@@ -201,7 +194,7 @@ const ComparisonTable = ({
                     {isEmailHosting ? (
                       <AnimatePresence mode="wait">
                         <motion.h2
-                          key={extraSizes.price[selectedSize]}
+                          key={extraSizes.price[selectedSizeExtra]}
                           className="mb-4 text-domain text-2xl font-bold"
                           variants={priceSwitchVariants}
                           initial="hidden"
@@ -210,7 +203,7 @@ const ComparisonTable = ({
                         >
                           ₦
                           <PriceFormatted
-                            price={extraSizes.price[selectedSize]}
+                            price={extraSizes.price[selectedSizeExtra]}
                           />
                           <span>/mo</span>
                         </motion.h2>
@@ -229,12 +222,13 @@ const ComparisonTable = ({
                   </div>
                   {isEmailHosting && (
                     <div className="flex justify-between pt-6">
-                      {Object.keys(premiumSizes.price).map((size) => (
+                      {Object.keys(extraSizes.price).map((size) => (
                         <p
                           key={size}
-                          onClick={() => handleSizeClick(size)}
+                          onClick={() => handleSizeClickExtra(size)}
                           className={`font-bold cursor-pointer ${
-                            selectedSize === size && "text-domain underline"
+                            selectedSizeExtra === size &&
+                            "text-domain underline"
                           }`}
                         >
                           {size}
@@ -263,7 +257,19 @@ const ComparisonTable = ({
           lite={lite}
           premium={premium}
           extra={extra}
+          liteSizes={liteSizes}
+          premiumSizes={premiumSizes}
+          extraSizes={extraSizes}
+          selectedSizeLite={selectedSizeLite}
+          selectedSizePremium={selectedSizePremium}
+          selectedSizeExtra={selectedSizeExtra}
           isEmailHosting={isEmailHosting}
+          priceSwitchVariants={priceSwitchVariants}
+          clickFunction={{
+            lite: handleSizeClickLite,
+            premium: handleSizeClickPremium,
+            extra: handleSizeClickExtra,
+          }}
         />
       </div>
     </>
