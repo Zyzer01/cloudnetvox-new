@@ -21,7 +21,7 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
   );
 };
 
-const ComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
+const ComparisonTable = ({ comparisonPlans, lite, premium, extra, isEmailHosting }) => {
   return (
     <>
       <div className="md:flex justify-center px-8 lg:px-28 py-28 bg-sky hidden">
@@ -41,10 +41,16 @@ const ComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
-                    <h2 className="mb-4 text-domain text-2xl font-bold">
-                      ₦{lite.price}
-                      <span className="">/mo</span>
-                    </h2>
+                    {isEmailHosting ? (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        <span className="">/mo</span>
+                      </h2>
+                    ) : (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        ₦{lite.price}
+                        <span className="">/mo</span>
+                      </h2>
+                    )}
                   </div>
                   <div className="">
                     <Link href="/new">
@@ -57,10 +63,16 @@ const ComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
-                    <h2 className="mb-4 text-domain text-2xl font-bold">
-                      ₦{premium.price}
-                      <span className="">/mo</span>
-                    </h2>
+                  {isEmailHosting ? (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        <span className="">/mo</span>
+                      </h2>
+                    ) : (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        ₦{premium.price}
+                        <span className="">/mo</span>
+                      </h2>
+                    )}
                   </div>
                   <div className="">
                     <Link href="/new">
@@ -73,10 +85,16 @@ const ComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
-                    <h2 className="mb-4 text-domain text-2xl font-bold">
-                      ₦{extra.price}
-                      <span className="">/mo</span>
-                    </h2>
+                  {isEmailHosting ? (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        <span className="">/mo</span>
+                      </h2>
+                    ) : (
+                      <h2 className="mb-4 text-domain text-2xl font-bold">
+                        ₦{extra.price}
+                        <span className="">/mo</span>
+                      </h2>
+                    )}
                   </div>
                   <div className="">
                     <Link href="/new">
@@ -104,6 +122,7 @@ const ComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
           lite={lite}
           premium={premium}
           extra={extra}
+          isEmailHosting={isEmailHosting}
         />
       </div>
     </>

@@ -1,5 +1,4 @@
 "use client";
-import { useContext } from "react";
 import AltHero from "@/components/AltHero";
 import ComparisonTable from "@/components/ComparisonTable";
 import PackedCta from "@/components/PackedCta";
@@ -17,7 +16,6 @@ import { GrServerCluster } from "react-icons/gr";
 import ComponentWrapper from "@/components/ComponentWrapper";
 import data from "../../data/prices.json";
 import { ImCheckmark } from "react-icons/im";
-import MobileComparisonTable from "@/components/MobileComparisonTable";
 
 const z = data.sharedHosting;
 

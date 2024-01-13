@@ -9,16 +9,20 @@ const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   return (
     <tr className="pb-24">
       <td className="border-r">{feature}</td>
-      {activeTab === "Lite" && <td className="flex justify-center items-center">{lite}</td>}
+      {activeTab === "Lite" && (
+        <td className="flex justify-center items-center">{lite}</td>
+      )}
       {activeTab === "Premium" && (
         <td className="flex justify-center items-center">{premium}</td>
       )}
-      {activeTab === "Extra" && <td className="flex justify-center items-center">{extra}</td>}
+      {activeTab === "Extra" && (
+        <td className="flex justify-center items-center">{extra}</td>
+      )}
     </tr>
   );
 };
 
-const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans }) => {
+const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailHosting }) => {
   const [activeTab, setActiveTab] = useState("Premium");
 
   const handleTabClick = (tab) => {
@@ -83,10 +87,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans }) => {
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-4 text-domain text-2xl font-bold">
-                        ₦{lite.price}
-                        <span className="">/mo</span>
-                      </h2>
+                      {isEmailHosting ? (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          <span className="">/mo</span>
+                        </h2>
+                      ) : (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          ₦{lite.price}
+                          <span className="">/mo</span>
+                        </h2>
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -101,10 +111,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans }) => {
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-4 text-domain text-2xl font-bold">
-                        ₦{premium.price}
-                        <span className="">/mo</span>
-                      </h2>
+                      {isEmailHosting ? (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          <span className="">/mo</span>
+                        </h2>
+                      ) : (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          ₦{premium.price}
+                          <span className="">/mo</span>
+                        </h2>
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -119,10 +135,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans }) => {
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      <h2 className="mb-4 text-domain text-2xl font-bold">
-                        ₦{extra.price}
-                        <span className="">/mo</span>
-                      </h2>
+                      {isEmailHosting ? (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          <span className="">/mo</span>
+                        </h2>
+                      ) : (
+                        <h2 className="mb-4 text-domain text-2xl font-bold">
+                          ₦{extra.price}
+                          <span className="">/mo</span>
+                        </h2>
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">

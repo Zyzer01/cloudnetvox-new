@@ -9,15 +9,16 @@ import logo from "public/images/logos/cloudnetvox logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaCloudArrowUp } from "react-icons/fa6";
 import Button from "./ui/Button";
+import netvox from "public/images/netvox-logo-transparent-1.png";
 
-const MobileMenuModal = ({ isOpen, onClose }) => { 
+const MobileMenuModal = ({ isOpen, onClose }) => {
   const navigation = [
     { title: "Shared Hosting", path: "/shared-hosting" },
     {
       title: "VPS Hosting",
       path: "javascript:void(0)",
       subMenu: [
-        { 
+        {
           title: "Submenu 1",
           desc: "NVMe Powered cPanel Web Hosting",
           path: "/sub",
@@ -53,11 +54,13 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    if (isOpen) {
-      controls.start({ x: 0 });
-    } else {
-      controls.start({ x: "-100%" });
-    }
+    const animation = isOpen ? { x: 0 } : { x: "-100%" };
+
+    controls.start((latest) => animation, {
+      type: "tween",
+      duration: 0.3, // Adjust the duration as needed
+      ease: "easeInOut", // You can choose a different easing function if needed
+    });
   }, [isOpen, controls]);
 
   const handleItemClick = (event) => {
@@ -75,7 +78,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
       <div class="flex h-screen flex-col justify-between border-e bg-white">
         <div class="px-4 py-6">
           <div className="flex justify-between items-center">
-            <span class="grid h-15 w-30 rounded-lg bg-gray-100 text-xs text-gray-600">
+            <span class="grid h-15 w-30">
               <Image src={logo} width={172} height={40} alt="Float UI logo" />
             </span>
             <button onClick={onClose}>
@@ -86,7 +89,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
             {navigation.map((item, idx) => (
               <li key={idx}>
                 <details
-                  class="group [&_summary::-webkit-details-marker]:hidden"  
+                  class="group [&_summary::-webkit-details-marker]:hidden"
                   onClick={handleItemClick}
                 >
                   <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
@@ -122,20 +125,27 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
         </div>
 
         <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
-          <a
-            href="#"
+          <Link
+            target="_blank"
+            href="https://netvox.ng"
             class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
-            <p>image</p>
-
+            <Image
+              className="w-16"
+              width={331}
+              height={256}
+              src={netvox}
+              alt="netvox logo"
+            />
             <div>
               <p class="text-xs">
-                <strong class="block font-medium">Eric Frusciante</strong>
-
-                <span> eric@frusciante.com </span>
+                <strong class="block font-medium">
+                  A Subsidiary of Netvox Networks
+                </strong>
+                <span> netvox.ng </span>
               </p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>
@@ -197,12 +207,12 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white w-full border-b md:border-0 md:static md:px-24">
-      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+      <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex md:px-8">
+        <div className="flex items-center justify-between py-3 md:py-5 lg:block">
           <Link href="javascript:void(0)">
-            <Image src={logo} width={172} height={40} alt="Float UI logo" />
+            <Image src={logo} width={172} height={40} alt="Cloudnetvox logo" />
           </Link>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               className="text-white text-xl outline-none p-2 rounded-md border-gray-100 border"
               onClick={handleToggleMenu}
@@ -212,7 +222,7 @@ const NavBar = () => {
             <MobileMenuModal isOpen={isMenuOpen} onClose={handleCloseMenu} />
           </div>
         </div>
-        <div className="flex-1 justify-self-center pb-3 mt-8 hidden md:block md:pb-0 md:mt-0">
+        <div className="flex-1 justify-self-center pb-3 mt-8 hidden lg:block md:pb-0 md:mt-0">
           <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => {
               return (
@@ -256,7 +266,7 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div className="hidden md:inline-block">
+        <div className="hidden lg:inline-block">
           <Link href="javascript:void(0)">
             <Button text="Login" />
           </Link>
