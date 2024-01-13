@@ -1,5 +1,6 @@
 'use client';
 import AltHero from '@/components/AltHero';
+import ComparisonTable from '@/components/ComparisonTable';
 import ComponentWrapper from '@/components/ComponentWrapper';
 import Spacer from '@/components/Spacer';
 const EmailHosting = () => {
@@ -11,6 +12,12 @@ const EmailHosting = () => {
         breadcrumb="Shared Hosting"
       />
       <Spacer />
+      <ComparisonTable
+          comparisonPlans={comparisonPlans}
+          lite={z.lite}
+          premium={z.premium}
+          extra={z.extra}
+        />
     </ComponentWrapper>
   );
 };

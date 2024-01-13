@@ -7,7 +7,7 @@ import { ImCheckmark } from "react-icons/im";
 
 const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   return (
-    <tr className="">
+    <tr className="pb-24">
       <td className="border-r">{feature}</td>
       {activeTab === "Lite" && <td className="flex justify-center items-center">{lite}</td>}
       {activeTab === "Premium" && (
@@ -18,27 +18,7 @@ const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {
   );
 };
 
-const MobileComparisonTable = ({ lite, premium, extra }) => {
-  const comparisonPlans = [
-    {
-      feature: "Visits per month",
-      lite: "Up to 10000",
-      premium: "Up to 50000",
-      extra: "Unlimited",
-    },
-    {
-      feature: "Free Domain Reg",
-      lite: <ImCheckmark />,
-      premium: <ImCheckmark />,
-      extra: <ImCheckmark />,
-    },
-    {
-      feature: "Visits per month",
-      lite: "Up to 10000",
-      premium: "Up to 50000",
-      extra: "Unlimited",
-    },
-  ];
+const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans }) => {
   const [activeTab, setActiveTab] = useState("Premium");
 
   const handleTabClick = (tab) => {
@@ -79,8 +59,8 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
           </button>
         ))}
       </div>
-      <div className="flex justify-center p-8 md:p-28 bg-sky">
-        <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl pb-32">
+      <div className="flex justify-center px-8 py-16 bg-sky">
+        <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl">
           <thead>
             <tr>
               <th className="border-0 invisible">Extensions (TLD)</th>
@@ -100,7 +80,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
               <td className="border-0 invisible">Extensions (TLD)</td>
               {activeTab === "Lite" && (
                 <td className="border">
-                  <div className="py-8">
+                  <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
                       <h2 className="mb-4 text-domain text-2xl font-bold">
@@ -118,7 +98,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
               )}
               {activeTab === "Premium" && (
                 <td className="default border">
-                  <div className="py-8">
+                  <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
                       <h2 className="mb-4 text-domain text-2xl font-bold">
@@ -136,7 +116,7 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
               )}
               {activeTab === "Extra" && (
                 <td className="border">
-                  <div className="py-8">
+                  <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
                       <h2 className="mb-4 text-domain text-2xl font-bold">
