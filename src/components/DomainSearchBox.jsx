@@ -53,7 +53,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
   ];
   return (
     <motion.div
-      className="p-16 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
+      className="p-1 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
       variants={cardVariants} 
       initial="offscreen"
       whileInView={enableAnimation && 'onscreen'}
@@ -66,7 +66,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
       </div>
       <div className="col-span-3 md:col-span-2">
         <div className="flex-flex-col space-y-6">
-          <div className="relative transition ease-in-out duration-3">
+          <div className="relative transition ease-in-out duration-3 mx-6 md:mx-0">
             <label htmlFor="Search" className="sr-only">
               Search
             </label>
@@ -86,7 +86,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
             </span>
           </div>
 
-          <div className="flex align-items-center justify-between space-x-4">
+          <div className="flex align-items-center justify-between space-x-2 md:space-x-4">
             {domainNames.map((item, index) => (
               <p className="text-muted uppercase" key={index}>
                 <span className={`${item.colorVariant} font-bold`}>{item.ext}</span> ₦

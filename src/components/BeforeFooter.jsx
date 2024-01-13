@@ -15,8 +15,8 @@ const BeforeFooter = () => {
           Need help? Call our Pro-active support team 24/7: +234 702-500-0200
         </h4>
       </div>
-      <div className="h-10 my-16 flex justify-center items-center">
-        <h4 className="text-xl md:text-3xl">
+      <div className="h-10 my-8 md:my-16 flex justify-center items-center">
+        <h4 className="text-center text-lg md:text-3xl">
           Proudly Hosting Over{' '}
           <span className="text-domain">
             <Counter value={10000} />

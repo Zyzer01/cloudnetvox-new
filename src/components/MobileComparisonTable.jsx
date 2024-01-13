@@ -87,16 +87,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {isEmailHosting ? (
+                      {/* {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : (
+                      ) : ( */}
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{lite.price}
                           <span className="">/mo</span>
                         </h2>
-                      )}
+                      {/* )} */}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -111,16 +111,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {isEmailHosting ? (
+                      {/* {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : (
+                      ) : ( */}
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{premium.price}
                           <span className="">/mo</span>
                         </h2>
-                      )}
+                      {/* )} */}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -135,16 +135,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {isEmailHosting ? (
+                      {/* {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : (
+                      ) : ( */}
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{extra.price}
                           <span className="">/mo</span>
                         </h2>
-                      )}
+                      {/* )} */}
                     </div>
                     <div className="">
                       <Link href="/new">
