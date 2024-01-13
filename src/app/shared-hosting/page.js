@@ -136,8 +136,6 @@ export default function SharedHosting() {
   return (
     <div>
       <ComponentWrapper>
-      <Nav />
-
         <AltHero
           pageTitle="Shared Hosting"
           pageSub="Powerful Cloud servers built from scratch with SSD storage"

@@ -122,7 +122,7 @@ const ComparisonTable = ({ comparisonPlans, lite, premium, extra, isEmailHosting
           lite={lite}
           premium={premium}
           extra={extra}
-          // isEmailHosting={isEmailHosting}
+          isEmailHosting={isEmailHosting}
         />
       </div>
     </>

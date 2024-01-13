@@ -31,17 +31,6 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
 
   const options = ["Lite", "Premium", "Extra"];
 
-  const buttonStyle = {
-    padding: "8px 12px",
-    backgroundColor: "white",
-    border: "1px solid #103dbe",
-    color: "#103dbe",
-    hover: "drop-shadow-md",
-    transition: "ease-in-out duration-300",
-    fontMedium: "font-medium",
-    borderRadius: "50px",
-  };
-
   return (
     <>
       <div className="flex space-x-4 justify-center mb-8">
@@ -54,10 +43,6 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                 : "md:hover:bg-domain md:hover:text-white"
             }`}
             onClick={() => handleTabClick(tab)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
           >
             {tab}
           </button>
@@ -87,16 +72,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {/* {isEmailHosting ? (
+                      {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : ( */}
+                      ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{lite.price}
                           <span className="">/mo</span>
                         </h2>
-                      {/* )} */}
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -111,16 +96,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {/* {isEmailHosting ? (
+                      {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : ( */}
+                      ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{premium.price}
                           <span className="">/mo</span>
                         </h2>
-                      {/* )} */}
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">
@@ -135,16 +120,16 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                   <div className="py-4">
                     <p className="mb-2">Starting at:</p>
                     <div>
-                      {/* {isEmailHosting ? (
+                      {isEmailHosting ? (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           <span className="">/mo</span>
                         </h2>
-                      ) : ( */}
+                      ) : (
                         <h2 className="mb-4 text-domain text-2xl font-bold">
                           ₦{extra.price}
                           <span className="">/mo</span>
                         </h2>
-                      {/* )} */}
+                      )}
                     </div>
                     <div className="">
                       <Link href="/new">
