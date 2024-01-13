@@ -4,7 +4,7 @@ import Link from "next/link";
 import "../styles/table.css";
 
 const FeatureRow = ({ feature, lite, premium, extra }) => {
-  return ( 
+  return (
     <tr className="">
       <td className="border-r">{feature}</td>
       <td className="border-r text-center">{lite}</td>
@@ -12,20 +12,36 @@ const FeatureRow = ({ feature, lite, premium, extra }) => {
       <td>{extra}</td>
     </tr>
   );
-};  
+};
 
-const MobileComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
+const MobileComparisonTable = ({ comparisonPlans, lite, premium, extra }) => {
+  const buttonStyle = {
+    padding: "8px 12px",
+    backgroundColor: "white",
+    border: "1px solid #103dbe",
+    color: "#103dbe",
+    hover: "drop-shadow-md",
+    transition: "ease-in-out duration-300",
+    fontMedium: "font-medium",
+    borderRadius: "50px",
+  };
 
   return (
-    <> 
-      <div className="flex justify-center mb-8 md:hidden">
-        <button className="active-btn">Lite</button>
-        <button className="active-btn">Premium</button>
-        <button className="active-btn">Extra</button>
+    <>
+      <div className="flex space-x-4 justify-center mb-8">
+        <button className="" style={buttonStyle}>
+          Lite
+        </button>
+        <button className="" style={buttonStyle}>
+          Premium
+        </button>
+        <button className="" style={buttonStyle}>
+          Extra
+        </button>
       </div>
       <div className="flex justify-center p-8 md:p-28 bg-sky">
         <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl pb-32">
-          <thead> 
+          <thead>
             <tr>
               <th className="border-0 invisible">Extensions (TLD)</th>
               <th className="border border-t-0">{lite.name}</th>
@@ -48,11 +64,11 @@ const MobileComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
                   <div className="">
                     <Link href="/new">
                       <ButtonV2 text="Order now" />
-                    </Link> 
+                    </Link>
                   </div>
                 </div>
               </td>
-              <td className="default border"> 
+              <td className="default border">
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>
                   <div>
@@ -67,7 +83,7 @@ const MobileComparisonTable = ({comparisonPlans, lite, premium, extra}) => {
                     </Link>
                   </div>
                 </div>
-               </td>
+              </td>
               <td className="border">
                 <div className="p-8">
                   <p className="mb-2">Starting at:</p>

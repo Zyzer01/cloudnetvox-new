@@ -17,6 +17,7 @@ import { GrServerCluster } from 'react-icons/gr';
 import ComponentWrapper from '@/components/ComponentWrapper';
 import data from '../../data/prices.json';
 import { ImCheckmark } from 'react-icons/im';
+import MobileComparisonTable from '@/components/MobileComparisonTable';
 
 
 const z = data.sharedHosting;
@@ -155,7 +156,8 @@ export default function SharedHosting() {
       />
       <Spacer />
       <Spacer />
-      <ComparisonTable comparisonPlans={comparisonPlans} lite={z.lite} premium={z.premium} extra={z.extra}  />
+      {/* <ComparisonTable comparisonPlans={comparisonPlans} lite={z.lite} premium={z.premium} extra={z.extra}  /> */}
+      <MobileComparisonTable comparisonPlans={comparisonPlans} lite={z.lite} premium={z.premium} extra={z.extra}  />
       <Spacer />
       <div>
         <div className="bg-sky py-16">
