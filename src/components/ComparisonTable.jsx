@@ -201,7 +201,7 @@ const ComparisonTable = ({
                     {isEmailHosting ? (
                       <AnimatePresence mode="wait">
                         <motion.h2
-                          key={premiumSizes.price[selectedSize]}
+                          key={extraSizes.price[selectedSize]}
                           className="mb-4 text-domain text-2xl font-bold"
                           variants={priceSwitchVariants}
                           initial="hidden"
@@ -210,7 +210,7 @@ const ComparisonTable = ({
                         >
                           ₦
                           <PriceFormatted
-                            price={premiumSizes.price[selectedSize]}
+                            price={extraSizes.price[selectedSize]}
                           />
                           <span>/mo</span>
                         </motion.h2>
