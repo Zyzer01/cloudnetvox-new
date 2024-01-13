@@ -73,6 +73,27 @@ const EmailHosting = () => {
       extra: "Unlimited",
     },
   ];
+  const liteSizes = {
+    price: {
+      "8gb": q.lite.price[0]["8gb"],
+      "25gb": q.lite.price[0]["25gb"],
+    },
+  };
+  const premiumSizes = {
+    price: {
+      "8gb": q.premium.price[0]["8gb"],
+      "25gb": q.premium.price[0]["25gb"],
+      "50gb": q.premium.price[0]["50gb"],
+    },
+  };
+  const extraSizes = {
+    price: {
+      "8gb": q.extra.price[0]["8gb"],
+      "25gb": q.extra.price[0]["25gb"],
+      "50gb": q.extra.price[0]["50gb"],
+      "100gb": q.extra.price[0]["100gb"],
+    },
+  };
 
   return (
     <ComponentWrapper>
@@ -95,6 +116,9 @@ const EmailHosting = () => {
           lite={q.lite}
           premium={q.premium}
           extra={q.extra}
+          liteSizes={liteSizes}
+          premiumSizes={premiumSizes}
+          extraSizes={extraSizes}
           isEmailHosting
         />
         <BeforeFooter />

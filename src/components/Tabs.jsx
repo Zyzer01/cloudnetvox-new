@@ -18,7 +18,7 @@ const Tabs = ({options}) => {
         heading="Choose Your Operating System"
         sub="OS templates are accessible for effortless one-click reinstallation whenever needed."
       />
-      <nav className="grid grid-cols-3 md:grid-cols-6 gap-y-6 gap-x-10 pt-8">
+      <nav className="grid grid-cols-3 md:grid-cols-6 gap-y-6 gap-x-4 md:gap-x-10 pt-8 px-4">
         {options.map((tab) => (
           <motion.div
             key={tab.title}
@@ -49,7 +49,7 @@ const Tabs = ({options}) => {
         {options.map((item, index) => (
           <div key={index}>
             {activeTab === item.title && (
-              <div className="px-16 md:px-32 grid md:grid-cols-2 place-content-center place-items-center">
+              <div className="px-8 md:px-32 grid md:grid-cols-2 place-content-center place-items-center">
                 <div>
                   <h2 className="text-2xl md:text-3xl my-3">{item.title}</h2>
                   <p className="text-gray-500">{item.desc}</p>

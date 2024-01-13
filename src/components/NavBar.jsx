@@ -71,7 +71,7 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
   };
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-white z-50"
+      className="fixed top-0 left-0 w-full h-full bg-white"
       initial={{ x: "-100%" }}
       animate={controls}
     >
@@ -164,22 +164,22 @@ const NavBar = () => {
   };
 
   const navigation = [
-    { title: "Shared Hosting", path: "/shared-hosting" },
+    { title: "Cloud Servers", path: "/cloud-servers" },
     {
-      title: "VPS Hosting",
+      title: "Hosting Services",
       path: "javascript:void(0)",
       subMenu: [
         {
           icon: <FaCloudArrowUp />,
-          title: "Submenu 1",
+          title: "Shared Hosting",
           desc: "NVMe Powered cPanel Web Hosting",
-          path: "/sub",
+          path: "/shared-hosting",
         },
         {
           icon: <FaCloudArrowUp />,
-          title: "Submenu 1",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/sub",
+          title: "Business Email",
+          desc: "Powerful email service",
+          path: "/email-hosting",
         },
       ],
     },
@@ -187,7 +187,7 @@ const NavBar = () => {
 
     {
       title: "Domains",
-      path: "/domains",
+      path: "javascript:void(0)",
       subMenu: [
         {
           icon: <FaCloudArrowUp />,
@@ -206,7 +206,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-white w-full border-b md:border-0 md:static md:px-24">
+    <nav className="bg-white w-full border-b md:border-0 md:static md:px-24  -mb-20 z-50">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 lg:block">
           <Link href="javascript:void(0)">
@@ -247,12 +247,14 @@ const NavBar = () => {
                                 <p className="text-4xl text-domain">
                                   {subItem.icon}
                                 </p>
+                                <Link href={subItem.path}>
                                 <div className="text-gray-800">
                                   <h4 className="font-medium hover:text-domain">
                                     {subItem.title}
                                   </h4>
                                   <p className="text-sm">{subItem.desc}</p>
                                 </div>
+                                </Link>
                               </div>
                             ))}
                           </div>
