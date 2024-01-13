@@ -58,8 +58,8 @@ const MobileMenuModal = ({ isOpen, onClose }) => {
 
     controls.start((latest) => animation, {
       type: "tween",
-      duration: 0.3, // Adjust the duration as needed
-      ease: "easeInOut", // You can choose a different easing function if needed
+      duration: 0.3,
+      ease: "easeInOut",
     });
   }, [isOpen, controls]);
 

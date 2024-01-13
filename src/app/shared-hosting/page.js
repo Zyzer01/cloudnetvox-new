@@ -16,6 +16,7 @@ import { GrServerCluster } from "react-icons/gr";
 import ComponentWrapper from "@/components/ComponentWrapper";
 import data from "../../data/prices.json";
 import { ImCheckmark } from "react-icons/im";
+import Nav from "@/components/Nav";
 
 const z = data.sharedHosting;
 
@@ -135,6 +136,8 @@ export default function SharedHosting() {
   return (
     <div>
       <ComponentWrapper>
+      <Nav />
+
         <AltHero
           pageTitle="Shared Hosting"
           pageSub="Powerful Cloud servers built from scratch with SSD storage"
