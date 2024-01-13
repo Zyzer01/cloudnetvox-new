@@ -31,16 +31,6 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
 
   const options = ["Lite", "Premium", "Extra"];
 
-  const buttonStyle = {
-    padding: "8px 12px",
-    backgroundColor: "white",
-    border: "1px solid #103dbe",
-    color: "#103dbe",
-    hover: "drop-shadow-md",
-    transition: "ease-in-out duration-300",
-    fontMedium: "font-medium",
-    borderRadius: "50px",
-  };
 
   return (
     <>
@@ -54,10 +44,6 @@ const MobileComparisonTable = ({ lite, premium, extra, comparisonPlans, isEmailH
                 : "md:hover:bg-domain md:hover:text-white"
             }`}
             onClick={() => handleTabClick(tab)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
           >
             {tab}
           </button>

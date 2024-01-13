@@ -152,7 +152,6 @@ export default function SharedHosting() {
           buttonText="Order Now"
         />
         <Spacer />
-        <Spacer />
         <ComparisonTable
           comparisonPlans={comparisonPlans}
           lite={z.lite}
