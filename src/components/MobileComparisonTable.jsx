@@ -84,39 +84,74 @@ const MobileComparisonTable = ({ lite, premium, extra }) => {
           <thead>
             <tr>
               <th className="border-0 invisible">Extensions (TLD)</th>
-              <th className="border border-t-0">{lite.name}</th>
-              <th className="border border-t-0">{premium.name}</th> 
-              <th className="border border-t-0">{extra.name}</th>
+              {activeTab === "Lite" && (
+                <th className="border border-t-0">{lite.name}</th>
+              )}
+              {activeTab === "Premium" && (
+                <th className="border border-t-0">{premium.name}</th>
+              )}
+              {activeTab === "Extra" && (
+                <th className="border border-t-0">{extra.name}</th>
+              )}
             </tr>
           </thead>
           <tbody>
             <tr className="text-center">
               <td className="border-0 invisible">Extensions (TLD)</td>
-              {options.map((tab) => (
-                <td key={tab} className="border">
-                  {activeTab === tab && (
-                    <div className="p-8">
-                      <p className="mb-2">Starting at:</p>
-                      <div>
-                        <h2 className="mb-3">
-                          ₦
-                          {tab === "Lite"
-                            ? lite.price
-                            : tab === "Premium"
-                            ? premium.price
-                            : extra.price}
-                          <span className="">/mo</span>
-                        </h2>
-                      </div>
-                      <div className="">
-                        <Link href="/new">
-                          <ButtonV2 text="Order now" />
-                        </Link>
-                      </div>
+              {activeTab === "Lite" && (
+                <td className="border">
+                  <div className="py-8">
+                    <p className="mb-2">Starting at:</p>
+                    <div>
+                      <h2 className="mb-3">
+                        ₦{lite.price}
+                        <span className="">/mo</span>
+                      </h2>
                     </div>
-                  )}
+                    <div className="">
+                      <Link href="/new">
+                        <ButtonV2 text="Order" />
+                      </Link>
+                    </div>
+                  </div>
                 </td>
-              ))}
+              )}
+              {activeTab === "Premium" && (
+                <td className="default border">
+                  <div className="py-8">
+                    <p className="mb-2">Starting at:</p>
+                    <div>
+                      <h2 className="mb-3">
+                        ₦{premium.price}
+                        <span className="">/mo</span>
+                      </h2>
+                    </div>
+                    <div className="">
+                      <Link href="/new">
+                        <ButtonV2 text="Order" />
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+              )}
+              {activeTab === "Extra" && (
+                <td className="border">
+                  <div className="py-8">
+                    <p className="mb-2">Starting at:</p>
+                    <div>
+                      <h2 className="mb-3">
+                        ₦{extra.price}
+                        <span className="">/mo</span>
+                      </h2>
+                    </div>
+                    <div className="">
+                      <Link href="/new">
+                        <ButtonV2 text="Order" />
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+              )}
             </tr>
 
             {comparisonPlans.map((item, index) => (
