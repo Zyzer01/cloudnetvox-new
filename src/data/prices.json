@@ -51,6 +51,40 @@
       "localPrice": 100500
     }
   },
+
+  "emailHosting": {
+    "lite": {
+      "name": "Lite",
+      "price": [
+        {
+          "8gb": 3000,
+          "25gb": 5000
+        }
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "price": [
+        {
+          "8gb": 3800,
+          "25gb": 5800,
+          "50gb": 6000
+        }
+      ]
+    },
+    "extra": {
+      "name": "Extra",
+      "price": [
+        {
+          "8gb": 6000,
+          "25gb": 8000,
+          "50gb": 12000,
+          "100gb": 20000
+        }
+      ]
+    }
+  },
+
   "domainNames": {
     "acKE": {
       "ext": ".ac.ke",

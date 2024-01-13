@@ -7,7 +7,7 @@ import TopBanner from '@/components/TopBanner';
 import NavBar from '@/components/NavBar';
 
 
-const archivo = Archivo({ subsets: ['latin'], display: 'swap', });
+const archivo = Archivo({ subsets: ['latin'], });
 
 export const metadata = {
   title: 'Cloudnetvox',

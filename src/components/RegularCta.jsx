@@ -19,7 +19,7 @@ const RegularCta = ({
     <div className="grid md:grid-cols-2 p-16 md:px-28 gap-x-8 gap-y-8 text-center sm:text-left place-items-center place-content-center">
       {isReversed ? (
         <>
-          <div>
+          <div className="order-last md:order-first">
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p
               className={`${
@@ -34,7 +34,7 @@ const RegularCta = ({
               </Link>
             )}
           </div>
-          <div className={`${hideImage && "hidden md:block"}`}>
+          <div className={`${hideImage && "hidden md:block order-first md:order-last"}`}>
             <Image
               src={ctaImageSrc}
               width={400}
@@ -46,7 +46,7 @@ const RegularCta = ({
         </>
       ) : (
         <>
-          <div className={`${hideImage && "hidden md:block"}`}>
+          <div className={`${hideImage && "hidden md:block order-last md:order-first"}`}>
             <Image
               src={ctaImageSrc}
               width={400}
@@ -56,7 +56,7 @@ const RegularCta = ({
               
             />
           </div>
-          <div>
+          <div className="">
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p
               className={`${
