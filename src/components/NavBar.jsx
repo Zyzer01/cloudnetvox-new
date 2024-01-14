@@ -17,8 +17,6 @@ import netvox from "public/images/netvox-logo-transparent-1.png";
 
 const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
 
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -31,13 +29,10 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
     });
   }, [isOpen, controls]);
 
-  const handleItemClick = (event, hasSubmenu) => {
-    if (!hasSubmenu) {
+  const handleItemClick = (event) => {
+    // Prevent closing when opening a submenu
+    if (!event.target.open) {
       onClose();
-      setIsSubmenuOpen(false);
-    } else {
-      // Toggle the submenu state
-      setIsSubmenuOpen((prevState) => !prevState);
     }
   };
 
@@ -75,9 +70,7 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
                   class="group [&_summary::-webkit-details-marker]:hidden"
                   onClick={handleItemClick}
                 >
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary"
-                  onClick={(event) => handleItemClick(event, item.subMenu)}
-                  >
+                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
                     <Link href={item.path}>
                       {" "}
                       <span class="font-medium"> {item.title} </span>
@@ -90,7 +83,7 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
                     )}
                   </summary>
                   {item.subMenu && (
-                    <ul className={`mt-2 space-y-1 px-4 ${isSubmenuOpen ? '' : 'hidden'}`}>
+                    <ul class="mt-2 space-y-1 px-4">
                       {item.subMenu.map((subItem, subIdx) => (
                         <li key={subIdx}>
                           <Link
