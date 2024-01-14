@@ -10,6 +10,11 @@ import { CiServer } from 'react-icons/ci';
 import { VscServer } from 'react-icons/vsc';
 import { GrServerCluster } from 'react-icons/gr';
 import BeforeFooter from '@/components/BeforeFooter';
+import RegularCta from '@/components/RegularCta';
+import ctaImageSrc0 from "public/images/email hosting.jpg";
+import ctaImageSrc1 from "public/images/email capture.jpg";
+import ctaImageSrc2 from "public/images/email capture.jpg";
+
 
 const q = data.emailHosting;
 
@@ -111,7 +116,7 @@ const EmailHosting = () => {
           buttonText="Order Now"
         />
         <Spacer />
-      <ComparisonTable
+        <ComparisonTable
           comparisonPlans={comparisonPlans}
           lite={q.lite}
           premium={q.premium}
@@ -121,6 +126,23 @@ const EmailHosting = () => {
           extraSizes={extraSizes}
           isEmailHosting
         />
+        <Spacer />
+        <RegularCta
+          heading="Personal and Shared Calendars"
+          description="Generate additional calendars beyond the default ones and decide whether to share them with your colleagues, tailoring the organizational management to fit your company's needs."
+          buttonText="Get Started"
+          ctaImageSrc={ctaImageSrc0}
+          link="/new"
+          isReversed
+        />
+        <RegularCta
+          heading="Sync across all your devices"
+          description="It ensures smooth synchronization of emails, contacts, and calendars across all your devices, guaranteeing constant access to the most up-to-date information, regardless of your location."
+          buttonText="Get Started"
+          ctaImageSrc={ctaImageSrc1}
+          link="/new"
+        />
+
         <BeforeFooter />
     </ComponentWrapper>
   );
