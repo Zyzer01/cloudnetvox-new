@@ -11,7 +11,7 @@ const Hero = () => {
     initial: {
       opacity: 0,
       scale: 0.1,
-      x: -1000,
+      x: '-100vw',
       transition: {
         duration: 0.5,
         ease: [0.55, 0.055, 0.675, 0.19],
@@ -24,9 +24,7 @@ const Hero = () => {
       transition: {
         type: "spring",
         damping: 12,
-        // stiffness: 90,
         duration: 0.5,
-        delay: 0.5,
         ease: [0.175, 0.885, 0.32, 1],
       },
     },
@@ -86,7 +84,7 @@ const Hero = () => {
             width={851}
             height={671}
             src={heroImage}
-            placeholder="blur"
+            // placeholder="blur"
             alt="Computer with cloud and server illustration"
           />
         </div>
@@ -98,7 +96,7 @@ const Hero = () => {
           height={167}
           src={welcomePattern}
           alt="zig-zag clouds illustration"
-          placeholder="blur"
+          // placeholder="blur"
         />
       </div>
     </div>
