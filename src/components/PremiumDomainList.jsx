@@ -71,7 +71,7 @@ const PremiumDomainList = () => {
         ctaImageSrc={ctaImageSrc0}
         hideImage
       />
-      <div className="domain-table-section bg-primary  text-domain flex justify-center">
+      <div className="domain-table-section bg-sky  text-domain flex justify-center">
         <div className="container bg-white mx-16 rounded-2xl">
           <div className="table-plan-box">
             <table className="table">

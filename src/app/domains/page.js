@@ -12,6 +12,11 @@ import data from "../../data/prices.json";
 import ctaImageSrc0 from "public/images/web search concept illustration.jpg";
 import DomainList from "@/components/DomainList";
 import Features from "@/components/Features";
+import { SlCloudUpload } from "react-icons/sl";
+import { MdOutlineSecurity, MdSupportAgent } from "react-icons/md";
+import { GrCertificate } from "react-icons/gr";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { FaRegHandshake } from "react-icons/fa6";
 
 const x = data.domainNames;
 
@@ -64,7 +69,44 @@ export default function Domains() {
     },
   ];
 
-  
+  const featureContent = [
+    {
+      title: '99% Uptime',
+      description:
+        "99% Uptime Don't be distracted! You're free to focus on growing your business, let us handle your site",
+      icon: <SlCloudUpload />,
+    },
+    {
+      title: 'Enhanced Security',
+      description:
+        'We secure your domains with 2FA, IP Whitelisting, and SSO for proactive protection.',
+      icon: <MdOutlineSecurity />,
+    },
+    {
+      title: 'Unparalleled accreditations',
+      description:
+        'As a leading registrar, we directly partner with global registries, saving you time and costs by bypassing middlemen.',
+      icon: <GrCertificate />,
+    },
+    {
+      title: '24/7/365 Support',
+      description:
+        'We prioritize rapid issue resolution and swift response to ensure your domain management never sleeps, just like the internet.',
+      icon: <MdSupportAgent />,
+    },
+    {
+      title: 'Transparency',
+      description:
+        'Choose clear pricing: no hidden fees, no extra charges for DNS updates, and no long-term contracts. Keep it simple with us.',
+      icon: <VscWorkspaceTrusted />,
+    },
+    {
+      title: 'Simplicity',
+      description:
+        'Simplify domain management by consolidating all your domains in one place, saving time across registrars.',
+      icon: <FaRegHandshake />,
+    },
+  ];
 
   return (
     <ComponentWrapper>
@@ -75,15 +117,15 @@ export default function Domains() {
       />
       <Spacer />
       <DomainSearchBox />
-      <Spacer />
       <PricingWithIcon
         heading="Explore Unique Domain Names"
         sub="Curated domains to elevate your online presence."
         pricingCards={pricingCards}
         buttonText="Check Availability"
       />
-      <Features featureContent={featureContent} />
       <Spacer />
+      <Features heading="What to expect" sub="Discover the Rich Experience that Awaits You in Our Domain World" featureContent={featureContent} />
+      <DomainList />
       <div>
         <div className="bg-sky py-16">
           <RegularCta
@@ -106,7 +148,6 @@ export default function Domains() {
           />
         </div>
       </div>
-      <DomainList />
       <Faq questionContent={questionContent} />
     </ComponentWrapper>
   );

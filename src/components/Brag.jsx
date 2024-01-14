@@ -25,9 +25,9 @@ const Brag = ({ heading, sub, guaranteeBox }) => {
             whileHover="hover"
             variants={cardHoverVariants}
             key={index}
-            className="bg-gray-800 rounded-2xl text-center px-6 py-14 border flex flex-col items-center justify-center space-y-5">
-            <p className="text-5xl text-domain">{item.icon}</p>
-            <h6 className="text-lg">{item.boxTitle}</h6>
+            className="bg-gray-800 rounded-2xl text-center px-4 py-12 border flex flex-col items-center justify-center space-y-5">
+            <p className="text-5xl text-sky">{item.icon}</p>
+            <h6 className="text-md">{item.boxTitle}</h6>
           </motion.div>
         ))}
       </div>

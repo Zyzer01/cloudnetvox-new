@@ -19,8 +19,11 @@ import ctaImageSrc2 from "public/images/sitting on drive and server people with 
 import ctaImageSrc3 from "public/images/world wide web and cloud.png";
 import ScrollingBanner from "@/components/ScrollingBanner";
 import BackToTop from "@/components/BackToTTop";
-import { SlCloudUpload } from 'react-icons/sl';
-import { HiOutlineAdjustmentsVertical } from 'react-icons/hi2';
+import { SlCloudUpload } from "react-icons/sl";
+import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
+import { MdOutlineSecurity, MdSupportAgent } from "react-icons/md";
+import { RiRefundLine } from "react-icons/ri";
+import { LuDatabaseBackup } from "react-icons/lu";
 
 const Home = () => {
   const contextValues = useContext(DomainContext);
@@ -74,40 +77,40 @@ const Home = () => {
   ];
   const featureContent = [
     {
-      title: '99% Uptime',
+      title: "99% Uptime",
       description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
+        "99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site",
       icon: <SlCloudUpload />,
     },
     {
-      title: 'Easy Control Panel',
+      title: "Easy Control Panel",
       description:
-        'Easy Control Panel From tracking bandwidth, i/o stats to creating SSL certificates, all the tools you need are in one convenient location.',
+        "Easy Control Panel From tracking bandwidth, i/o stats to creating SSL certificates, all the tools you need are in one convenient location.",
       icon: <HiOutlineAdjustmentsVertical />,
     },
     {
-      title: 'Daily Backups',
+      title: "Daily Backups",
       description:
-        'Daily Backups The daily data back-up service offered by CloudNetvox is aimed at providing you with automatic recovery of lost data.',
-      icon: <HiOutlineAdjustmentsVertical />,
+        "Daily Backups The daily data back-up service offered by us is aimed at providing you with automatic recovery of lost data.",
+      icon: <LuDatabaseBackup />,
     },
     {
-      title: '99% Uptime',
+      title: "Money Back Guarantee",
       description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
+        "Try us and love us, or get a refund within 30 days of signing up. Your satisfaction is our number 1 priority.",
+      icon: <RiRefundLine />,
     },
     {
-      title: '99% Uptime',
+      title: "Security",
       description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
+        "Enjoy 2.5X Speed, Advanced Security, hassle-free WordPress installation on all accounts + FREE Migrations.",
+      icon: <MdOutlineSecurity />,
     },
     {
-      title: '99% Uptime',
+      title: "Guaranteed Support",
       description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
+        "Support is our number one priority. Pro-active experts at your service, who reach out when your attention is needed..",
+      icon: <MdSupportAgent />,
     },
   ];
 
@@ -128,13 +131,17 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       {/* <ScrollingBanner /> */}
-      <Hero /> 
+      <Hero />
       <DomainSearchBox enableAnimation />
-      <BackToTop />  
+      <BackToTop />
       <Spacer />
       <Patners />
       <Spacer />
-      <Features featureContent={featureContent} />
+      <Features
+        heading="Overall Features"
+        sub="Our revolutionary Cloud solution is powerful, simple, and surprisingly affordable."
+        featureContent={featureContent}
+      />
       <Spacer />
       <Pricing
         showBadge

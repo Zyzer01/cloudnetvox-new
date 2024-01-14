@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import { motion } from 'framer-motion';
 
-const Features = ({featureContent}) => {
+const Features = ({heading, sub, featureContent}) => {
   const sleekShowVariants = {
     hidden: {
       opacity: 0,
@@ -16,8 +16,8 @@ const Features = ({featureContent}) => {
   return (
     <div className="bg-sky p-16 md:p-24">
       <Header
-        heading="Overall Features"
-        sub="Our revolutionary Cloud solution is powerful, simple, and surprisingly affordable."
+        heading={heading}
+        sub={sub}
       />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-y-16 gap-x-4">
         {featureContent.map((item, index) => (

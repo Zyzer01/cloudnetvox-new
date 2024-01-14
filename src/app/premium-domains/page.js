@@ -1,5 +1,6 @@
 import AltHero from "@/components/AltHero";
 import PremiumDomainList from "@/components/PremiumDomainList";
+import RegularCta from "@/components/RegularCta";
 import Spacer from "@/components/Spacer";
 
 const PremiumDomains = () => {
@@ -12,6 +13,15 @@ const PremiumDomains = () => {
       />
 
       <PremiumDomainList />
+      <RegularCta
+            heading="Full Domain Management"
+            description="Simplify your online presence with our comprehensive domain management services. From registration to renewal,
+            we handle every aspect, ensuring your domains are secure, accessible, and seamlessly integrated with your web hosting.
+            Focus on your business while we take care of your domain needs."
+            buttonText="Get Started"
+            ctaImageSrc={ctaImageSrc0}
+            link="/new"
+          />
       <Spacer />
     </main>
   );
