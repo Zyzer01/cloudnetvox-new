@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from './Header';
-import { SlCloudUpload } from 'react-icons/sl';
-import { HiOutlineAdjustmentsVertical } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 
-const Features = () => {
+const Features = ({featureContent}) => {
   const sleekShowVariants = {
     hidden: {
       opacity: 0,
@@ -14,44 +12,7 @@ const Features = () => {
       transition: { duration: 1 },
     },
   };
-  const featureContent = [
-    {
-      title: '99% Uptime',
-      description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
-    },
-    {
-      title: 'Easy Control Panel',
-      description:
-        'Easy Control Panel From tracking bandwidth, i/o stats to creating SSL certificates, all the tools you need are in one convenient location.',
-      icon: <HiOutlineAdjustmentsVertical />,
-    },
-    {
-      title: 'Daily Backups',
-      description:
-        'Daily Backups The daily data back-up service offered by CloudNetvox is aimed at providing you with automatic recovery of lost data.',
-      icon: <HiOutlineAdjustmentsVertical />,
-    },
-    {
-      title: '99% Uptime',
-      description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
-    },
-    {
-      title: '99% Uptime',
-      description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
-    },
-    {
-      title: '99% Uptime',
-      description:
-        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
-      icon: <SlCloudUpload />,
-    },
-  ];
+
   return (
     <div className="bg-sky p-16 md:p-24">
       <Header

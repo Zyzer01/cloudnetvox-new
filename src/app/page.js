@@ -19,6 +19,8 @@ import ctaImageSrc2 from "public/images/sitting on drive and server people with 
 import ctaImageSrc3 from "public/images/world wide web and cloud.png";
 import ScrollingBanner from "@/components/ScrollingBanner";
 import BackToTop from "@/components/BackToTTop";
+import { SlCloudUpload } from 'react-icons/sl';
+import { HiOutlineAdjustmentsVertical } from 'react-icons/hi2';
 
 const Home = () => {
   const contextValues = useContext(DomainContext);
@@ -70,6 +72,45 @@ const Home = () => {
       buttonText: "Buy now",
     },
   ];
+  const featureContent = [
+    {
+      title: '99% Uptime',
+      description:
+        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
+      icon: <SlCloudUpload />,
+    },
+    {
+      title: 'Easy Control Panel',
+      description:
+        'Easy Control Panel From tracking bandwidth, i/o stats to creating SSL certificates, all the tools you need are in one convenient location.',
+      icon: <HiOutlineAdjustmentsVertical />,
+    },
+    {
+      title: 'Daily Backups',
+      description:
+        'Daily Backups The daily data back-up service offered by CloudNetvox is aimed at providing you with automatic recovery of lost data.',
+      icon: <HiOutlineAdjustmentsVertical />,
+    },
+    {
+      title: '99% Uptime',
+      description:
+        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
+      icon: <SlCloudUpload />,
+    },
+    {
+      title: '99% Uptime',
+      description:
+        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
+      icon: <SlCloudUpload />,
+    },
+    {
+      title: '99% Uptime',
+      description:
+        '99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site',
+      icon: <SlCloudUpload />,
+    },
+  ];
+
   const ctaListItems = [
     "FREE Domain Name for 1st Year",
     "FREE Email Address",
@@ -93,7 +134,7 @@ const Home = () => {
       <Spacer />
       <Patners />
       <Spacer />
-      <Features />
+      <Features featureContent={featureContent} />
       <Spacer />
       <Pricing
         showBadge

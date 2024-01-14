@@ -11,6 +11,7 @@ import ComponentWrapper from "@/components/ComponentWrapper";
 import data from "../../data/prices.json";
 import ctaImageSrc0 from "public/images/web search concept illustration.jpg";
 import DomainList from "@/components/DomainList";
+import Features from "@/components/Features";
 
 const x = data.domainNames;
 
@@ -63,6 +64,8 @@ export default function Domains() {
     },
   ];
 
+  
+
   return (
     <ComponentWrapper>
       <AltHero
@@ -79,6 +82,7 @@ export default function Domains() {
         pricingCards={pricingCards}
         buttonText="Check Availability"
       />
+      <Features featureContent={featureContent} />
       <Spacer />
       <div>
         <div className="bg-sky py-16">
