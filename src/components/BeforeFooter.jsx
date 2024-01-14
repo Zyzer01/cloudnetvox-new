@@ -11,7 +11,7 @@ const BeforeFooter = () => {
           height={243}
           alt="cloud support engineering"
         />
-        <h4 className="text-md md:text-xl lg:text-3xl absolute top-8 sm:top-12 md:top-16 lg:top-24 text-white">
+        <h4 className="text-md md:text-xl lg:text-3xl absolute hidden md:block md:top-16 lg:top-24 text-white">
           Need help? Call our Pro-active support team 24/7: +234 702-500-0200
         </h4>
       </div>

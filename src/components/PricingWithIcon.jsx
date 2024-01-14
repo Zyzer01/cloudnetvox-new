@@ -37,7 +37,7 @@ const PricingWithIcon = ({ pricingCards, isWithToggle, buttonText, heading, sub 
   };
 
   return (
-    <div className="p-16 md:px-28">
+    <div className="p-8 sm:p-16 md:px-28">
       <Header heading={heading} sub={sub} />
       {isWithToggle && (
         <div className="flex items-center justify-center mt-8 mb-12">

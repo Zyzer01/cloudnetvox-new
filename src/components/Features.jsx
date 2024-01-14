@@ -14,12 +14,12 @@ const Features = ({heading, sub, featureContent}) => {
   };
 
   return (
-    <div className="bg-sky p-16 md:p-24">
+    <div className="bg-sky p-8 sm:p-16 md:p-24">
       <Header
         heading={heading}
         sub={sub}
       />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-y-16 gap-x-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-y-8 md:gap-y-16 gap-x-4">
         {featureContent.map((item, index) => (
           <motion.div
             className="flex"
@@ -31,7 +31,7 @@ const Features = ({heading, sub, featureContent}) => {
               <p className="text-4xl text-domain">{item.icon}</p>
             </div>
             <div>
-              <h3 className="text-2xl mb-2">{item.title}</h3>
+              <h3 className="text-xl md:text-2xl mb-2">{item.title}</h3>
               <p className="text-muted">{item.description}</p>
             </div>
           </motion.div>

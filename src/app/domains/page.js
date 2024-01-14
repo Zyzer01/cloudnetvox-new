@@ -117,6 +117,7 @@ export default function Domains() {
       />
       <Spacer />
       <DomainSearchBox />
+      <Spacer />
       <PricingWithIcon
         heading="Explore Unique Domain Names"
         sub="Curated domains to elevate your online presence."

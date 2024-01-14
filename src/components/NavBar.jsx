@@ -37,11 +37,11 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
   };
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-white"
+      className="fixed top-0 left-0 w-full h-full bg-white overflow-y-hidden"
       initial={{ x: "-100%" }}
       animate={controls}
     >
-      <div class="flex h-screen flex-col justify-between border-e bg-white">
+      <div class="flex h-screen flex-col justify-between border-e bg-white z-100 ">
         <div class="px-4 py-6">
           <div className="flex justify-between items-center">
             <span class="grid h-15 w-30">

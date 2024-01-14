@@ -4,7 +4,7 @@ import React from 'react';
 
 const AwardBadge = () => {
   return (
-    <div className="grid grid-cols-3 place-items-center p-16 md:p-28">
+    <div className="grid grid-cols-3 place-items-center p-8 gap-x-4 sm:p-16 md:p-28">
       <div>
         <Image
           src="/images/logos/2023-silver-top-25-best-cloud-hosting.png"

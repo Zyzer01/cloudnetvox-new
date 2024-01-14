@@ -7,8 +7,6 @@ import { domains } from "@/utility/PremiumDomainNameData";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsFire } from "react-icons/bs";
 import RegularCta from "./RegularCta";
-import ctaImageSrc0 from "public/images/girl sitting on domain animation.jpg";
-
 
 const PremiumDomainRow = ({ cols }) => {
   return (
@@ -65,12 +63,7 @@ const PremiumDomainList = () => {
   return (
     <div>
       {/* <Header heading="Premium Domain name" sub="i dont know what to add" /> */}
-      <RegularCta
-        heading="Elevate Your Online Presence With CloudNetvox!"
-        description="Stand out from the crowd with domain names that are memorable, relevant, and distinctly reflective of your brand. A premium domain instantly communicates professionalism and trustworthiness to potential customers, partners, and clients."
-        ctaImageSrc={ctaImageSrc0}
-        hideImage
-      />
+      
       <div className="domain-table-section bg-sky  text-domain flex justify-center">
         <div className="container bg-white mx-16 rounded-2xl">
           <div className="table-plan-box">
@@ -107,11 +100,22 @@ const PremiumDomainList = () => {
             </table>
             <div className="text-center mt-6 text-black">
               <motion.button
+              className="bg-domain p-2 text-white rounded"
                 whileTap={{ scale: 0.95 }}
                 onClick={showMore ? handleHide : handleShowMore}
               >
                 {showMore ? "Hide" : "See more"}
               </motion.button>
+              <p className="mt-6">
+                Not what you want?{" "}
+                <span className="text-domain">
+                  {" "}
+                  <Link href="https://cloudnetvox.com/clients/cart.php?a=add&domain=register">
+                    {" "}
+                    Explore more
+                  </Link>
+                </span>
+              </p>
             </div>
           </div>
         </div>

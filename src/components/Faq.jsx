@@ -52,7 +52,7 @@ const Item = ({ title, content }) => {
 
 const Faq = ({ questionContent }) => {
   return (
-    <div className="p-16 md:px-28">
+    <div className="p-8 sm:p-16 md:px-28">
       <Header heading="Frequently Asked Questions" sub="See if your questions are answered" />
       <div className="mx-auto mt-16">
         <div className="max-w-xl sm:mx-auto lg:max-w-3xl">

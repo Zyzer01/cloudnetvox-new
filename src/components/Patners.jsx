@@ -16,7 +16,7 @@ const Patners = () => {
   ];
 
   return (
-    <div className="p-16 md:px-28">
+    <div className="p-8 sm:p-16 md:px-28">
       <Header
         heading="Trusted By 10,000+ Clients & Partners"
         sub="We are just better together... Build, launch, and grow your website or app in our environment. Our team has your back."

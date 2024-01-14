@@ -73,7 +73,7 @@ const MobileComparisonTable = ({
           </button>
         ))}
       </div>
-      <div className="flex justify-center px-8 py-16 bg-sky">
+      <div className="flex justify-center px-2 py-16 bg-sky">
         <table className="table-fixed w-full border-collapse border-0 bg-white rounded-3xl">
           <thead>
             <tr>

@@ -16,7 +16,7 @@ const RegularCta = ({
   showButton,
 }) => {
   return (
-    <div className="grid md:grid-cols-2 p-16 md:px-28 gap-x-8 md:gap-x-16 gap-y-8 text-center sm:text-left place-items-center place-content-center">
+    <div className="grid md:grid-cols-2 p-8 sm:p-16 md:px-28 gap-x-8 md:gap-x-16 gap-y-8 text-center sm:text-left place-items-center place-content-center">
       {isReversed ? (
         <>
           <div className="order-last md:order-first">
