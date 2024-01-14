@@ -16,7 +16,8 @@ import { GrServerCluster } from "react-icons/gr";
 import ComponentWrapper from "@/components/ComponentWrapper";
 import data from "../../data/prices.json";
 import { ImCheckmark } from "react-icons/im";
-import Nav from "@/components/Nav";
+import ctaImageSrc0 from "public/images/web hosting.jpg";
+import RegularCta from "@/components/RegularCta";
 
 const z = data.sharedHosting;
 
@@ -155,6 +156,14 @@ export default function SharedHosting() {
           lite={z.lite}
           premium={z.premium}
           extra={z.extra}
+        />
+        <Spacer />
+        <RegularCta
+          heading="Simplified Hosting Management"
+          description="Simplify your website management with our cPanel hosting plans! Unlock the power of the Softaculous Apps Installer – your go-to solution for one-click installations of popular web applications like phpBB, Joomla, WordPress, and more. Effortless and efficient web hosting at your fingertips!"
+          buttonText="Get Started"
+          ctaImageSrc={ctaImageSrc0}
+          link="/new"
         />
         <Spacer />
         <div>
