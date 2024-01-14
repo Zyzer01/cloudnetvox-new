@@ -109,7 +109,7 @@ export default function Domains() {
   ];
 
   return (
-    <ComponentWrapper>
+    <main>
       <AltHero
         pageTitle="Choose Your Perfect Domain Name"
         pageSub="We'll make sure you find the right domain and that it's got a secure home online."
@@ -150,6 +150,6 @@ export default function Domains() {
         </div>
       </div>
       <Faq questionContent={questionContent} />
-    </ComponentWrapper>
+    </main>
   );
 }

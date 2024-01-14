@@ -150,7 +150,8 @@ const CloudServers = () => {
   ];
 
   return (
-    <ComponentWrapper>
+    // <ComponentWrapper>
+      <>
       <AltHero
         pageTitle="SSD Cloud Server"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -213,7 +214,7 @@ const CloudServers = () => {
       />
       <Faq questionContent={questionContent} />
       <BeforeFooter />
-    </ComponentWrapper>
+      </>
   );
 };
 

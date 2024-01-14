@@ -136,7 +136,7 @@ export default function SharedHosting() {
 
   return (
     <div>
-      <ComponentWrapper>
+      <main>
         <AltHero
           pageTitle="Shared Hosting"
           pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -187,7 +187,7 @@ export default function SharedHosting() {
         </div>
 
         <Faq questionContent={questionContent} />
-      </ComponentWrapper>
+      </main>
     </div>
   );
 }

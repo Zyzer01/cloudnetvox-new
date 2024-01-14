@@ -101,7 +101,7 @@ const EmailHosting = () => {
   };
 
   return (
-    <ComponentWrapper>
+    <main>
       <AltHero
         pageTitle="Email Hosting"
         pageSub="Secure and professional email"
@@ -144,7 +144,7 @@ const EmailHosting = () => {
         />
 
         <BeforeFooter />
-    </ComponentWrapper>
+    </main>
   );
 };
 
