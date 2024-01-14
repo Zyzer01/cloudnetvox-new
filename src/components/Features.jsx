@@ -58,7 +58,7 @@ const Features = () => {
         heading="Overall Features"
         sub="Our revolutionary Cloud solution is powerful, simple, and surprisingly affordable."
       />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center py-16 gap-y-16 gap-x-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center gap-y-16 gap-x-4">
         {featureContent.map((item, index) => (
           <motion.div
             className="flex"

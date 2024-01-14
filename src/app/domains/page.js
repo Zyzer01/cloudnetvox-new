@@ -1,16 +1,16 @@
-'use client';
-import AltHero from '@/components/AltHero';
-import DomainSearchBox from '@/components/DomainSearchBox';
-import PricingWithIcon from '@/components/PricingWithIcon';
-import Spacer from '@/components/Spacer';
-import Image from 'next/image';
-import { CiGlobe } from 'react-icons/ci';
-import Faq from '@/components/Faq';
-import RegularCta from '@/components/RegularCta';
-import ComponentWrapper from '@/components/ComponentWrapper';
-import data from '../../data/prices.json';
-import ctaImageSrc0 from 'public/images/web search concept illustration.jpg';
-import DomainList from '@/components/DomainList';
+"use client";
+import AltHero from "@/components/AltHero";
+import DomainSearchBox from "@/components/DomainSearchBox";
+import PricingWithIcon from "@/components/PricingWithIcon";
+import Spacer from "@/components/Spacer";
+import Image from "next/image";
+import { CiGlobe } from "react-icons/ci";
+import Faq from "@/components/Faq";
+import RegularCta from "@/components/RegularCta";
+import ComponentWrapper from "@/components/ComponentWrapper";
+import data from "../../data/prices.json";
+import ctaImageSrc0 from "public/images/web search concept illustration.jpg";
+import DomainList from "@/components/DomainList";
 
 const x = data.domainNames;
 
@@ -22,19 +22,20 @@ export default function Domains() {
         "A domain name refers to your website address. This is what users type in a browser's search bar to directly access your website. A domain name is unique and cannot be shared between different sites. For example: cloudnetvoxcom",
     },
     {
-      title: 'How do I buy a domain name?',
+      title: "How do I buy a domain name?",
       content:
-        'To buy a domain name, enter the domain name you want to buy in the search box above, sign up and register the domain name.',
+        "To buy a domain name, enter the domain name you want to buy in the search box above, sign up and register the domain name.",
     },
     {
-      title: 'Got any tips on finding a good domain name?',
+      title: "Got any tips on finding a good domain name?",
       content:
-        'How much thought do you need to give to a domain name when you want to create a website? In theory, with a good website, users should visit your pages whatever the domain name...but it is a little more complicated than that. If you are part of a business, it is crucial to choose a domain name that is right for your business or brand. search for your perfect domain name',
+        "How much thought do you need to give to a domain name when you want to create a website? In theory, with a good website, users should visit your pages whatever the domain name...but it is a little more complicated than that. If you are part of a business, it is crucial to choose a domain name that is right for your business or brand. search for your perfect domain name",
     },
     {
-      title: 'What are the advantages of reserving your domain with Cloudnetvox?',
+      title:
+        "What are the advantages of reserving your domain with Cloudnetvox?",
       content:
-        'You have a wide range of domain name extensions to help protect your brand on the internet, if you are a business. Cloudnetvox also provides you with a custom email address linked to the domain. Furthermore, as a hosting provider, we can strengthen your DNS security, and allow you to configure your DNS zone.',
+        "You have a wide range of domain name extensions to help protect your brand on the internet, if you are a business. Cloudnetvox also provides you with a custom email address linked to the domain. Furthermore, as a hosting provider, we can strengthen your DNS security, and allow you to configure your DNS zone.",
     },
   ];
 
@@ -42,26 +43,25 @@ export default function Domains() {
     {
       icon: <CiGlobe />,
       title: x.comNG.ext,
-      desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
+      desc: "Elevate your online presence with .com.ng - a domain that speaks volumes!",
       price: x.comNG.price,
-      link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
+      link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
     },
     {
       icon: <CiGlobe />,
       title: x.com.ext,
-      desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
+      desc: "Establish your digital identity with the timeless appeal of a .com domain!",
       price: x.com.price,
-      link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
+      link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
     },
     {
       icon: <CiGlobe />,
       title: x.africa.ext,
-      desc: 'Get .com a top-level domain (TLD) in the DNS of the Internet.',
+      desc: "Embrace Africa with a unique .africa domain for your online presence!",
       price: x.africa.price,
-      link: 'https://cloudnetvox.com/clients/cart.php?a=add&domain=register',
+      link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
     },
   ];
-
 
   return (
     <ComponentWrapper>
@@ -73,7 +73,12 @@ export default function Domains() {
       <Spacer />
       <DomainSearchBox />
       <Spacer />
-      <PricingWithIcon pricingCards={pricingCards} buttonText="Check Availability" />
+      <PricingWithIcon
+        heading="Explore Unique Domain Names"
+        sub="Curated domains to elevate your online presence."
+        pricingCards={pricingCards}
+        buttonText="Check Availability"
+      />
       <Spacer />
       <div>
         <div className="bg-sky py-16">
@@ -92,7 +97,7 @@ export default function Domains() {
             className="w-full"
             width={2000}
             height={2000}
-            src={'/images/welcome-pattern.png'}
+            src={"/images/welcome-pattern.png"}
             alt="zig zag clouds illustration"
           />
         </div>

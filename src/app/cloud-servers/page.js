@@ -14,9 +14,9 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { TbWorldUpload } from "react-icons/tb";
 import ComponentWrapper from "@/components/ComponentWrapper";
-import ctaImageSrc0 from "public/images/dedicated server feature network illustration.png";
-import ctaImageSrc1 from "public/images/cloud technology feature.png";
-import ctaImageSrc2 from "public/images/flexible root option.png";
+import ctaImageSrc0 from "public/images/server management.jpg"; 
+import ctaImageSrc1 from "public/images/cloud saas.jpg"; 
+import ctaImageSrc2 from "public/images/flexible root.jpg";
 import Faq from "@/components/Faq";
 
 const CloudServers = () => {
@@ -169,7 +169,7 @@ const CloudServers = () => {
       <Spacer />
       <div>
         <div className="bg-sky p-16 lg:p-28 ">
-          <div className="bg-white xl:p-8 rounded-3xl">
+          <div className="bg-white rounded-3xl">
             <RegularCta
               heading="Multi-Server Management"
               description="Need more than one server? You can add more VPS, or even Shared and Dedicated hosting services to your account and effortlessly manage everything in one convenient location."

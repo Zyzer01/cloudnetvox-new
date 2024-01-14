@@ -3,7 +3,6 @@ import ButtonV2 from "./ui/ButtonV2";
 import Link from "next/link";
 import "../styles/table.css";
 import { useState } from "react";
-import { ImCheckmark } from "react-icons/im";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FeatureRow = ({ feature, lite, premium, extra, activeTab }) => {

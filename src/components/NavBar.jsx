@@ -8,48 +8,14 @@ import { AiOutlineClose } from "react-icons/ai";
 import logo from "public/images/logos/cloudnetvox logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaCloudArrowUp } from "react-icons/fa6";
+import { SiAmazonsimpleemailservice } from "react-icons/si";
+import { CiServer } from "react-icons/ci";
+import { MdDomain } from "react-icons/md";
+import { MdDomainAdd } from "react-icons/md";
 import Button from "./ui/Button";
 import netvox from "public/images/netvox-logo-transparent-1.png";
 
-const MobileMenuModal = ({ isOpen, onClose }) => {
-  const navigation = [
-    { title: "Shared Hosting", path: "/shared-hosting" },
-    {
-      title: "VPS Hosting",
-      path: "javascript:void(0)",
-      subMenu: [
-        {
-          title: "Submenu 1",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/sub",
-        },
-        {
-          icon: <FaCloudArrowUp />,
-          title: "Submenu 1",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/sub",
-        },
-      ],
-    },
-    { title: "Dedicated Servers", path: "/dedicated-servers" },
-
-    {
-      title: "Domains",
-      path: "javascript:void(0)",
-      subMenu: [
-        {
-          title: "Domains",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/domains",
-        },
-        {
-          title: "Premium Domains",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/premium-domains",
-        },
-      ],
-    },
-  ];
+const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
 
   const controls = useAnimation();
 
@@ -170,13 +136,13 @@ const NavBar = () => {
       path: "javascript:void(0)",
       subMenu: [
         {
-          icon: <FaCloudArrowUp />,
+          icon: <CiServer />,
           title: "Shared Hosting",
           desc: "NVMe Powered cPanel Web Hosting",
           path: "/shared-hosting",
         },
         {
-          icon: <FaCloudArrowUp />,
+          icon: <SiAmazonsimpleemailservice />,
           title: "Business Email",
           desc: "Powerful email service",
           path: "/email-hosting",
@@ -190,13 +156,13 @@ const NavBar = () => {
       path: "javascript:void(0)",
       subMenu: [
         {
-          icon: <FaCloudArrowUp />,
+          icon: <MdDomain />,
           title: "Domains",
           desc: "NVMe Powered cPanel Web Hosting",
           path: "/domains",
         },
         {
-          icon: <FaCloudArrowUp />,
+          icon: <MdDomainAdd />,
           title: "Premium Domains",
           desc: "NVMe Powered cPanel Web Hosting",
           path: "/premium-domains",
@@ -219,7 +185,7 @@ const NavBar = () => {
             >
               <RiMenu4Fill />
             </button>
-            <MobileMenuModal isOpen={isMenuOpen} onClose={handleCloseMenu} />
+            <MobileMenuModal isOpen={isMenuOpen} onClose={handleCloseMenu} navigation={navigation} />
           </div>
         </div>
         <div className="flex-1 justify-self-center pb-3 mt-8 hidden lg:block md:pb-0 md:mt-0">
