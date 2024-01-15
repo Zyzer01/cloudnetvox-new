@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 const HostAdviceWidget = () => {
   useEffect(() => {
+    // Function to embed the HostAdvice script
     const embedHostAdviceScript = () => {
       const script = document.createElement('script');
       script.id = 'ha-embed';
