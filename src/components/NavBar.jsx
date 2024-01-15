@@ -29,9 +29,9 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
     });
   }, [isOpen, controls]);
 
-  const handleItemClick = (event, hasSubMenu) => {
+  const handleItemClick = (event) => {
     // Prevent closing when opening a submenu
-    if (!hasSubMenu) {
+    if (!event.target.open) {
       onClose();
     }
   };
@@ -68,7 +68,6 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
               <li key={idx}>
                 <details
                   class="group [&_summary::-webkit-details-marker]:hidden"
-                  onClick={(event) => handleItemClick(event, !!item.subMenu)}
                 >
                   <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
                     <Link href={item.path}>

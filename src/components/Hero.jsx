@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="col-span-6 lg:col-span-3">
           <div className="grid grid-cols-3">
             <div className="col-span-3 md:col-span-2">
-              <motion.p
+              {/* <motion.p
                 className="mb-4 rounded-full bg-gray-300 bg-opacity-20 mb-0 flex items-center p-2"
                 initial="initial"
                 animate="animate"
@@ -63,7 +63,7 @@ const Hero = () => {
                 </motion.span>
                 <span className="font-bold"> .com.ng </span> 
                  domain name at N1200
-              </motion.p>
+              </motion.p> */}
             </div>
             <div></div>
           </div>

@@ -109,6 +109,7 @@ export default function Domains() {
   ];
 
   return (
+    <div>
     <main>
       <AltHero
         pageTitle="Choose Your Perfect Domain Name"
@@ -151,5 +152,6 @@ export default function Domains() {
       </div>
       <Faq questionContent={questionContent} />
     </main>
+    </div>
   );
 }
