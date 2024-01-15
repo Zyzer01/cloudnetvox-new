@@ -14,7 +14,7 @@ module.exports = {
         '3xl': '0 8px 8px -1px rgba(0, 0, 0, 0.15);',
         spread: '0 30px 30px rgba(24, 27, 34, 0.10)',
       },
-      colors: {
+      colors: { 
         primary: '#06155A',
         domain: '#103dbe',
         slight: '#123072',
