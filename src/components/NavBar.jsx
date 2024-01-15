@@ -183,10 +183,10 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-white w-full border-b md:border-0 md:static md:px-24  -mb-20 z-50">
+    <nav className="bg-white w-full border-b md:border-0 md:static xl:px-20 -mb-20 z-50">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 lg:block">
-          <Link href="javascript:void(0)">
+          <Link href="/">
             <Image src={logo} width={172} height={40} alt="Cloudnetvox logo" />
           </Link>
           <div className="lg:hidden">

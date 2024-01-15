@@ -13,7 +13,8 @@ import BeforeFooter from '@/components/BeforeFooter';
 import RegularCta from '@/components/RegularCta';
 import ctaImageSrc0 from "public/images/email hosting.jpg";
 import ctaImageSrc1 from "public/images/email capture.jpg";
-import ctaImageSrc2 from "public/images/email capture.jpg";
+import { motion } from 'framer-motion';
+
 
 
 const q = data.emailHosting;
@@ -101,11 +102,16 @@ const EmailHosting = () => {
   };
 
   return (
-    <main>
+    <motion.main
+    initial={{ x: '100vw' }}
+      animate={{ x: 0, transition: { type: 'linear' } }}
+      exit={{ x: '-100vw' }}
+      className='z-0'
+    >
       <AltHero
         pageTitle="Email Hosting"
         pageSub="Secure and professional email"
-        breadcrumb="Shared Hosting"
+        breadcrumb="Email Hosting"
       />
       <Spacer />
       <PricingWithIcon
@@ -144,7 +150,7 @@ const EmailHosting = () => {
         />
 
         <BeforeFooter />
-    </main>
+    </motion.main>
   );
 };
 

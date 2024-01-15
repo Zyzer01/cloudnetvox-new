@@ -25,21 +25,13 @@ const TopBanner = () => {
           </p>
         </Link>
       </div>
-      <div className="flex divide-x space-x-4">
+      <div className="flex">
         <Link href="tel:07025000200">
           <p className="flex items-center text-white">
             <span className="mr-2">
               <FaWhatsapp />
             </span>{' '}
             Chat
-          </p>
-        </Link>
-        <Link href="mailto:info@cloudnetvox.com">
-          <p className="flex items-center text-white ml-4">
-            <span className="mr-2">
-              <MdPayment />
-            </span>
-            <span className="hidden lg:inline-block">Payment Options</span>
           </p>
         </Link>
       </div>
