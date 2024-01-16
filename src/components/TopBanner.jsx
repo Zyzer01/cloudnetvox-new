@@ -25,7 +25,7 @@ const TopBanner = () => {
           </p>
         </Link>
       </div>
-      <div className="flex"> 
+      <div className="flex">
         <Link href="tel:07025000200">
           <p className="flex items-center text-white">
             <span className="mr-2">
