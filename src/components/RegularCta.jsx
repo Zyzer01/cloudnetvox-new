@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React from "react";
 import ButtonV2 from "./ui/ButtonV2";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+
 
 
 const RegularCta = ({
@@ -19,7 +21,11 @@ const RegularCta = ({
     <div className="grid md:grid-cols-2 p-8 sm:p-16 md:px-28 gap-x-8 md:gap-x-16 gap-y-8 text-center sm:text-left place-items-center place-content-center">
       {isReversed ? (
         <>
-          <div className="order-last md:order-first">
+          <motion.div className="order-last md:order-first"
+          initial={{ scale: -0.8 }}
+          whileInView={{scale: 1}}
+          transition={{ duration: 0.5 }}
+          >
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p
               className={`${
@@ -33,7 +39,7 @@ const RegularCta = ({
                 <ButtonV2 text={buttonText} />
               </Link>
             )}
-          </div>
+          </motion.div>
           <div className={`${hideImage && "hidden md:block order-first md:order-last"}`}>
             <Image
               src={ctaImageSrc}
