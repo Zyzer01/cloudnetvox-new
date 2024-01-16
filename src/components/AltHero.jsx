@@ -1,5 +1,5 @@
 import React from 'react';
-import BreadCrumbs from './ui/BreadCrumbs';
+import BreadCrumbs from './ui/BreadCrumbs'; 
 
 const AltHero = ({ pageTitle, pageSub, breadcrumb }) => { 
   return (
