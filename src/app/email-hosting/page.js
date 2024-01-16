@@ -101,13 +101,13 @@ const EmailHosting = () => {
     },
   };
 
-  return (
+  return ( 
     <motion.main
     initial={{ x: '100vw' }}
       animate={{ x: 0, transition: { type: 'linear' } }}
       exit={{ x: '-100vw' }}
       className='z-0'
-    >
+    > 
       <AltHero
         pageTitle="Email Hosting"
         pageSub="Secure and professional email"
