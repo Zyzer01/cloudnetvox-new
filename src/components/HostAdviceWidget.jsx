@@ -13,7 +13,6 @@ const HostAdviceWidget = () => {
     };
 
     embedHostAdviceScript();
-
     return () => {
       const scriptElement = document.getElementById('ha-embed');
       if (scriptElement) {
