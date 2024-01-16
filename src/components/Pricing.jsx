@@ -47,7 +47,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
       </div>
       <div
         className={`grid grid-cols-1 lg:grid-cols-3 ${
-          isFourCols && 'md:grid-cols-2 lg:grid-cols-4'
+          isFourCols && 'md:grid-cols-2 lg:grid-cols-4' 
         } gap-y-16 place-content-center place-items-center gap-x-8`}>
         {card.map((item, index) => (
           <motion.div
