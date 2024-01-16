@@ -44,7 +44,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
           />
         </div>
         <span className="ml-2 text-gray-900 font-bold">{option2}</span>
-      </div>
+      </div> 
       <div
         className={`grid grid-cols-1 lg:grid-cols-3 ${
           isFourCols && 'md:grid-cols-2 lg:grid-cols-4' 
