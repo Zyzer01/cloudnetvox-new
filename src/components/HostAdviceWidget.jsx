@@ -20,7 +20,6 @@ const HostAdviceWidget = () => {
       }
     };
   }, []); 
-
   return (
     <div className="ha-widget px-8 md:px-24 pt-8" data-widget="latest-reviews" data-height="500" data-width="auto" data-id="94020" data-lang="en" data-params="above_stars:"></div>
   );
