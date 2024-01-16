@@ -30,7 +30,7 @@ const TopBanner = () => {
           <p className="flex items-center text-white">
             <span className="mr-2">
               <FaWhatsapp />
-            </span>{
+            </span>
             Chat
           </p>
         </Link>
