@@ -180,7 +180,7 @@ const NavBar = () => {
         },
       ],
     },
-  ];c
+  ];
 
   return (
     <nav className="bg-white w-full border-b md:border-0 md:static xl:px-20 -mb-20 z-50">
