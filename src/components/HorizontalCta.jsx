@@ -11,7 +11,7 @@ const HorizontalCta = ({guaranteeBox}) => {
           boxShadow: '0 30px 30px rgba(24, 27, 34, 0.10)', // Add a drop shadow
           transition: {
             duration: 0.3,
-            ease: 'easeInOut',
+            ease: 'easeInOut', 
           },
         },
       };
