@@ -6,7 +6,7 @@ const HostAdviceWidget = () => {
       const script = document.createElement('script');
       script.id = 'ha-embed';
       script.async = true;
-      script.src = 'https://hostadvice.com/embed/widget';
+      script.src = 'https://hostadvice.com/embed/widgets.js';
 
       const firstScript = document.getElementsByTagName('script')[0];
       firstScript.parentNode.insertBefore(script, firstScript);
