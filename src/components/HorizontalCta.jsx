@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const HorizontalCta = ({guaranteeBox}) => {
     const cardHoverVariants = {
         initial: {
-          y: 0,
+          y: 0, 
         }, 
         hover: {
           y: -5,
