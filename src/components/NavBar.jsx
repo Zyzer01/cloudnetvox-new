@@ -189,8 +189,8 @@ const NavBar = () => {
           <Link href="/">
             <Image src={logo} width={172} height={40} alt="Cloudnetvox logo" />
           </Link>
-          <div className="lg:hidden">
-            <button
+          <div className="lg:hidden"> 
+            <button 
               className="text-white text-xl outline-none p-2 rounded-md border-gray-100 border"
               onClick={handleToggleMenu}
             >
