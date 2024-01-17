@@ -14,7 +14,6 @@ const HorizontalCta = ({guaranteeBox}) => {
             ease: 'easeInOut',
           },
         },
-      };
   return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white px-8 md:px-24 gap-6">
           {guaranteeBox.map((item, index) => (
