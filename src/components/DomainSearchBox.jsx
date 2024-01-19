@@ -1,6 +1,6 @@
-'useClient';
-import { motion } from 'framer-motion';
-import data from '../data/prices.json';
+"useClient";
+import { motion } from "framer-motion";
+import data from "../data/prices.json";
 
 const x = data.domainNames;
 
@@ -12,7 +12,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
     onscreen: {
       y: 50,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 100,
         duration: 0.3,
       },
@@ -21,51 +21,111 @@ const DomainSearchBox = ({ enableAnimation }) => {
 
   const domainNames = [
     {
-      colorVariant: 'text-blue-600',
+      colorVariant: "text-blue-600",
       ext: x.com.ext,
       price: x.com.price,
     },
     {
-      colorVariant: 'text-domain',
-      ext: x.co.ext,
-      price: x.co.price,
-    },
-    {
-      colorVariant: 'text-green-800',
-      ext: x.comNG.ext,
-      price: x.comNG.price,
-    },
-    {
-      colorVariant: 'text-secondary',
-      ext: x.africa.ext,
-      price: x.africa.price,
-    },
-    {
-      colorVariant: 'text-alternate',
+      colorVariant: "text-red-700",
       ext: x.net.ext,
       price: x.net.price,
     },
     {
-      colorVariant: 'text-red-700',
-      ext: x.coZA.ext,
-      price: x.coZA.price,
+      colorVariant: "text-green-800",
+      ext: x.comNG.ext,
+      price: x.comNG.price,
+    },
+    {
+      colorVariant: "text-secondary",
+      ext: x.africa.ext,
+      price: x.africa.price,
+    },
+    {
+      colorVariant: "text-red-700",
+      ext: x.net.ext,
+      price: x.net.price,
     },
   ];
   return (
-    <motion.div
-      className="p-1 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
-      variants={cardVariants} 
-      initial="offscreen"
-      whileInView={enableAnimation && 'onscreen'}
-      viewport={{ once: true, amount: 0.8 }}>
-      <div className="col-span-3 md:col-span-1 text-center md:text-left">
-        <h2 className="text-2xl  md:text-4xl font-medium leading-snug">
-          Find Your Perfect Domain Name{' '}
-        </h2>
-        <p className="text-muted mt-3 font-medium">There are no limits, make the search!</p>
+    <div>
+      <div className="p-8 md:px-16 lg:px-28 gap-8 grid grid-cols-2 text-center md:text-left">
+        <div className="col-span-2 md:col-span-1">
+          <h2 className="text-2xl  md:text-4xl font-medium leading-snug">
+            Find Your Perfect Domain Name{" "}
+          </h2>
+          <p className="text-muted mt-3 font-medium">
+            There are no limits, make the search!
+          </p>
+        </div>
+        <div className="col-span-2 md:col-span-1">
+          <div className="relative">
+            <label htmlFor="Search" className="sr-only">
+              Search
+            </label>
+            <input
+              type="text"
+              id="Search"
+              placeholder="Enter Your Domain Name"
+              className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md"
+            />
+            <span className="absolute inset-y-0 end-0 grid w-16 pr-10 place-content-center">
+              <button
+                type="button"
+                className="px-4 py-2 bg-domain text-white md:hover:text-domain md:hover:bg-white hover:drop-shadow-md transition ease-in-out duration-300 font-medium rounded-full"
+              >
+                <span className="sr-only">Search</span>
+                Search
+              </button>
+            </span>
+          </div>
+          <div className="grid grid-cols-5 py-6 text-center gap-x-6">
+            {domainNames.map((item, index) => (
+              <div key={index} >
+                <span className={`${item.colorVariant} font-bold`}>
+                  {item.ext}
+                </span>
+                <p className="text-muted uppercase">
+                  ₦
+                  {new Intl.NumberFormat("en-US", {
+                    style: "decimal",
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 2,
+                    currency: "NGN",
+                  }).format(item.price)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="col-span-3 md:col-span-2">
-        <div className="flex-flex-col space-y-6">
+    </div>
+  );
+};
+
+export default DomainSearchBox;
+
+{
+  /* <motion.div
+className="p-1 md:p-28 grid grid-cols-3 place-items-center gap-x-8 gap-y-8"
+variants={cardVariants} 
+initial="offscreen"
+whileInView={enableAnimation && 'onscreen'}
+viewport={{ once: true, amount: 0.8 }}> */
+}
+{
+  /* <div className="col-span-3 md:col-span-1 text-center md:text-left">
+  <h2 className="text-2xl  md:text-4xl font-medium leading-snug">
+    Find Your Perfect Domain Name{' '}
+  </h2>
+  <p className="text-muted mt-3 font-medium">There are no limits, make the search!</p>
+</div> */
+}
+{
+  /* </motion.div> */
+}
+
+{
+  /* <div className="flex flex-col space-y-6">
           <div className="relative transition ease-in-out duration-3">
             <label htmlFor="Search" className="sr-only">
               Search
@@ -86,7 +146,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
             </span>
           </div>
 
-          {/* <div className="flex align-items-center justify-between space-x-2 md:space-x-4">
+          <div className="flex align-items-center justify-between space-x-2 md:space-x-4">
             {domainNames.map((item, index) => (
               <p className="text-muted uppercase" key={index}>
                 <span className={`${item.colorVariant} font-bold`}>{item.ext}</span> ₦
@@ -98,11 +158,6 @@ const DomainSearchBox = ({ enableAnimation }) => {
                 }).format(item.price)}
               </p>
             ))}
-          </div> */}
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-export default DomainSearchBox;
+          </div>
+        </div> */
+}

@@ -178,7 +178,7 @@
     },
     "govNG": {
       "ext": ".gov.ng",
-      "price": 20000,
+      "price": 0,
       "renewPrice": 20000,
       "transferPrice": 20000
     },
