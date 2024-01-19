@@ -27,7 +27,7 @@ const PremiumDomainRow = ({ cols }) => {
 };
 
 const PremiumDomainList = () => {
-  const [visibleRow, setVisibleRow] = useState(5);
+  const [visibleRow, setVisibleRow] = useState(10);
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {
