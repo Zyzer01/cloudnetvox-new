@@ -1,28 +1,24 @@
-'use client';
-import AltHero from '@/components/AltHero';
-import ComparisonTable from '@/components/ComparisonTable';
-import ComponentWrapper from '@/components/ComponentWrapper';
-import Spacer from '@/components/Spacer';
+"use client";
+import AltHero from "@/components/AltHero";
+import ComparisonTable from "@/components/ComparisonTable";
+import ComponentWrapper from "@/components/ComponentWrapper";
+import Spacer from "@/components/Spacer";
 import { ImCheckmark } from "react-icons/im";
 import data from "../../data/prices.json";
-import PricingWithIcon from '@/components/PricingWithIcon';
-import { CiServer } from 'react-icons/ci';
-import { VscServer } from 'react-icons/vsc';
-import { GrServerCluster } from 'react-icons/gr';
-import BeforeFooter from '@/components/BeforeFooter';
-import RegularCta from '@/components/RegularCta';
+import PricingWithIcon from "@/components/PricingWithIcon";
+import { CiServer } from "react-icons/ci";
+import { VscServer } from "react-icons/vsc";
+import { GrServerCluster } from "react-icons/gr";
+import BeforeFooter from "@/components/BeforeFooter";
+import RegularCta from "@/components/RegularCta";
 import ctaImageSrc0 from "public/images/email hosting.jpg";
 import ctaImageSrc1 from "public/images/email capture.jpg";
-import { motion } from 'framer-motion';
-
-
 
 const q = data.emailHosting;
 
 console.log(q);
 
 const EmailHosting = () => {
-
   const pricingCards = [
     {
       icon: <CiServer />,
@@ -101,12 +97,8 @@ const EmailHosting = () => {
     },
   };
 
-  return ( 
-    <motion.main
-    initial={{ x: '100vw' }}
-      animate={{ x: 0, transition: { type: 'linear' } }}
-      exit={{ x: '-100vw' }}
-    > 
+  return (
+    <main>
       <AltHero
         pageTitle="Email Hosting"
         pageSub="Secure and professional email"
@@ -114,42 +106,42 @@ const EmailHosting = () => {
       />
       <Spacer />
       <PricingWithIcon
-          isWithToggle
-          pricingCards={pricingCards}
-          heading="Choose Your Email Hosting Plan"
-          sub="Empower your inbox, select the perfect Email Hosting plan for seamless communication!."
-          buttonText="Order Now"
-        />
-        <Spacer />
-        <ComparisonTable
-          comparisonPlans={comparisonPlans}
-          lite={q.lite}
-          premium={q.premium}
-          extra={q.extra}
-          liteSizes={liteSizes}
-          premiumSizes={premiumSizes}
-          extraSizes={extraSizes}
-          isEmailHosting
-        />
-        <Spacer />
-        <RegularCta
-          heading="Personal and Shared Calendars"
-          description="Generate additional calendars beyond the default ones and decide whether to share them with your colleagues, tailoring the organizational management to fit your company's needs."
-          buttonText="Get Started"
-          ctaImageSrc={ctaImageSrc0}
-          link="/new"
-          isReversed
-        />
-        <RegularCta
-          heading="Sync across all your devices"
-          description="It ensures smooth synchronization of emails, contacts, and calendars across all your devices, guaranteeing constant access to the most up-to-date information, regardless of your location."
-          buttonText="Get Started"
-          ctaImageSrc={ctaImageSrc1}
-          link="/new"
-        />
+        isWithToggle
+        pricingCards={pricingCards}
+        heading="Choose Your Email Hosting Plan"
+        sub="Empower your inbox, select the perfect Email Hosting plan for seamless communication!."
+        buttonText="Order Now"
+      />
+      <Spacer />
+      <ComparisonTable
+        comparisonPlans={comparisonPlans}
+        lite={q.lite}
+        premium={q.premium}
+        extra={q.extra}
+        liteSizes={liteSizes}
+        premiumSizes={premiumSizes}
+        extraSizes={extraSizes}
+        isEmailHosting
+      />
+      <Spacer />
+      <RegularCta
+        heading="Personal and Shared Calendars"
+        description="Generate additional calendars beyond the default ones and decide whether to share them with your colleagues, tailoring the organizational management to fit your company's needs."
+        buttonText="Get Started"
+        ctaImageSrc={ctaImageSrc0}
+        link="/new"
+        isReversed
+      />
+      <RegularCta
+        heading="Sync across all your devices"
+        description="It ensures smooth synchronization of emails, contacts, and calendars across all your devices, guaranteeing constant access to the most up-to-date information, regardless of your location."
+        buttonText="Get Started"
+        ctaImageSrc={ctaImageSrc1}
+        link="/new"
+      />
 
-        <BeforeFooter />
-    </motion.main>
+      <BeforeFooter />
+    </main>
   );
 };
 

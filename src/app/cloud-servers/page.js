@@ -14,8 +14,8 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { TbWorldUpload } from "react-icons/tb";
 import ComponentWrapper from "@/components/ComponentWrapper";
-import ctaImageSrc0 from "public/images/server management.jpg"; 
-import ctaImageSrc1 from "public/images/cloud saas.jpg"; 
+import ctaImageSrc0 from "public/images/server management.jpg";
+import ctaImageSrc1 from "public/images/cloud saas.jpg";
 import ctaImageSrc2 from "public/images/flexible root.jpg";
 import Faq from "@/components/Faq";
 
@@ -151,7 +151,7 @@ const CloudServers = () => {
 
   return (
     // <ComponentWrapper>
-      <>
+    <main>
       <AltHero
         pageTitle="SSD Cloud Server"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
@@ -214,7 +214,7 @@ const CloudServers = () => {
       />
       <Faq questionContent={questionContent} />
       <BeforeFooter />
-      </>
+    </main>
   );
 };
 

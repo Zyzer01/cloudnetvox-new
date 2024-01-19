@@ -22,9 +22,9 @@ const RegularCta = ({
       {isReversed ? (
         <>
           <motion.div className="order-last md:order-first"
-          initial={{ scale: -0.8 }}
-          whileInView={{scale: 1}}
-          transition={{ duration: 0.5 }}
+          // initial={{ scale: -0.8 }}
+          // whileInView={{scale: 1}}
+          // transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl md:text-3xl my-3">{heading}</h2>
             <p

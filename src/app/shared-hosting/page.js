@@ -135,59 +135,57 @@ export default function SharedHosting() {
   ];
 
   return (
-    <div>
-      <main>
-        <AltHero
-          pageTitle="Shared Hosting"
-          pageSub="Powerful Cloud servers built from scratch with SSD storage"
-          breadcrumb="Shared Hosting"
-        />
-        <Spacer />
-        <PricingWithIcon
-          isWithToggle
-          pricingCards={pricingCards}
-          heading="Choose Your Shared Hosting Plan"
-          sub="Start your online journey with our shared hosting — reliable, affordable, and perfect for getting your website up and running."
-          buttonText="Order Now"
-        />
-        <Spacer />
-        <ComparisonTable
-          comparisonPlans={comparisonPlans}
-          lite={z.lite}
-          premium={z.premium}
-          extra={z.extra}
-        />
-        <Spacer />
-        <RegularCta
-          heading="Simplified Hosting Management"
-          description="Simplify your website management with our cPanel hosting plans! Unlock the power of the Softaculous Apps Installer – your go-to solution for one-click installations of popular web applications like phpBB, Joomla, WordPress, and more. Effortless and efficient web hosting at your fingertips!"
-          buttonText="Get Started"
-          ctaImageSrc={ctaImageSrc0}
-          link="/new"
-        />
-        <Spacer />
-        <div>
-          <div className="bg-sky py-16">
-            <PackedCta
-              title={ctaContent.title}
-              sub={ctaContent.sub}
-              desc={ctaContent.desc}
-              guaranteeBox={guaranteeBox}
-            />
-          </div>
-          <div className="welcome-pattern -mt-8 md:-mt-16 w-full">
-            <Image
-              className="w-full"
-              width={2000}
-              height={2000}
-              src={"/images/welcome-pattern.png"}
-              alt="zig zag clouds illustration"
-            />
-          </div>
+    <main>
+      <AltHero
+        pageTitle="Shared Hosting"
+        pageSub="Powerful Cloud servers built from scratch with SSD storage"
+        breadcrumb="Shared Hosting"
+      />
+      <Spacer />
+      <PricingWithIcon
+        isWithToggle
+        pricingCards={pricingCards}
+        heading="Choose Your Shared Hosting Plan"
+        sub="Start your online journey with our shared hosting — reliable, affordable, and perfect for getting your website up and running."
+        buttonText="Order Now"
+      />
+      <Spacer />
+      <ComparisonTable
+        comparisonPlans={comparisonPlans}
+        lite={z.lite}
+        premium={z.premium}
+        extra={z.extra}
+      />
+      <Spacer />
+      <RegularCta
+        heading="Simplified Hosting Management"
+        description="Simplify your website management with our cPanel hosting plans! Unlock the power of the Softaculous Apps Installer – your go-to solution for one-click installations of popular web applications like phpBB, Joomla, WordPress, and more. Effortless and efficient web hosting at your fingertips!"
+        buttonText="Get Started"
+        ctaImageSrc={ctaImageSrc0}
+        link="/new"
+      />
+      <Spacer />
+      <div>
+        <div className="bg-sky py-16">
+          <PackedCta
+            title={ctaContent.title}
+            sub={ctaContent.sub}
+            desc={ctaContent.desc}
+            guaranteeBox={guaranteeBox}
+          />
         </div>
+        <div className="welcome-pattern -mt-8 md:-mt-16 w-full">
+          <Image
+            className="w-full"
+            width={2000}
+            height={2000}
+            src={"/images/welcome-pattern.png"}
+            alt="zig zag clouds illustration"
+          />
+        </div>
+      </div>
 
-        <Faq questionContent={questionContent} />
-      </main>
-    </div>
+      <Faq questionContent={questionContent} />
+    </main>
   );
 }
