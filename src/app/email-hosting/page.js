@@ -106,7 +106,6 @@ const EmailHosting = () => {
     initial={{ x: '100vw' }}
       animate={{ x: 0, transition: { type: 'linear' } }}
       exit={{ x: '-100vw' }}
-      className='z-0'
     > 
       <AltHero
         pageTitle="Email Hosting"

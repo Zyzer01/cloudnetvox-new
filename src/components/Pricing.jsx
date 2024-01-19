@@ -55,7 +55,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
             initial="hidden"
             whileInView="onScreen"
             key={index}
-            className={`z-20  relative shadow-3xl border rounded ${
+            className={`relative shadow-3xl border rounded ${
               isFourCols ? 'p-8' : 'p-12'
             } w-full hover:bg-sky hover:transition ease-in-out duration-500 ${
               index === 1 && 'bg-sky hover:bg-sky'

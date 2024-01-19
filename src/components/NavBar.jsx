@@ -29,12 +29,6 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
     });
   }, [isOpen, controls]);
 
-  const handleItemClick = (event) => {
-    // Prevent closing when opening a submenu
-    if (!event.target.open) {
-      onClose();
-    }
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -49,45 +43,46 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-white overflow-y-hidden"
+      className="fixed top-0 left-0 w-full h-full bg-white overflow-y-hidden z-50"
       initial={{ x: "-100%" }}
       animate={controls}
     >
-      <div class="flex h-screen flex-col justify-between border-e bg-white">
-        <div class="px-4 py-6">
+      <div className="flex h-screen flex-col justify-between border-e bg-white">
+        <div className="px-4 py-6">
           <div className="flex justify-between items-center">
-            <span class="grid h-15 w-30">
+            <span className="grid h-15 w-30">
               <Image src={logo} width={172} height={40} alt="Float UI logo" />
             </span>
             <button onClick={onClose}>
               <AiOutlineClose />
             </button>
           </div>
-          <ul class="mt-12 space-y-2">
+          <ul className="mt-12 space-y-2">
             {navigation.map((item, idx) => (
               <li key={idx}>
                 <details
-                  class="group [&_summary::-webkit-details-marker]:hidden"
+                  className="group [&_summary::-webkit-details-marker]:hidden"
                 >
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
-                    <Link href={item.path}>
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
+                    <Link href={item.path} onClick={onClose}>
                       {" "}
-                      <span class="font-medium"> {item.title} </span>
+                      <span className="font-medium"> {item.title} </span>
                     </Link>
 
                     {item.subMenu && (
-                      <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                      <span className="shrink-0 bg-gray-600 text-white rounded-full p-2 transition duration-300 group-open:-rotate-180">
                         <IoIosArrowDown />
                       </span>
                     )}
                   </summary>
                   {item.subMenu && (
-                    <ul class="mt-2 space-y-1 px-4">
+                    <ul className="mt-2 space-y-1 px-4">
                       {item.subMenu.map((subItem, subIdx) => (
                         <li key={subIdx}>
                           <Link
+                          onClick={onClose}
                             href={subItem.path}
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                            className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                           >
                             {subItem.title}
                           </Link>
@@ -101,11 +96,11 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
           </ul>
         </div>
 
-        <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
+        <div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
           <Link
             target="_blank"
             href="https://netvox.ng"
-            class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
+            className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
             <Image
               className="w-16"
@@ -115,8 +110,8 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
               alt="netvox logo"
             />
             <div>
-              <p class="text-xs">
-                <strong class="block font-medium">
+              <p className="text-xs">
+                <strong className="block font-medium">
                   A Subsidiary of Netvox Networks
                 </strong>
                 <span> netvox.ng </span>
@@ -144,7 +139,7 @@ const NavBar = () => {
     { title: "Cloud Servers", path: "/cloud-servers" },
     {
       title: "Hosting Services",
-      path: "javascript:void(0)",
+      path: "#",
       subMenu: [
         {
           icon: <CiServer />,
@@ -164,7 +159,7 @@ const NavBar = () => {
 
     {
       title: "Domains",
-      path: "javascript:void(0)",
+      path: "#",
       subMenu: [
         {
           icon: <MdDomain />,
@@ -183,7 +178,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-white w-full border-b md:border-0 md:static xl:px-20 -mb-20 z-50">
+    <nav className="bg-white w-full border-b md:border-0 md:static xl:px-20 z-50">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 lg:block">
           <Link href="/">
