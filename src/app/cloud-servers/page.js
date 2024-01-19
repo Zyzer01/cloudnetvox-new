@@ -24,7 +24,6 @@ const CloudServers = () => {
   const { ssdCloudServers } = contextValues;
   const [lite, premium, extra, gold] = ssdCloudServers;
 
-  console.log(lite);
 
   const card = [
     {

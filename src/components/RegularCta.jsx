@@ -3,9 +3,6 @@ import ButtonV2 from "./ui/ButtonV2";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-
-
-
 const RegularCta = ({
   heading,
   description,

@@ -4,20 +4,8 @@ import data from "../data/prices.json";
 
 const x = data.domainNames;
 
-const DomainSearchBox = ({ enableAnimation }) => {
-  const cardVariants = {
-    offscreen: {
-      y: enableAnimation ? 300 : 0,
-    },
-    onscreen: {
-      y: 50,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        duration: 0.3,
-      },
-    },
-  };
+const DomainSearchBox = () => {
+
 
   const domainNames = [
     {
@@ -78,9 +66,14 @@ const DomainSearchBox = ({ enableAnimation }) => {
               </button>
             </span>
           </div>
-          <div className="grid grid-cols-5 py-6 text-center gap-x-6">
+          <motion.div
+            className="grid grid-cols-5 py-6 text-center"
+            initial={{ scale: -0.8 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             {domainNames.map((item, index) => (
-              <div key={index} >
+              <div key={index}>
                 <span className={`${item.colorVariant} font-bold`}>
                   {item.ext}
                 </span>
@@ -95,7 +88,7 @@ const DomainSearchBox = ({ enableAnimation }) => {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

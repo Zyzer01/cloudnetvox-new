@@ -16,7 +16,6 @@ import ctaImageSrc1 from "public/images/email capture.jpg";
 
 const q = data.emailHosting;
 
-console.log(q);
 
 const EmailHosting = () => {
   const pricingCards = [

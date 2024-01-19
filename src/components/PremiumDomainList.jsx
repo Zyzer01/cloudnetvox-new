@@ -40,7 +40,16 @@ const PremiumDomainList = () => {
     setShowMore(false);
   };
 
-  const columnsPerRow = 5;
+  const getColumnsPerRow = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 756) {
+      return 5;
+    } else {
+      return 3;
+    }
+  };
+
+  const columnsPerRow = getColumnsPerRow();
 
   const rows = domains.reduce((acc, domain, index) => {
     const rowIndex = Math.floor(index / columnsPerRow);
