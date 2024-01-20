@@ -43,11 +43,12 @@ const PremiumDomainList = () => {
   const getColumnsPerRow = () => {
     if (typeof window !== "undefined") {
       const screenWidth = window.innerWidth;
-    }
-    if (screenWidth >= 756) {
-      return 5;
-    } else {
-      return 3;
+
+      if (screenWidth >= 756) {
+        return 5;
+      } else {
+        return 3;
+      }
     }
   };
 
