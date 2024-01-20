@@ -6,23 +6,27 @@ const BackToTop = ({ scrollHeightToShow = 100 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      setIsVisible(scrolled > scrollHeightToShow);
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const scrolled = window.scrollY;
+        setIsVisible(scrolled > scrollHeightToShow);
+      };
 
-    window.addEventListener("scroll", handleScroll); 
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [scrollHeightToShow]);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (

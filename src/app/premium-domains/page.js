@@ -2,7 +2,6 @@
 import AltHero from "@/components/AltHero";
 import PremiumDomainList from "@/components/PremiumDomainList";
 import RegularCta from "@/components/RegularCta";
-import Spacer from "@/components/Spacer";
 import ctaImageSrc0 from "public/images/girl sitting on domain animation.jpg";
 import ctaImageSrc1 from "public/images/users working email hosting.jpg";
 

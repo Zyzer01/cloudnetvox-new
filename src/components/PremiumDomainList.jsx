@@ -41,7 +41,9 @@ const PremiumDomainList = () => {
   };
 
   const getColumnsPerRow = () => {
-    const screenWidth = window.innerWidth;
+    if (typeof window !== "undefined") {
+      const screenWidth = window.innerWidth;
+    }
     if (screenWidth >= 756) {
       return 5;
     } else {
@@ -72,7 +74,7 @@ const PremiumDomainList = () => {
   return (
     <div>
       {/* <Header heading="Premium Domain name" sub="i dont know what to add" /> */}
-      
+
       <div className="domain-table-section bg-sky  text-domain flex justify-center">
         <div className="container bg-white mx-16 rounded-2xl">
           <div className="table-plan-box">
@@ -109,7 +111,7 @@ const PremiumDomainList = () => {
             </table>
             <div className="text-center mt-6 text-black">
               <motion.button
-              className="bg-domain p-2 text-white rounded"
+                className="bg-domain p-2 text-white rounded"
                 whileTap={{ scale: 0.95 }}
                 onClick={showMore ? handleHide : handleShowMore}
               >
