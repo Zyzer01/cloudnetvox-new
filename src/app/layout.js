@@ -18,31 +18,31 @@ export const metadata = {
     "Maximize Your Online Presence on a Budget! Launch Your Business into the Digital Realm with Cloudnetvox! – Achieve More, Spend Less. Transform Your Vision into Reality and Score Massive Savings on All the Essentials for Kickstarting Your Fresh Website. Loaded with Handy Features. Unbeatable Value and Prices for Web Products.",
   manifest: "https://cloudnetvox.com/manifest.json",
   category: 'technology',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Cloudnetvox',
-    description: 'Maximize Your Online Presence on a Budget! Launch Your Business into the Digital Realm with Cloudnetvox! – Achieve More, Spend Less. Transform Your Vision into Reality and Score Massive Savings on All the Essentials for Kickstarting Your Fresh Website. Unbeatable Value and Prices for Web Products.',
-    siteId: '1467726470533754880',
-    creator: '@cloudnetvox',
-    creatorId: '1467726470533754880',
-    images: ['https://cloudnetvox.com/og.png'],
-    images: {
-      url: 'https://nextjs.org/og.png',
-      alt: 'Next.js Logo',
-    },
-    app: {
-      name: 'twitter_app',
-      id: {
-        iphone: 'twitter_app://iphone',
-        ipad: 'twitter_app://ipad',
-        googleplay: 'twitter_app://googleplay',
-      },
-      url: {
-        iphone: 'https://iphone_url',
-        ipad: 'https://ipad_url',
-      },
-    },
-  },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   title: 'Cloudnetvox',
+  //   description: 'Maximize Your Online Presence on a Budget! Launch Your Business into the Digital Realm with Cloudnetvox! – Achieve More, Spend Less. Transform Your Vision into Reality and Score Massive Savings on All the Essentials for Kickstarting Your Fresh Website. Unbeatable Value and Prices for Web Products.',
+  //   siteId: '1467726470533754880',
+  //   creator: '@cloudnetvox',
+  //   creatorId: '1467726470533754880',
+  //   images: ['https://cloudnetvox.com/og.png'],
+  //   images: {
+  //     url: 'https://nextjs.org/og.png',
+  //     alt: 'Next.js Logo',
+  //   },
+  //   app: {
+  //     name: 'twitter_app',
+  //     id: {
+  //       iphone: 'twitter_app://iphone',
+  //       ipad: 'twitter_app://ipad',
+  //       googleplay: 'twitter_app://googleplay',
+  //     },
+  //     url: {
+  //       iphone: 'https://iphone_url',
+  //       ipad: 'https://ipad_url',
+  //     },
+  //   },
+  // },
   verification: {
     google: 'google',
     yandex: 'yandex',
