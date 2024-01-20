@@ -61,7 +61,7 @@ const Pricing = ({ showBadge, card, heading, sub, isFourCols, option1, option2 }
               index === 1 && 'bg-sky hover:bg-sky'
             }`}>
             {showBadge && index === 1 && (
-              <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border border-primary shadow-md bg-white text-center text-gray-700 text-sm font-semibold">
+              <span className="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border border-primary shadow-md bg-white text-center text-gray-700 text-sm font-semibold">
                 Most popular
               </span>
             )}
