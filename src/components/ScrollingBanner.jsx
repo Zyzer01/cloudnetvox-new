@@ -55,14 +55,3 @@ const ScrollingBanner = () => {
 };
 
 export default ScrollingBanner;
-
-// <div class="scroll-container text-center pb-0 pt-1">
-// <p class="scrolling-payment" id="scroller1" style="margin-left: 1121px;">
-//     <span><strong> We accept: </strong></span> &nbsp;
-//     <span>Cryptocurrency <img src="img/core-img/crypto.svg" alt="bitcoin crypto"></span> &nbsp; | &nbsp;
-//     <span>USSD <img src="img/core-img/USSD.svg" alt="USSD phone"></span> &nbsp; | &nbsp;
-//     <span>Bank Transfer <img src="img/core-img/Bank TF.svg" alt="Bank Transfer"></span> &nbsp; | &nbsp;
-//     <span>Barter <img src="img/core-img/Barter.svg" alt="Barter"></span> &nbsp; | &nbsp;
-//     <span>Visa QR <img src="img/core-img/Visa QR.svg" alt="Visa QR"></span>
-// </p>
-// </div>
