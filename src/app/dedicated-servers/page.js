@@ -25,7 +25,6 @@ import ctaImageSrc1 from "public/images/power energy.png";
 import ctaImageSrc3 from "public/images/security.png";
 import Header from "@/components/Header";
 import BeforeFooter from "@/components/BeforeFooter";
-import Nav from "@/components/Nav";
 
 
 const DedicatedServers = () => {
