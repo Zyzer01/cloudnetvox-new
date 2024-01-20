@@ -51,7 +51,7 @@ export const metadata = {
       me: ['my-email', 'my-link'],
     },
   },
-};
+}; 
 
 export default function RootLayout({ children }) {
   return (
