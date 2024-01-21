@@ -47,7 +47,7 @@ export const metadata = {
     google: 'google',
     yandex: 'yandex',
     yahoo: 'yahoo',
-    other: {
+    other: { 
       me: ['my-email', 'my-link'],
     },
   },
