@@ -18,7 +18,7 @@ const Hero = () => {
       },
     },
     animate: {                   
-      opacity: 1,
+      opacity: 1, 
       scale: 1,
       x: 10,
       transition: { 
