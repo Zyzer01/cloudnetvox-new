@@ -17,7 +17,7 @@ const Hero = () => {
         ease: [0.55, 0.055, 0.675, 0.19],
       },
     },
-    animate: {
+    animate: {                   
       opacity: 1,
       scale: 1,
       x: 10,
