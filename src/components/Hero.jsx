@@ -21,7 +21,7 @@ const Hero = () => {
       opacity: 1,
       scale: 1,
       x: 10,
-      transition: {
+      transition: { 
         type: "spring",
         damping: 12,
         duration: 0.5,
