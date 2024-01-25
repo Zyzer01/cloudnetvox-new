@@ -184,7 +184,7 @@ const Home = () => {
           description="The freedom of accessibility can bring some threats along with the perks. The cybercriminals are now fully prepared to attack any vulnerable website and gain personal profits from it. Trust CloudNetvox to protect you from being vulnerable."
           buttonText="Learn more"
           isReversed={true}
-          ctaImageSrc={ctaImageSrc3}
+          ctaImageSrc={ctaImageSrc3} 
           darkBg={true}
           link="/new"
           showButton  
