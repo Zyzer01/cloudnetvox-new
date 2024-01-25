@@ -187,7 +187,7 @@ const Home = () => {
           ctaImageSrc={ctaImageSrc3}
           darkBg={true}
           link="/new"
-          showButton
+          showButton 
         />
       </div>
       <Spacer />
