@@ -109,7 +109,7 @@ const Home = () => {
     {
       title: "Guaranteed Support",
       description:
-        "Support is our number one priority.  Pro-active experts at your service, who reach out when your attention is needed..",
+        "Support is our number one priority. Pro-active experts at your service, who reach out when your attention is needed..",
       icon: <MdSupportAgent />,
     },
   ];
