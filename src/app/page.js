@@ -185,7 +185,7 @@ const Home = () => {
           buttonText="Learn more"
           isReversed={true}
           ctaImageSrc={ctaImageSrc3} 
-          darkBg={true}
+          darkBg={true} 
           link="/new"
           showButton  
         />
