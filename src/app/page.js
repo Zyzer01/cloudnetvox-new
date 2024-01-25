@@ -189,7 +189,7 @@ const Home = () => {
           link="/new"
           showButton  
         />
-      </div>
+      </div> 
       <Spacer />
       <Reviews />
       <Spacer />
