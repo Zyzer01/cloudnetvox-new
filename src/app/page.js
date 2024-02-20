@@ -151,7 +151,7 @@ const Home = () => {
         option1="Monthly"
         option2="Yearly"
       />
-      <Spacer />
+      <Spacer /> 
       <CtaWithList
         ctaHeading="Up to 30% Discount with FREE Domain Name Registration Included!"
         ctaListItems={ctaListItems}
