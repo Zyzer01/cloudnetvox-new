@@ -1,5 +1,6 @@
 export const domains = [
     "net.ng",
+    "abidi.ng",
     "box.ng",
     "dogfood.ng",
     "haircuts.ng",
