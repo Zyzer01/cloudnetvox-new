@@ -4,7 +4,7 @@ const x = data.domainNames;
 
 export const domainPrices = [
     {
-      ext: x.com.ext,
+      ext: x.com.ext, 
       tag: "Popular",
       tagColor: 'bg-blue-300',
       formerRegPrice: "₦" + 13000,
