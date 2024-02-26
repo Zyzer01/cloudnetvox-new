@@ -46,7 +46,7 @@ const MobileComparisonTable = ({
   comparisonPlans,
   isEmailHosting,
   priceSwitchVariants,
-  clickFunction
+  clickFunction,
 }) => {
   const [activeTab, setActiveTab] = useState("Premium");
 
@@ -127,20 +127,21 @@ const MobileComparisonTable = ({
                       </Link>
                     </div>
                     {isEmailHosting && (
-                    <div className="flex justify-between pt-6">
-                      {Object.keys(liteSizes.price).map((size) => (
-                        <p
-                          key={size}
-                          onClick={() => clickFunction.lite(size)}
-                          className={`font-bold cursor-pointer ${
-                            selectedSizeLite === size && "text-domain underline"
-                          }`}
-                        >
-                          {size}
-                        </p>
-                      ))}
-                    </div>
-                  )}
+                      <div className="flex justify-between pt-6">
+                        {Object.keys(liteSizes.price).map((size) => (
+                          <p
+                            key={size}
+                            onClick={() => clickFunction.lite(size)}
+                            className={`font-bold cursor-pointer ${
+                              selectedSizeLite === size &&
+                              "text-domain underline"
+                            }`}
+                          >
+                            {size}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </td>
               )}
@@ -179,20 +180,21 @@ const MobileComparisonTable = ({
                       </Link>
                     </div>
                     {isEmailHosting && (
-                    <div className="flex justify-between pt-6">
-                      {Object.keys(premiumSizes.price).map((size) => (
-                        <p
-                          key={size}
-                          onClick={() => clickFunction.premium(size)}
-                          className={`font-bold cursor-pointer ${
-                            selectedSizePremium === size && "text-domain underline"
-                          }`}
-                        >
-                          {size}
-                        </p>
-                      ))}
-                    </div>
-                  )}
+                      <div className="flex justify-between pt-6">
+                        {Object.keys(premiumSizes.price).map((size) => (
+                          <p
+                            key={size}
+                            onClick={() => clickFunction.premium(size)}
+                            className={`font-bold cursor-pointer ${
+                              selectedSizePremium === size &&
+                              "text-domain underline"
+                            }`}
+                          >
+                            {size}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </td>
               )}
@@ -231,20 +233,21 @@ const MobileComparisonTable = ({
                       </Link>
                     </div>
                     {isEmailHosting && (
-                    <div className="flex justify-between pt-6">
-                      {Object.keys(extraSizes.price).map((size) => (
-                        <p
-                          key={size}
-                          onClick={() => clickFunction.extra(size)}
-                          className={`font-bold cursor-pointer ${
-                            selectedSizeExtra === size && "text-domain underline"
-                          }`}
-                        >
-                          {size}
-                        </p>
-                      ))}
-                    </div>
-                  )}
+                      <div className="flex justify-between pt-6">
+                        {Object.keys(extraSizes.price).map((size) => (
+                          <p
+                            key={size}
+                            onClick={() => clickFunction.extra(size)}
+                            className={`font-bold cursor-pointer ${
+                              selectedSizeExtra === size &&
+                              "text-domain underline"
+                            }`}
+                          >
+                            {size}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </td>
               )}

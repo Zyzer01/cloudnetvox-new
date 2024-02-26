@@ -7,7 +7,16 @@ import BeforeFooter from "@/components/BeforeFooter";
 import RegularCta from "@/components/RegularCta";
 import ctaImageSrc0 from "public/images/email hosting.jpg";
 import ctaImageSrc1 from "public/images/email capture.jpg";
-import { emailComparisonPlans, emailPricingCards } from "@/utility/items";
+import {
+  emailComparisonPlans,
+  emailExtraSizes,
+  emailLiteSizes,
+  emailPremiumSizes,
+  emailPricingCards,
+} from "@/utility/items";
+import data from "../../data/prices.json";
+
+const email = data.emailHosting;
 
 const EmailHosting = () => {
   return (
@@ -28,12 +37,12 @@ const EmailHosting = () => {
       <Spacer />
       <ComparisonTable
         comparisonPlans={emailComparisonPlans}
-        lite={q.lite}
-        premium={q.premium}
-        extra={q.extra}
-        liteSizes={liteSizes}
-        premiumSizes={premiumSizes}
-        extraSizes={extraSizes}
+        lite={email.lite}
+        premium={email.premium}
+        extra={email.extra}
+        liteSizes={emailLiteSizes}
+        premiumSizes={emailPremiumSizes}
+        extraSizes={emailExtraSizes}
         isEmailHosting
       />
       <Spacer />
