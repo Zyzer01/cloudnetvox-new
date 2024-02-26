@@ -1,5 +1,4 @@
 "use client";
-import { useContext } from "react";
 import Hero from "@/components/Hero";
 import DomainSearchBox from "@/components/DomainSearchBox";
 import Partners from "@/components/Partners";
@@ -11,109 +10,15 @@ import RegularCta from "@/components/RegularCta";
 import Reviews from "@/components/Reviews";
 import AwardBadge from "@/components/AwardBadge";
 import BeforeFooter from "@/components/BeforeFooter";
-import { DomainContext } from "@/context/DomainContext";
 import { motion } from "framer-motion";
 import ctaImageSrc0 from "public/images/man standing on server.png";
 import ctaImageSrc1 from "public/images/animation people sitting on server.png";
 import ctaImageSrc2 from "public/images/sitting on drive and server people with laptop.png";
 import ctaImageSrc3 from "public/images/world wide web and cloud.png";
 import ScrollingBanner from "@/components/ScrollingBanner";
-import BackToTop from "@/components/BackToTTop";
-import { SlCloudUpload } from "react-icons/sl";
-import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
-import { MdOutlineSecurity, MdSupportAgent } from "react-icons/md";
-import { RiRefundLine } from "react-icons/ri";
-import { LuDatabaseBackup } from "react-icons/lu";
+import { card, featureContent } from "@/utility/items";
 
 const Home = () => {
-  const contextValues = useContext(DomainContext);
-
-  const { cloudServers } = contextValues;
-
-  const [ssd, shared, dedicated] = cloudServers;
-  const card = [
-    {
-      title: ssd.name,
-      sub: "On sale 5%",
-      price: ssd.price,
-      duration: "/per month",
-      features: [
-        "Enjoy flexibility",
-        " Increased power for your websites",
-        "Unlimited Bandwidth",
-        " 2X Processing Power & Memory",
-      ],
-      link: "/cloud-servers",
-      buttonText: "Buy now",
-    },
-    {
-      title: shared.name,
-      sub: "On sale 12%",
-      price: shared.price,
-      duration: "/per month",
-      features: [
-        " 1 Website",
-        "10,000 visits",
-        "5 GB disk space",
-        "Free SSL & Sitelock",
-      ],
-      link: "/shared-hosting",
-      buttonText: "Buy now",
-    },
-    {
-      title: dedicated.name,
-      sub: "On sale 15%",
-      price: dedicated.price,
-      duration: "/per month",
-      features: [
-        "Always-on, 24/7 Fully-Managed",
-        "Bare metal servers",
-        "Root access for complete control",
-        "Flexible Server Configurations",
-      ],
-      link: "https://cloudnetvox.com/clients/contact.php",
-      buttonText: "Buy now",
-    },
-  ];
-  const featureContent = [
-    {
-      title: "99% Uptime",
-      description:
-        "99% Uptime Don't be distracted! You're free to focus on growing your business, let us handle your site",
-      icon: <SlCloudUpload />,
-    },
-    {
-      title: "Easy Control Panel",
-      description:
-        "Easy Control Panel From tracking bandwidth, i/o stats to creating SSL certificates, all the tools you need are in one convenient location.",
-      icon: <HiOutlineAdjustmentsVertical />,
-    },
-    {
-      title: "Daily Backups",
-      description:
-        "Daily Backups The daily data back-up service offered by us is aimed at providing you with automatic recovery of lost data.",
-      icon: <LuDatabaseBackup />,
-    },
-    {
-      title: "Money Back Guarantee",
-      description:
-        "Try us and love us, or get a refund within 30 days of signing up. Your satisfaction is our number 1 priority.",
-      icon: <RiRefundLine />,
-    },
-    {
-      title: "Security",
-      description:
-        "Enjoy 2.5X Speed, Advanced Security, hassle-free WordPress installation on all accounts + FREE Migrations.",
-      icon: <MdOutlineSecurity />,
-    },
-    {
-      title: "Guaranteed Support",
-      description:
-        "Support is our number one priority. Pro-active experts at your service, who reach out when your attention is needed..",
-      icon: <MdSupportAgent />,
-    },
-  ];
-
   const ctaListItems = [
     "FREE Domain Name for 1st Year",
     "FREE Email Address",
@@ -133,7 +38,6 @@ const Home = () => {
       {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
-      <BackToTop />
       <Spacer />
       <Partners />
       <Spacer />

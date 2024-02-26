@@ -1,7 +1,7 @@
 {
   "hostingServicesBasePrice": {
-    "lite": {
-      "cloudServers": "SSD Cloud Server",
+    "vps": {
+      "name": "SSD Cloud Server",
       "price": 9000
     },
     "shared": {
