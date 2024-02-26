@@ -1,87 +1,87 @@
-'use client';
-import { createContext, useContext } from 'react';
+"use client";
+import { createContext, useContext } from "react";
 
 export const DomainContext = createContext();
 
 const DomainContextProvider = ({ children }) => {
   const domainPrices = [
     {
-      ext: '.com',
+      ext: ".com",
       price: 12200,
     },
     {
-      ext: '.com.ng',
+      ext: ".com.ng",
       price: 1200,
     },
     {
-      ext: '.co',
+      ext: ".co",
       price: 29500,
     },
     {
-      ext: '.co.za',
+      ext: ".co.za",
       price: 6000,
     },
     {
-      ext: '.net',
+      ext: ".net",
       price: 13700,
     },
     {
-      ext: '.info',
+      ext: ".info",
       price: 8950,
     },
     {
-      ext: '.africa',
+      ext: ".africa",
       price: 10000,
     },
   ];
 
   const webHostingPrices = [
     {
-      name: 'Lite',
+      name: "Lite",
       price: 999,
     },
     {
-      name: 'Premium',
+      name: "Premium",
       price: 1300,
     },
     {
-      name: 'Extra',
+      name: "Extra",
       price: 2500,
     },
   ];
 
   const cloudServers = [
     {
-      name: 'SSD Cloud Server',
+      name: "VPS Hosting",
       price: 9000,
     },
     {
-      name: 'Shared Hosting',
+      name: "Shared Hosting",
       price: 999,
     },
     {
-      name: 'Dedicated Servers',
+      name: "Dedicated Servers",
       price: 60000,
     },
   ];
   const ssdCloudServers = [
     {
-      name: 'Lite',
+      name: "Lite",
       globalPrice: 9000,
       localPrice: 29250,
     },
     {
-      name: 'Premium',
+      name: "Premium",
       globalPrice: 23000,
       localPrice: 45000,
     },
     {
-      name: 'Extra',
+      name: "Extra",
       globalPrice: 23000,
       localPrice: 65000,
     },
     {
-      name: 'Gold',
+      name: "Gold",
       globalPrice: 80000,
       localPrice: 100500,
     },
@@ -93,7 +93,11 @@ const DomainContextProvider = ({ children }) => {
     ssdCloudServers,
   };
 
-  return <DomainContext.Provider value={contextValues}>{children}</DomainContext.Provider>;
+  return (
+    <DomainContext.Provider value={contextValues}>
+      {children}
+    </DomainContext.Provider>
+  );
 };
 
 export default DomainContextProvider;

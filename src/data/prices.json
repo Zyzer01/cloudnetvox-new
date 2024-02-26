@@ -1,12 +1,12 @@
 {
   "hostingServicesBasePrice": {
     "vps": {
-      "name": "SSD Cloud Server",
-      "price": 9000
+      "name": "VPS Hosting",
+      "price": 12000
     },
     "shared": {
       "name": "Shared Hosting",
-      "price": 999
+      "price": 1299
     },
     "dedicated": {
       "name": "Dedicated Servers",
@@ -17,15 +17,15 @@
   "sharedHosting": {
     "lite": {
       "name": "Lite",
-      "price": 999
+      "price": 1299
     },
     "premium": {
       "name": "Premium",
-      "price": 1300
+      "price": 1799
     },
     "extra": {
       "name": "Extra",
-      "price": 2500
+      "price": 2999
     }
   },
 

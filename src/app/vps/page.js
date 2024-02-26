@@ -18,12 +18,12 @@ import ctaImageSrc0 from "public/images/server management.jpg";
 import ctaImageSrc1 from "public/images/cloud saas.jpg";
 import ctaImageSrc2 from "public/images/flexible root.jpg";
 import Faq from "@/components/Faq";
+import { guaranteeBox } from "@/utility/items";
 
 const CloudServers = () => {
   const contextValues = useContext(DomainContext);
   const { ssdCloudServers } = contextValues;
   const [lite, premium, extra, gold] = ssdCloudServers;
-
 
   const card = [
     {
@@ -96,25 +96,6 @@ const CloudServers = () => {
     },
   ];
 
-  const guaranteeBox = [
-    {
-      icon: <BiSupport />,
-      boxTitle: "Award Winning 24/7 Live Support",
-    },
-    {
-      icon: <TbWorldUpload />,
-      boxTitle: "99.99% Network Uptime Guarantee!",
-    },
-    {
-      icon: <LuDatabaseBackup />,
-      boxTitle: "Daily backups with 1-click restore",
-    },
-    {
-      icon: <FaMoneyBillTransfer />,
-      boxTitle: "30 Day Money Back Guarantee",
-    },
-  ];
-
   const questionContent = [
     {
       title: "What are Cloud Servers?",
@@ -152,9 +133,9 @@ const CloudServers = () => {
     // <ComponentWrapper>
     <main>
       <AltHero
-        pageTitle="SSD Cloud Server"
+        pageTitle="VPS Hosting"
         pageSub="Powerful Cloud servers built from scratch with SSD storage"
-        breadcrumb="Cloud Servers"
+        breadcrumb="vps"
       />
       <Spacer />
       <Pricing

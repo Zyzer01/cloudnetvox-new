@@ -8,8 +8,6 @@ const Partners = () => {
   const partnerLogos = [
     "/images/logos/fmcjalingo.jpg",
     "/images/logos/opm.png",
-    "/images/logos/alpha tech.png",
-    "/images/logos/cafe 40.png",
     "/images/logos/federal ministry of education.png",
     "/images/logos/ncc.png",
     "/images/logos/ngcares.png",
@@ -21,26 +19,24 @@ const Partners = () => {
         heading="Trusted By 10,000+ Clients & Partners"
         sub="We are just better together... Build, launch, and grow your website or app in our environment. Our team has your back."
       />
-      <div className="py-16">
-        <Marquee>
-          {partnerLogos.map((logo, index) => (
-            <motion.div
-              key={index}
-              whileHover={{
-                scale: 1.1,
-                transition: { ease: "easeIn", duration: 0.3 },
-              }}
-            >
-              <Image
-                className="w-24 mr-16"
-                src={logo}
-                width={280}
-                height={200}
-                alt={`logo ${index + 1}`}
-              />
-            </motion.div>
-          ))}
-        </Marquee>
+      <div className="py-8 flex flex-wrap justify-between items-center">
+        {partnerLogos.map((logo, index) => (
+          <motion.div
+            key={index}
+            whileHover={{
+              scale: 1.1,
+              transition: { ease: "easeIn", duration: 0.3 },
+            }}
+          >
+            <Image
+              className="w-16 md:w-24"
+              src={logo}
+              width={280}
+              height={200}
+              alt={`logo ${index + 1}`}
+            />
+          </motion.div>
+        ))}
       </div>
     </div>
   );

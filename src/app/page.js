@@ -69,7 +69,6 @@ const Home = () => {
         buttonText="Learn more"
         isReversed={true}
         ctaImageSrc={ctaImageSrc1}
-        hideImage
         link="/new"
         showButton
       />
@@ -78,7 +77,6 @@ const Home = () => {
         description="Nowadays, most websites are vulnerable to unpredictable crashes and thus more prone to unprecedented downtimes too At CloudNetvox, We ensure Integrated Caching, Resource Management, Automated Failover, Data Mirroring, and Stabilty!"
         buttonText="Learn more"
         ctaImageSrc={ctaImageSrc2}
-        hideImage
         link="/new"
         showButton
       />
@@ -95,7 +93,7 @@ const Home = () => {
         />
       </div>
       <Spacer />
-      <Reviews />
+      {/* <Reviews /> */}
       <Spacer />
       <AwardBadge />
       <BeforeFooter />

@@ -7,16 +7,11 @@ import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "public/images/logos/cloudnetvox logo.png";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaCloudArrowUp } from "react-icons/fa6";
-import { SiAmazonsimpleemailservice } from "react-icons/si";
-import { CiServer } from "react-icons/ci";
-import { MdDomain } from "react-icons/md";
-import { MdDomainAdd } from "react-icons/md";
 import Button from "./ui/Button";
 import netvox from "public/images/netvox-logo-transparent-1.png";
+import { navigation } from "@/utility/items";
 
 const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -29,15 +24,14 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
     });
   }, [isOpen, controls]);
 
-
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflowY = 'hidden';
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = 'auto';
+      document.body.style.overflowY = "auto";
     }
     return () => {
-      document.body.style.overflowY = 'auto';
+      document.body.style.overflowY = "auto";
     };
   }, [isOpen]);
 
@@ -60,9 +54,7 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
           <ul className="mt-12 space-y-2">
             {navigation.map((item, idx) => (
               <li key={idx}>
-                <details
-                  className="group [&_summary::-webkit-details-marker]:hidden"
-                >
+                <details className="group [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-primary">
                     <Link href={item.path} onClick={onClose}>
                       {" "}
@@ -80,7 +72,7 @@ const MobileMenuModal = ({ isOpen, onClose, navigation }) => {
                       {item.subMenu.map((subItem, subIdx) => (
                         <li key={subIdx}>
                           <Link
-                          onClick={onClose}
+                            onClick={onClose}
                             href={subItem.path}
                             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                           >
@@ -135,63 +127,25 @@ const NavBar = () => {
     setMenuOpen(false);
   };
 
-  const navigation = [
-    { title: "Cloud Servers", path: "/cloud-servers" },
-    {
-      title: "Hosting Services",
-      path: "#",
-      subMenu: [
-        {
-          icon: <CiServer />,
-          title: "Shared Hosting",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/shared-hosting",
-        },
-        {
-          icon: <SiAmazonsimpleemailservice />,
-          title: "Business Email",
-          desc: "Powerful email service",
-          path: "/email-hosting",
-        },
-      ],
-    },
-    { title: "Dedicated Servers", path: "/dedicated-servers" },
-
-    {
-      title: "Domains",
-      path: "#",
-      subMenu: [
-        {
-          icon: <MdDomain />,
-          title: "Domains",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/domains",
-        },
-        {
-          icon: <MdDomainAdd />,
-          title: "Premium Domains",
-          desc: "NVMe Powered cPanel Web Hosting",
-          path: "/premium-domains",
-        },
-      ],
-    },
-  ];
-
   return (
-    <nav className="bg-white w-full border-b md:border-0 md:static xl:px-20 z-50">
+    <nav className="bg-primary w-full border-b md:border-0 md:static xl:px-20 z-50">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 lg:block">
           <Link href="/">
             <Image src={logo} width={172} height={40} alt="Cloudnetvox logo" />
           </Link>
-          <div className="lg:hidden"> 
-            <button 
+          <div className="lg:hidden">
+            <button
               className="text-white text-xl outline-none p-2 rounded-md border-gray-100 border"
               onClick={handleToggleMenu}
             >
               <RiMenu4Fill />
             </button>
-            <MobileMenuModal isOpen={isMenuOpen} onClose={handleCloseMenu} navigation={navigation} />
+            <MobileMenuModal
+              isOpen={isMenuOpen}
+              onClose={handleCloseMenu}
+              navigation={navigation}
+            />
           </div>
         </div>
         <div className="flex-1 justify-self-center pb-3 mt-8 hidden lg:block md:pb-0 md:mt-0">
@@ -220,12 +174,12 @@ const NavBar = () => {
                                   {subItem.icon}
                                 </p>
                                 <Link href={subItem.path}>
-                                <div className="text-gray-800">
-                                  <h4 className="font-medium hover:text-domain">
-                                    {subItem.title}
-                                  </h4>
-                                  <p className="text-sm">{subItem.desc}</p>
-                                </div>
+                                  <div className="text-gray-800">
+                                    <h4 className="font-medium hover:text-domain">
+                                      {subItem.title}
+                                    </h4>
+                                    <p className="text-sm">{subItem.desc}</p>
+                                  </div>
                                 </Link>
                               </div>
                             ))}

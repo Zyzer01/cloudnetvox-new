@@ -1,5 +1,5 @@
-import Counter from './Counter';
-import Image from 'next/image';
+import Counter from "./Counter";
+import Image from "next/image";
 
 const BeforeFooter = () => {
   return (
@@ -16,11 +16,11 @@ const BeforeFooter = () => {
         </h4>
       </div>
       <div className="h-10 my-8 md:my-16 flex justify-center items-center">
-        <h4 className="text-center text-lg md:text-3xl">
-          Proudly Hosting Over{' '}
+        <h4 className="text-center text-md md:text-3xl">
+          Proudly Hosting Over{" "}
           <span className="text-domain">
             <Counter value={10000} />
-          </span>{' '}
+          </span>{" "}
           Websites Since 2015
         </h4>
       </div>
