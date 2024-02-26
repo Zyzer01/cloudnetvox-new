@@ -11,17 +11,17 @@ const Hero = () => {
     initial: {
       opacity: 0,
       scale: 0.1,
-      x: '-100vw',
+      x: "-100vw",
       transition: {
         duration: 0.5,
         ease: [0.55, 0.055, 0.675, 0.19],
       },
     },
-    animate: {                    
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       scale: 1,
       x: 10,
-      transition: { 
+      transition: {
         type: "spring",
         damping: 12,
         duration: 0.5,
@@ -89,7 +89,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="welcome-pattern -mt-8 md:-mt-16 w-full">
+      <div className="welcome-pattern -mt-4 sm:mt-8 md:-mt-16 w-full">
         <Image
           className="w-full"
           width={1919}

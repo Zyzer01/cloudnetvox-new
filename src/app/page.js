@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import Hero from "@/components/Hero";
 import DomainSearchBox from "@/components/DomainSearchBox";
-import Patners from "@/components/Patners";
+import Partners from "@/components/Partners";
 import Spacer from "@/components/Spacer";
 import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
@@ -79,7 +79,7 @@ const Home = () => {
     {
       title: "99% Uptime",
       description:
-        "99% Uptime Don&apos;t be distracted! You&apos;re free to focus on growing your business, let us handle your site",
+        "99% Uptime Don't be distracted! You're free to focus on growing your business, let us handle your site",
       icon: <SlCloudUpload />,
     },
     {
@@ -126,16 +126,16 @@ const Home = () => {
   return (
     <motion.main
       className=""
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
     >
       {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
       <BackToTop />
       <Spacer />
-      <Patners />
+      <Partners />
       <Spacer />
       <Features
         heading="Overall Features"
@@ -151,7 +151,7 @@ const Home = () => {
         option1="Monthly"
         option2="Yearly"
       />
-      <Spacer /> 
+      <Spacer />
       <CtaWithList
         ctaHeading="Up to 30% Discount with FREE Domain Name Registration Included!"
         ctaListItems={ctaListItems}
@@ -184,12 +184,12 @@ const Home = () => {
           description="The freedom of accessibility can bring some threats along with the perks. The cybercriminals are now fully prepared to attack any vulnerable website and gain personal profits from it. Trust CloudNetvox to protect you from being vulnerable."
           buttonText="Learn more"
           isReversed={true}
-          ctaImageSrc={ctaImageSrc3} 
-          darkBg={true} 
+          ctaImageSrc={ctaImageSrc3}
+          darkBg={true}
           link="/new"
-          showButton  
+          showButton
         />
-      </div>  
+      </div>
       <Spacer />
       <Reviews />
       <Spacer />
