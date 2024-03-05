@@ -14,13 +14,13 @@ import {
   SiArchlinux,
   SiOpensuse,
 } from "react-icons/si";
-import { CiServer } from "react-icons/ci";
-import { VscServer } from "react-icons/vsc";
-import { GrServerCluster } from "react-icons/gr";
+import { CiGlobe, CiServer } from "react-icons/ci";
+import { VscServer, VscWorkspaceTrusted } from "react-icons/vsc";
+import { GrCertificate, GrServerCluster } from "react-icons/gr";
 import { ImCheckmark } from "react-icons/im";
 import { BiSupport } from "react-icons/bi";
 import { TbBrandUbuntu, TbWorldUpload } from "react-icons/tb";
-import { FaMoneyBillTransfer } from "react-icons/fa6";
+import { FaMoneyBillTransfer, FaRegHandshake } from "react-icons/fa6";
 import { DiDebian } from "react-icons/di";
 import ubuntu from "public/images/ubuntu.png";
 import debian from "public/images/debian-logo-1024x576.png";
@@ -170,6 +170,92 @@ export const featureContent = [
     description:
       "Support is our number one priority. Pro-active experts at your service, who reach out when your attention is needed..",
     icon: <MdSupportAgent />,
+  },
+];
+
+export const domainsFeatureContent = [
+  {
+    title: "99% Uptime",
+    description:
+      "99% Uptime Don't be distracted! You're free to focus on growing your business, let us handle your site",
+    icon: <SlCloudUpload />,
+  },
+  {
+    title: "Enhanced Security",
+    description:
+      "We secure your domains with 2FA, IP Whitelisting, and SSO for proactive protection.",
+    icon: <MdOutlineSecurity />,
+  },
+  {
+    title: "Unparalleled accreditations",
+    description:
+      "As a leading registrar, we directly partner with global registries, saving you time and costs by bypassing middlemen.",
+    icon: <GrCertificate />,
+  },
+  {
+    title: "24/7/365 Support",
+    description:
+      "We prioritize rapid issue resolution and swift response to ensure your domain management never sleeps, just like the internet.",
+    icon: <MdSupportAgent />,
+  },
+  {
+    title: "Transparency",
+    description:
+      "Choose clear pricing: no hidden fees, no extra charges for DNS updates, and no long-term contracts. Keep it simple with us.",
+    icon: <VscWorkspaceTrusted />,
+  },
+  {
+    title: "Simplicity",
+    description:
+      "Simplify domain management by consolidating all your domains in one place, saving time across registrars.",
+    icon: <FaRegHandshake />,
+  },
+];
+
+export const domainsFaq = [
+  {
+    title: "What's a domain name?",
+    content:
+      "A domain name refers to your website address. This is what users type in a browser's search bar to directly access your website. A domain name is unique and cannot be shared between different sites. For example: cloudnetvoxcom",
+  },
+  {
+    title: "How do I buy a domain name?",
+    content:
+      "To buy a domain name, enter the domain name you want to buy in the search box above, sign up and register the domain name.",
+  },
+  {
+    title: "Got any tips on finding a good domain name?",
+    content:
+      "How much thought do you need to give to a domain name when you want to create a website? In theory, with a good website, users should visit your pages whatever the domain name...but it is a little more complicated than that. If you are part of a business, it is crucial to choose a domain name that is right for your business or brand. search for your perfect domain name",
+  },
+  {
+    title: "What are the advantages of reserving your domain with Cloudnetvox?",
+    content:
+      "You have a wide range of domain name extensions to help protect your brand on the internet, if you are a business. Cloudnetvox also provides you with a custom email address linked to the domain. Furthermore, as a hosting provider, we can strengthen your DNS security, and allow you to configure your DNS zone.",
+  },
+];
+
+export const domainsPricingCards = [
+  {
+    icon: <CiGlobe />,
+    title: featuredDomains.comNG.ext,
+    desc: "Elevate your online presence with .com.ng - a domain that speaks volumes!",
+    price: featuredDomains.comNG.price,
+    link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
+  },
+  {
+    icon: <CiGlobe />,
+    title: featuredDomains.com.ext,
+    desc: "Establish your digital identity with the timeless appeal of a .com domain!",
+    price: featuredDomains.com.price,
+    link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
+  },
+  {
+    icon: <CiGlobe />,
+    title: featuredDomains.africa.ext,
+    desc: "Embrace Africa with a unique .africa domain for your online presence!",
+    price: featuredDomains.africa.price,
+    link: "https://cloudnetvox.com/clients/cart.php?a=add&domain=register",
   },
 ];
 
