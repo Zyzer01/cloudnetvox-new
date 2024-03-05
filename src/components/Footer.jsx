@@ -153,26 +153,26 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex flex-col flex-wrap space-y-5">
-              <h4 className="text-2xl text-white mb-3">Contact Info</h4>
-              {contact.map((item, index) => (
-                <Link
-                  key={index}
+          {/* <div className="col-span-2 md:col-span-1"> */}
+          <div className="flex flex-col flex-wrap space-y-5">
+            <h4 className="text-2xl text-white mb-3">Contact Info</h4>
+            {contact.map((item, index) => (
+              <Link
+                key={index}
+                href={item.link}
+                className={`${item.link ? "" : "pointer-events-none"}`}
+              >
+                <p
                   href={item.link}
-                  className={`${item.link ? "" : "pointer-events-none"}`}
+                  className="flex items-center text-off hover:text-white transition ease"
                 >
-                  <p
-                    href={item.link}
-                    className="flex items-center text-off hover:text-white transition ease"
-                  >
-                    <span className="mr-2 text-xl">{item.icon}</span>
-                    {item.value}
-                  </p>
-                </Link>
-              ))}
-            </div>
+                  <span className="mr-2 text-xl">{item.icon}</span>
+                  {item.value}
+                </p>
+              </Link>
+            ))}
           </div>
+          {/* </div> */}
         </div>
 
         <div className="grid md:grid-cols-2 my-16 gap-y-8 md:gap-x-8 place-content-between text-off">
@@ -185,7 +185,7 @@ const Footer = () => {
               </span>{" "}
             </p>
           </div>
-          <div className="flex flex-wrap items-center space-x-4 space-y-4 md:space-y-0">
+          <div className="flex flex-wrap items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
             <div>
               <p className="font-medium">Payments we accept: </p>
             </div>
