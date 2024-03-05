@@ -37,7 +37,7 @@ const DomainSearchBox = () => {
                 id="Search"
                 name="query"
                 placeholder="Enter Your Domain Name"
-                className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md"
+                className="w-full rounded-full border border-gray-300 py-4 px-6 shadow-md focus:border-domain focus:outline-none focus:ring-domain"
               />
               <span className="absolute inset-y-0 end-0 grid w-16 pr-10 place-content-center">
                 <button

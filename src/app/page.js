@@ -33,9 +33,8 @@ const Home = () => {
       className=""
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      transition={{ duration: 0.3, ease: "easeIn" }}
     >
-      {/* <ScrollingBanner /> */}
       <Hero />
       <DomainSearchBox enableAnimation />
       <Spacer />

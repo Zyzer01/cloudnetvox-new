@@ -6,7 +6,7 @@ import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Faq from "@/components/Faq";
 import PricingWithIcon from "@/components/PricingWithIcon";
-import ctaImageSrc0 from "public/images/web hosting.jpg";
+import ctaImageSrc0 from "public/images/shared hosting.png";
 import RegularCta from "@/components/RegularCta";
 import {
   guaranteeBox,

@@ -8,41 +8,51 @@ import { FaPaypal } from "react-icons/fa";
 import { FaGooglePay } from "react-icons/fa6";
 
 const ScrollingBanner = () => {
+  const colorVariant = {
+    yellow: "text-yellow-500",
+    domain: "text-domain",
+    blue: "text-blue-300",
+    yellow700: "text-yellow-700",
+    red: "text-red-600",
+  };
+
   const payments = [
     {
       name: "Cryptocurrency",
       icon: <FaBitcoin />,
-      iconColor: "text-yellow-500",
+      iconColor: "yellow",
     },
     {
       name: "Paypal",
       icon: <FaPaypal />,
-      iconColor: "text-domain",
+      iconColor: "domain",
     },
     {
       name: "Bank Transfer",
       icon: <BiSolidBank />,
-      iconColor: "text-blue-300",
+      iconColor: "blue",
     },
     {
       name: "Debit Cards",
       icon: <IoCardOutline />,
-      iconColor: "text-yellow-700",
+      iconColor: "yellow700",
     },
     {
       name: "Google Pay",
       icon: <FaGooglePay />,
-      iconColor: "text-red-600",
+      iconColor: "red",
     },
   ];
   return (
-    <div className="p-2">
+    <div className="p-2 text-white">
       <div>
         <Marquee>
           <p className="font-medium mx-3">We accept: </p>
           {payments.map((item, index) => (
             <p key={index} className="flex items-center mr-5">
-              <span className={`mr-1.5 text-xl ${item.iconColor}`}>
+              <span
+                className={`${colorVariant[item.iconColor]} mr-1.5 text-xl`}
+              >
                 {item.icon}
               </span>
               {item.name}

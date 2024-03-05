@@ -202,7 +202,8 @@ const Footer = () => {
       <div className="grid md:grid-cols-3 gap-y-8 place-items-center place-content-center md:place-content-between p-12 lg:px-28 bg-primary ">
         <div>
           <p className="text-off text-center md:text-left">
-            Copyright © 2023 Cloudnetvox. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} Cloudnetvox. All Rights
+            Reserved.
           </p>
         </div>
         <div className="order-first md:order-none">
