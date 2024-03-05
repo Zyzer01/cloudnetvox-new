@@ -3,7 +3,7 @@ import BreadCrumbs from "./ui/BreadCrumbs";
 const AltHero = ({ pageTitle, pageSub, breadcrumb }) => {
   return (
     <div className="">
-      <div className="bg-primary text-white px-8 md:px-0 -mt-[65px] md:-mt-20 h-96 grid md:grid-cols-4 place-content-center place-items-center ">
+      <div className="bg-primary text-white px-6 md:px-0 -mt-[65px] md:-mt-20 h-96 grid md:grid-cols-4 place-content-center place-items-center ">
         <div></div>
         <div className="text-white text-center col-span-4 md:col-span-2">
           <div className="py-16">
