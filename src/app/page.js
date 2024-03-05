@@ -7,7 +7,6 @@ import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import CtaWithList from "@/components/CtaWithList";
 import RegularCta from "@/components/RegularCta";
-import Reviews from "@/components/Reviews";
 import AwardBadge from "@/components/AwardBadge";
 import BeforeFooter from "@/components/BeforeFooter";
 import { motion } from "framer-motion";
@@ -15,7 +14,6 @@ import ctaImageSrc0 from "public/images/man standing on server.png";
 import ctaImageSrc1 from "public/images/animation people sitting on server.png";
 import ctaImageSrc2 from "public/images/sitting on drive and server people with laptop.png";
 import ctaImageSrc3 from "public/images/world wide web and cloud.png";
-import ScrollingBanner from "@/components/ScrollingBanner";
 import { card, featureContent } from "@/utility/items";
 
 const Home = () => {
