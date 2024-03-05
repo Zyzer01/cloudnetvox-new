@@ -175,27 +175,27 @@ export const featureContent = [
 
 export const featuredDomainNames = [
   {
-    colorVariant: "text-blue-600",
+    colorVariant: "blue",
     ext: featuredDomains.com.ext,
     price: featuredDomains.com.price,
   },
   {
-    colorVariant: "text-red-700",
+    colorVariant: "red",
     ext: featuredDomains.net.ext,
     price: featuredDomains.net.price,
   },
   {
-    colorVariant: "text-green-800",
+    colorVariant: "green",
     ext: featuredDomains.comNG.ext,
     price: featuredDomains.comNG.price,
   },
   {
-    colorVariant: "text-secondary",
+    colorVariant: "secondary",
     ext: featuredDomains.africa.ext,
     price: featuredDomains.africa.price,
   },
   {
-    colorVariant: "text-red-700",
+    colorVariant: "red",
     ext: featuredDomains.net.ext,
     price: featuredDomains.net.price,
   },

@@ -2,12 +2,11 @@ import { Archivo } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import DomainContextProvider from "@/context/DomainContext";
-import PageWrapper from "@/components/PageWrapper";
 import TopBanner from "@/components/TopBanner";
 import NavBar from "@/components/NavBar";
 import BackToTop from "@/components/BackToTTop";
 
-const archivo = Archivo({ subsets: ["latin"], display: "swap" });
+const archivo = Archivo({ subsets: ["latin"] });
 
 export const viewport = {
   themeColor: "#06155A",

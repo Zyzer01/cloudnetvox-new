@@ -4,6 +4,13 @@ import data from "../data/prices.json";
 import { featuredDomainNames } from "@/utility/items";
 import Marquee from "react-fast-marquee";
 
+const colorVariant = {
+  blue: "text-blue-600 font-bold",
+  red: "text-red-700 font-bold",
+  green: "text-green-800 font-bold",
+  secondary: "text-secondary font-bold",
+};
+
 const DomainSearchBox = () => {
   return (
     <div>
@@ -47,7 +54,7 @@ const DomainSearchBox = () => {
             <Marquee speed={30}>
               {featuredDomainNames.map((item, index) => (
                 <div key={index} className="mr-10">
-                  <span className={`${item.colorVariant} font-bold`}>
+                  <span className={`${colorVariant[item.colorVariant]}`}>
                     {item.ext}
                   </span>
                   <p className="text-muted uppercase">
