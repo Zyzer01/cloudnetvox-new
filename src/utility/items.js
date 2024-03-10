@@ -229,7 +229,7 @@ export const domainsFaq = [
       "How much thought do you need to give to a domain name when you want to create a website? In theory, with a good website, users should visit your pages whatever the domain name...but it is a little more complicated than that. If you are part of a business, it is crucial to choose a domain name that is right for your business or brand. search for your perfect domain name",
   },
   {
-    title: "What are the advantages of reserving your domain with Cloudnetvox?",
+    title: "What are the advantages of reserving your domains with Cloudnetvox?",
     content:
       "You have a wide range of domain name extensions to help protect your brand on the internet, if you are a business. Cloudnetvox also provides you with a custom email address linked to the domain. Furthermore, as a hosting provider, we can strengthen your DNS security, and allow you to configure your DNS zone.",
   },
