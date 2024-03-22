@@ -201,7 +201,7 @@ export const domainsFeatureContent = [
   {
     title: "Transparency",
     description:
-      "Choose clear pricing: there are no hidden fees, no extra charges for DNS updates, and no long-term contracts. Keep it simple with us.",
+      "Choose clear pricing: no hidden fees, no extra charges for DNS updates, and no long-term contracts. Keep it simple with us.",
     icon: <VscWorkspaceTrusted />,
   },
   {
