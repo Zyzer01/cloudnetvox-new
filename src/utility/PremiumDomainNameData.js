@@ -1,4 +1,5 @@
 export const domains = [
+  "install.ng"
   "net.ng",
   "box.ng",
   "dogfood.ng",
