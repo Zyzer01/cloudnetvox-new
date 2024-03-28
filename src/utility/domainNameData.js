@@ -10,7 +10,7 @@ export const domainPrices = [
       formerRegPrice: "₦" + 13000,
       regPrice: x.com.price,
       formerRenewPrice: "₦" + x.com.price,
-      renewPrice: x.com.renewPrice,
+      renewPrice: x.com.renewPric,
       formerTransferPrice: "₦" + x.com.price,
       transferPrice: x.com.transferPrice,
     },
