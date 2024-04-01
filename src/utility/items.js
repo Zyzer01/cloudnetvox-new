@@ -44,7 +44,7 @@ export const card = [
     features: [
       "Enjoy flexibility",
       " Increased power for your websites",
-      "Unlimited Bandwidths",
+      "Unlimited Bandwidth",
       " 2X Processing Power & Memory",
     ],
     link: "/cloud-servers",
