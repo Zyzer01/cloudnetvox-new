@@ -15,6 +15,7 @@ import {
   domainsPricingCards,
 } from "@/utility/items";
 
+
 export default function Domains() {
   return (
     <div>

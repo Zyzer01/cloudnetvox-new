@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from "react";
 import "../styles/table.css";
 import { domainPrices } from "@/utility/domainNameData";
@@ -67,7 +69,32 @@ const DomainRow = ({
   );
 };
 
-const DomainList = () => {
+
+
+// eslint-disable-next-line @next/next/no-async-client-component
+
+
+async function getStrapiData(url) {
+  const baseUrl = "http://localhost:1337";
+  try {
+    const response = await fetch(baseUrl + url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// eslint-disable-next-line @next/next/no-async-client-component
+
+
+const DomainList = async () => {
+
+  const strapiData = await getStrapiData("/api/domain")
+
+  const { domainNames } = strapiData.data.attributes
+
+  // console.log(domainNames);
   const [visibleRow, setVisibleRow] = useState(5);
   const [showMore, setShowMore] = useState(false);
 
